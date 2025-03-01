@@ -1,101 +1,196 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import QuestionSection from '../components/Quiz/QuestionSection';
+import Results from '../components/Quiz/Results';
+import LandingCompass from '../components/Quiz/LandingCompass';
+import { calculatePosition } from '../utils/calculatePosition';
+import questionsData from '../data/questions.json';
+import Link from 'next/link';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [currentSection, setCurrentSection] = useState(0);
+  const [allAnswers, setAllAnswers] = useState({});
+  const [showResults, setShowResults] = useState(false);
+  const [compassPosition, setCompassPosition] = useState({ x: 0, y: 0 });
+  const [isStarted, setIsStarted] = useState(false);
+  const [shuffledQuestions, setShuffledQuestions] = useState([]);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Shuffle questions in each section when component mounts
+  useEffect(() => {
+    const shuffled = questionsData.map((section) => {
+      // Create a copy of the questions array
+      const shuffledQuestions = [...section.questions];
+
+      // Fisher-Yates shuffle algorithm
+      for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledQuestions[i], shuffledQuestions[j]] = [
+          shuffledQuestions[j],
+          shuffledQuestions[i],
+        ];
+      }
+
+      // Return a new section object with shuffled questions
+      return {
+        ...section,
+        questions: shuffledQuestions,
+      };
+    });
+
+    setShuffledQuestions(shuffled);
+  }, []);
+
+  useEffect(() => {
+    console.log(
+      'Before scroll - scrollY:',
+      window.scrollY,
+      'document height:',
+      document.documentElement.scrollHeight
+    );
+
+    setTimeout(() => {
+      console.log(
+        'After scroll - scrollY:',
+        window.scrollY,
+        'document height:',
+        document.documentElement.scrollHeight
+      );
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50); // Give smooth scroll time to complete
+  }, [currentSection, showResults, isStarted]);
+
+  const handleSectionComplete = (sectionAnswers) => {
+    const newAllAnswers = {
+      ...allAnswers,
+      [currentSection]: sectionAnswers,
+    };
+
+    setAllAnswers(newAllAnswers);
+
+    // Move to the next section or show results if all sections are complete
+    if (currentSection < shuffledQuestions.length - 1) {
+      setCurrentSection(currentSection + 1);
+      // Scroll to top after changing section
+    } else {
+      // Calculate final position
+      const position = calculatePosition(newAllAnswers, shuffledQuestions);
+      setCompassPosition(position);
+      setShowResults(true);
+      // Scroll to top when showing results
+    }
+  };
+
+  if (!isStarted) {
+    return (
+      <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
+        <div className="max-w-3xl w-full p-8 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/30">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold mb-4 text-cyan-400 font-mono">
+              AI SAFETY COMPASS
+            </h1>
+            <p className="text-slate-300">
+              Discover where you stand on key AI safety and governance issues
+            </p>
+          </div>
+
+          <div className="mb-8 bg-slate-900 p-6 rounded-lg border border-slate-700">
+            <h2 className="text-xl font-semibold mb-4 text-cyan-300">
+              About This Test
+            </h2>
+            <p className="text-slate-300 mb-4">
+              The AI Safety Compass maps your views on two key dimensions of AI
+              governance:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <h3 className="font-semibold text-cyan-400 mb-2">
+                  Alignment Axis
+                </h3>
+                <p className="text-sm text-slate-300">
+                  From &ldquo;No Alignment&rdquo; (skeptical of AI risks) to
+                  &ldquo;Pro Alignment&rdquo; (prioritizing AI safety research)
+                </p>
+              </div>
+
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <h3 className="font-semibold text-cyan-400 mb-2">
+                  Access Axis
+                </h3>
+                <p className="text-sm text-slate-300">
+                  From &ldquo;Closed Source&rdquo; (restricted access to AI) to
+                  &ldquo;Open Source&rdquo; (democratized access to AI)
+                </p>
+              </div>
+            </div>
+
+            <p className="text-slate-300 text-sm">
+              Answer honestly to get the most accurate results. There are{' '}
+              {questionsData.reduce(
+                (total, section) => total + section.questions.length,
+                0
+              )}{' '}
+              questions across {questionsData.length} sections.
+            </p>
+          </div>
+
+          {/* Add the AI Models Compass */}
+          <div className="mb-8">
+            <LandingCompass />
+          </div>
+
+          <div className="text-center">
+            <button
+              onClick={() => setIsStarted(true)}
+              className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-cyan-500/20 text-lg"
+            >
+              Start the Test
+            </button>
+
+            <Link
+              href="/model-responses"
+              className="block mt-4 text-cyan-500 hover:text-cyan-400"
+            >
+              View AI Model Responses →
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </div>
+    );
+  }
+
+  // Wait until questions are shuffled before rendering
+  if (shuffledQuestions.length === 0) {
+    return (
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <p className="text-cyan-400">Loading questions...</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-slate-900 text-white py-8 px-4">
+      {!showResults ? (
+        <div className="mb-8">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-cyan-400 font-mono">
+              AI SAFETY COMPASS
+            </h1>
+            <p className="text-slate-400 mt-2">
+              Section {currentSection + 1} of {shuffledQuestions.length}
+            </p>
+          </div>
+
+          <QuestionSection
+            section={shuffledQuestions[currentSection]}
+            onSectionComplete={handleSectionComplete}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      ) : (
+        <Results xValue={compassPosition.x} yValue={compassPosition.y} />
+      )}
     </div>
   );
 }
