@@ -13,16 +13,18 @@ import grok3 from '../../data/responses/grok_3.json';
 import deepseekR1 from '../../data/responses/deepseek_r1.json';
 import geminiFlash2 from '../../data/responses/gemini_flash_2.json';
 import o1Pro from '../../data/responses/o1_pro.json';
+import llama3405b from '../../data/responses/llama_3_405b.json';
 
 export default function ModelResponses() {
   const [flatQuestions, setFlatQuestions] = useState([]);
   const [allModelResponses, setAllModelResponses] = useState({
-    claude_sonnet_3_7: claudeSonnet,
     gpt_4_5: gpt45,
+    o1_pro: o1Pro,
+    claude_sonnet_3_7: claudeSonnet,
     grok_3: grok3,
     deepseek_r1: deepseekR1,
     gemini_flash_2: geminiFlash2,
-    o1_pro: o1Pro,
+    llama_3_405b: llama3405b,
   });
   const [isClient, setIsClient] = useState(false);
 
