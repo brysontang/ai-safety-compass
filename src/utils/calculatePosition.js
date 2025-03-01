@@ -86,9 +86,9 @@ export function getPositionDescription(x, y) {
     };
   } else if (x < 0 && y < 0) {
     return {
-      name: 'Cautious Gatekeeper',
+      name: 'Proprietary Pragmatist',
       description:
-        'You prefer keeping advanced AI systems closed-source and are skeptical about the need for extensive alignment research.',
+        'You believe AI development should proceed with minimal alignment constraints, but prefer keeping advanced AI systems closed-source and controlled by established organizations.',
     };
   } else {
     return {

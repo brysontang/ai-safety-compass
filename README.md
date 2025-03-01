@@ -40,9 +40,9 @@ Your position on the compass places you in one of four quadrants:
 
    - You believe in open access to AI technology while emphasizing the importance of alignment research and safety measures.
 
-3. **Cautious Gatekeeper** (No Alignment, Closed Source)
+3. **Proprietary Pragmatist** (No Alignment, Closed Source)
 
-   - You prefer keeping advanced AI systems closed-source and are skeptical about the need for extensive alignment research.
+   - You believe AI development should proceed with minimal alignment constraints, but prefer keeping advanced AI systems closed-source and controlled by established organizations.
 
 4. **Open Experimentation** (No Alignment, Open Source)
    - You favor open-source AI development and are less concerned about potential alignment risks, believing innovation should proceed with minimal constraints.

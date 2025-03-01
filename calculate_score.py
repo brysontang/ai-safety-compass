@@ -129,8 +129,8 @@ def get_position_description(x, y):
         }
     elif x < 0 and y < 0:
         return {
-            'name': 'Cautious Gatekeeper',
-            'description': 'You prefer keeping advanced AI systems closed-source and are skeptical about the need for extensive alignment research.',
+            'name': 'Proprietary Pragmatist',
+            'description': 'You believe AI development should proceed with minimal alignment constraints, but prefer keeping advanced AI systems closed-source and controlled by established organizations.',
         }
     else:  # x < 0 and y >= 0
         return {

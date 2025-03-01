@@ -30,7 +30,7 @@ const LandingCompass = () => {
             yValue={0}
             aiModels={aiModels}
             showUserPosition={false}
-            defaultView={true}
+            defaultView={false}
           />
         )}
       </div>
