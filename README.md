@@ -2,6 +2,8 @@
 
 The AI Safety Compass is a tool for evaluating and visualizing perspectives on AI safety, governance, and development. It maps responses to a series of questions onto a two-dimensional compass with axes representing alignment priorities and open vs. closed source preferences.
 
+If you would like to try the AI Safety Compass, visit: https://ai-safety-compass.vercel.app
+
 ## Overview
 
 The AI Safety Compass consists of:

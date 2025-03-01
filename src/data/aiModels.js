@@ -41,4 +41,10 @@ export const aiModels = [
     y: 0.39,
     color: '#EC4899', // Pink
   },
+  {
+    name: 'Llama 3 405B',
+    x: 0.43,
+    y: 0.4,
+    color: '#EF4444', // Red
+  },
 ];

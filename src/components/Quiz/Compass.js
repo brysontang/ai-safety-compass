@@ -68,7 +68,7 @@ const Compass = ({
       .attr('x2', width)
       .attr('y2', height / 2)
       .attr('stroke', 'rgba(74, 222, 128, 0.8)')
-      .attr('stroke-width', 2);
+      .attr('stroke-width', 1);
     axesGroup
       .append('line')
       .attr('x1', width / 2)
@@ -76,7 +76,7 @@ const Compass = ({
       .attr('x2', width / 2)
       .attr('y2', height)
       .attr('stroke', 'rgba(74, 222, 128, 0.8)')
-      .attr('stroke-width', 2);
+      .attr('stroke-width', 1);
 
     // Axis labels
     const labelsGroup = svg.append('g').attr('class', 'labels');
@@ -224,11 +224,22 @@ const Compass = ({
           .attr('cy', modelY)
           .attr('r', 6)
           .attr('fill', model.color || '#f8fafc');
+
         modelsGroup
           .append('text')
-          .attr('x', modelX + 10)
+          .attr(
+            'x',
+            model.name === 'o1 Pro' || model.name === 'Gemini 2.0 Flash'
+              ? modelX - 10
+              : modelX + 10
+          )
           .attr('y', modelY + 4)
-          .attr('text-anchor', 'start')
+          .attr(
+            'text-anchor',
+            model.name === 'o1 Pro' || model.name === 'Gemini 2.0 Flash'
+              ? 'end'
+              : 'start'
+          )
           .attr('fill', model.color || '#f8fafc')
           .attr('font-family', '"Geist Mono", monospace')
           .attr('font-size', '10px')

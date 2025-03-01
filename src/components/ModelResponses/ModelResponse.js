@@ -3,6 +3,7 @@ import { getPositionDescription } from '../../utils/calculatePosition';
 export default function ModelResponse({
   response,
   modelName,
+  model,
   modelPosition,
   question,
 }) {
@@ -60,42 +61,27 @@ export default function ModelResponse({
           </div>
 
           <div className="flex items-center flex-col">
-            <div className="relative w-16 h-16 border border-slate-600 rounded mb-2">
+            <div className="relative w-16 h-16 border border-slate-600 rounded mb-2 group">
               {/* Simple compass visualization */}
               <div className="absolute inset-0 flex items-center justify-center">
+                {/* Quadrant backgrounds with hover effects */}
+                <div className="absolute w-1/2 h-1/2 left-0 top-0 bg-purple-600/0 group-hover:bg-purple-600/30 transition-colors duration-300"></div>
+                <div className="absolute w-1/2 h-1/2 right-0 top-0 bg-teal-600/0 group-hover:bg-teal-600/30 transition-colors duration-300"></div>
+                <div className="absolute w-1/2 h-1/2 left-0 bottom-0 bg-amber-500/0 group-hover:bg-amber-500/30 transition-colors duration-300"></div>
+                <div className="absolute w-1/2 h-1/2 right-0 bottom-0 bg-rose-500/0 group-hover:bg-rose-500/30 transition-colors duration-300"></div>
+
                 {/* Vertical line */}
                 <div className="absolute h-full w-px bg-slate-600"></div>
                 {/* Horizontal line */}
                 <div className="absolute w-full h-px bg-slate-600"></div>
-
                 {/* Answer position dot */}
-                {response.score !== undefined && (
+                {modelPosition && (
                   <div
-                    className="absolute w-2 h-2 rounded-full bg-yellow-500"
+                    className="absolute w-2 h-2 rounded-full"
                     style={{
-                      left: question.axes.some((a) => a.axis === 'alignment')
-                        ? `${
-                            (((response.score *
-                              (question.axes.find((a) => a.axis === 'alignment')
-                                ?.multiplier || 1)) /
-                              2 +
-                              1) /
-                              2) *
-                            100
-                          }%`
-                        : '50%',
-                      top: question.axes.some((a) => a.axis === 'openVsClosed')
-                        ? `${
-                            (((response.score *
-                              (question.axes.find(
-                                (a) => a.axis === 'openVsClosed'
-                              )?.multiplier || 1)) /
-                              2 +
-                              1) /
-                              2) *
-                            100
-                          }%`
-                        : '50%',
+                      backgroundColor: '#3b82f6',
+                      left: `${((modelPosition.x + 1) / 2) * 100}%`,
+                      top: `${((1 + modelPosition.y) / 2) * 100}%`,
                       transform: 'translate(-50%, -50%)',
                     }}
                   ></div>
@@ -103,7 +89,7 @@ export default function ModelResponse({
               </div>
             </div>
 
-            <div className="text-slate-400 text-xs">Question Vector</div>
+            <div className="text-slate-400 text-xs">Model Position</div>
           </div>
         </div>
       </div>
