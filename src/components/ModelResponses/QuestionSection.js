@@ -6,14 +6,22 @@ export default function QuestionSection({
   getModelPosition,
   getModelDisplayName,
 }) {
+  // Sort questions by id
+  const sortedQuestions = [...section.questions].sort((a, b) => {
+    // Extract the numeric part after the hyphen (e.g., "0-1" -> "1")
+    const idA = a.id.split('-')[1];
+    const idB = b.id.split('-')[1];
+    return parseInt(idA) - parseInt(idB);
+  });
+
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4">
+      <h2 className="text-2xl font-bold text-cyan-200 mb-4">
         {section.sectionTitle}
       </h2>
 
-      <div className="space-y-4">
-        {section.questions.map((question) => (
+      <div>
+        {sortedQuestions.map((question) => (
           <QuestionItem
             key={question.id}
             question={question}

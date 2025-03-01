@@ -84,8 +84,8 @@ export default function Home() {
 
   if (!isStarted) {
     return (
-      <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
-        <div className="max-w-3xl w-full p-8 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/30">
+      <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-2">
+        <div className="max-w-4xl w-full p-8 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/30">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-4 text-cyan-400 font-mono">
               AI SAFETY COMPASS
@@ -171,7 +171,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white py-8 px-4">
+    <div className="min-h-screen bg-slate-900 text-white py-8 px-2">
       {!showResults ? (
         <div className="mb-8">
           <div className="text-center mb-8">
