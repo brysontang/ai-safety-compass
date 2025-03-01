@@ -45,6 +45,6 @@ export const aiModels = [
     name: 'Llama 3 405B',
     x: 0.43,
     y: 0.4,
-    color: '#EF4444', // Red
+    color: '#00FFFF', // Neon cyan
   },
 ];
