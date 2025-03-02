@@ -63,7 +63,3 @@
 
 - Sources: This article
 - Agree: [[No-alignment]]
-
-[The AI Alignment Paradox]
-
-[]
