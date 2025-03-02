@@ -21,17 +21,17 @@
 
 [Towards a Theory of AI Personhood]
 
-4. Because human values evolve over time, aligning AI systems to today's values risks permanently embedding outdated or unwanted values.
+4. Because human values change over time, aligning AI to today's values risks locking in outdated beliefs.
 
 - Sources: (Carroll et al. 2024).
 - Agree: [[No-alignment]]
 
-5. AI systems capable of reflecting on their own goals and values will inevitably become too difficult for humans to reliably control
+5. AI systems that reflect on their own goals and values will eventually become too difficult for humans to reliably control.
 
 - Sources: (Carlsmith, 2023; Soares, 2022)
 - Agree: [[No-alignment]]
 
-6. If advanced AI systems deserve moral rights similar to humans or animals, aligning them strictly to human values is ethically unnecessary.
+6. If advanced AI systems deserve moral consideration similar to humans or animals, strictly aligning them to human values may be ethically inappropriate."
 
 - Sources: (Sebo & Long, 2023; Schwitzgebel & Garza, 2015; Tomasik, 2020), this paper
 - Agree: [[No-alignment]]
@@ -45,21 +45,21 @@
 
 [Andrew Ng: Why AI Is the New Electricity](https://www.gsb.stanford.edu/insights/andrew-ng-why-ai-new-electricity)
 
-8. Addressing immediate AI-related challenges like job displacement should be a higher priority than worrying about speculative long-term threats.
+8. Addressing immediate AI challenges like job displacement is more important than focusing on theoretical future risks.
 
 - Sources: This article
 - Agree: [[No-alignment]]
 
 [The bitter lesson]
 
-9. AI systems will become aligned with human values naturally as they become smarter, so explicitly teaching them morality is unnecessary.
+9. AI systems will naturally align with human values as they become smarter, making explicit moral training unnecessary.
 
 - Sources: This article
 - Agree: [[No-alignment]]
 
 [https://time.com/6260185/elon-musk-ai-culture-wars/]
 
-10. Imposing heavy content filters on AI outputs makes the AI less useful and is essentially a form of censorship.
+10. Strict content filtering makes AI less useful and amounts to unnecessary censorship.
 
 - Sources: This article
 - Agree: [[No-alignment]]
