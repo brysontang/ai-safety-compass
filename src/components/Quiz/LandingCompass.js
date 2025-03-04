@@ -26,8 +26,8 @@ const LandingCompass = () => {
 
         {isClient && (
           <Compass
-            xValue={-0.13}
-            yValue={0.42}
+            xValue={0}
+            yValue={0}
             aiModels={aiModels}
             showUserPosition={false}
             defaultView={true}

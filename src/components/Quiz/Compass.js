@@ -278,7 +278,7 @@ const Compass = ({
           .attr('x1', modelX)
           .attr('y1', modelY)
           .attr('x2', isLeft ? labelX - 10 : labelX + 10)
-          .attr('y2', labelY)
+          .attr('y2', labelY + 10)
           .attr('stroke', model.color || '#f8fafc')
           .attr('stroke-width', 1)
           .attr('stroke-dasharray', '4');
@@ -287,7 +287,7 @@ const Compass = ({
         modelsGroup
           .append('text')
           .attr('x', labelX)
-          .attr('y', labelY)
+          .attr('y', labelY + 10)
           .attr('text-anchor', isLeft ? 'start' : 'end')
           .attr('dy', '.35em')
           .attr('fill', model.color || '#f8fafc')
@@ -297,7 +297,53 @@ const Compass = ({
           .text(model.name);
       });
 
-      // Rest of your existing code (user position, etc.) remains here
+      if (showUserPosition) {
+        const posX = (normalizedX + 1) * (width / 2);
+        const posY = (normalizedY + 1) * (height / 2);
+
+        const defs = svg.append('defs');
+        const gradient = defs
+          .append('radialGradient')
+          .attr('id', 'userGlow')
+          .attr('cx', '50%')
+          .attr('cy', '50%')
+          .attr('r', '50%');
+        gradient
+          .append('stop')
+          .attr('offset', '0%')
+          .attr('stop-color', 'rgba(34, 211, 238, 1)');
+        gradient
+          .append('stop')
+          .attr('offset', '70%')
+          .attr('stop-color', 'rgba(34, 211, 238, 0.3)');
+        gradient
+          .append('stop')
+          .attr('offset', '100%')
+          .attr('stop-color', 'rgba(34, 211, 238, 0)');
+
+        svg
+          .append('circle')
+          .attr('cx', posX)
+          .attr('cy', posY)
+          .attr('r', 20)
+          .attr('fill', 'url(#userGlow)');
+        svg
+          .append('circle')
+          .attr('cx', posX)
+          .attr('cy', posY)
+          .attr('r', 8)
+          .attr('fill', '#22d3ee');
+        svg
+          .append('text')
+          .attr('x', posX + 15)
+          .attr('y', posY + 5)
+          .attr('text-anchor', 'start')
+          .attr('fill', '#22d3ee')
+          .attr('font-family', '"Geist Mono", monospace')
+          .attr('font-size', '12px')
+          .style('pointer-events', 'none')
+          .text('You');
+      }
     }
   }, [normalizedX, normalizedY, aiModels, showUserPosition, defaultView]);
 
