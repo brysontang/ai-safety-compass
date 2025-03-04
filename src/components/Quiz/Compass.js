@@ -299,20 +299,6 @@ const Compass = ({
 
       // Rest of your existing code (user position, etc.) remains here
     }
-
-    if (showUserPosition) {
-      // Plot the user position
-      modelsGroup
-        .append('circle')
-        .attr('cx', normalizedX * (width / 2))
-        .attr('cy', normalizedY * (height / 2))
-        .attr('r', 9)
-        .attr('fill', 'rgba(248, 250, 252, 0.9)')
-        .attr('font-family', '"Geist Mono", monospace')
-        .attr('font-size', '14px')
-        .style('pointer-events', 'none')
-        .text('Your Position');
-    }
   }, [normalizedX, normalizedY, aiModels, showUserPosition, defaultView]);
 
   return (
