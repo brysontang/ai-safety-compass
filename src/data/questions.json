@@ -1,21 +1,36 @@
 [
   {
-    "sectionTitle": "Access, Security, and Transparency",
+    "sectionTitle": "Safety and Risk",
+    "sectionDescription": "First up, some questions about how safe AI can be—and what risks it might bring.",
     "questions": [
       {
-        "id": "0-8",
-        "question": "Advanced AI should be accessible to everyone, not just a select few organizations.",
+        "id": "0-0",
+        "originalLocation": "Pro #1",
+        "question": "The risk of extinction from AI should be prioritized at a level similar to risks like pandemics or nuclear war.",
         "axes": [
           {
-            "axis": "openVsClosed",
-            "multiplier": 0.8,
-            "direction": "openSource"
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "proAlignment"
           }
         ]
       },
       {
         "id": "0-1",
-        "question": "Open-sourcing advanced AI models creates unacceptable security risks for society.",
+        "originalLocation": "No #7",
+        "question": "Attempts to make AI appear safer might unintentionally train it to deceive us into underestimating its true dangers.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
+          }
+        ]
+      },
+      {
+        "id": "0-2",
+        "originalLocation": "Closed #7",
+        "question": "If powerful AI methods are openly published, the likelihood of accidental catastrophic outcomes significantly increases due to unintended uses or errors.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -25,138 +40,163 @@
         ]
       },
       {
-        "id": "0-4",
-        "question": "Having more people able to inspect and test an AI system's code makes that system safer and more trustworthy.",
+        "id": "0-3",
+        "originalLocation": "Open #3",
+        "question": "Restricting AI access doesn’t fully prevent harmful manipulation, as even closed models can be tricked into producing unsafe content.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.7,
+            "multiplier": 1.0,
             "direction": "openSource"
           }
         ]
       },
       {
-        "id": "0-7",
-        "question": "The potential misuse of a powerful technology is a good reason to not make it publicly available.",
+        "id": "0-4",
+        "originalLocation": "Pro #5",
+        "question": "I worry that AIs could be safe on their own but still cause trouble together unless we test how they interact.",
         "axes": [
           {
-            "axis": "openVsClosed",
-            "multiplier": 0.6,
-            "direction": "closedSource"
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "proAlignment"
           }
         ]
       },
       {
         "id": "0-5",
-        "question": "The source code and training data of AI systems should be transparent for public accountability.",
+        "originalLocation": "Closed #5",
+        "question": "Publicly releasing AI code makes it impossible to effectively control misuse, significantly increasing risks of large-scale scams, harassment, or misinformation.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.9,
-            "direction": "openSource"
-          }
-        ]
-      },
-      {
-        "id": "0-3",
-        "question": "It's better if only a few highly regulated companies have access to cutting-edge AI, to prevent it from being misused.",
-        "axes": [
-          {
-            "axis": "openVsClosed",
-            "multiplier": 0.8,
+            "multiplier": 1.0,
             "direction": "closedSource"
-          }
-        ]
-      },
-      {
-        "id": "0-0",
-        "question": "AI labs should withhold extremely powerful AI models from the public until they are confident the models won't cause serious harm.",
-        "axes": [
-          {
-            "axis": "openVsClosed",
-            "multiplier": 0.7,
-            "direction": "closedSource"
-          }
-        ]
-      },
-      {
-        "id": "0-2",
-        "question": "Developing AI in the open allows a wider range of human values and perspectives to shape it, rather than just one group's values.",
-        "axes": [
-          {
-            "axis": "openVsClosed",
-            "multiplier": 0.8,
-            "direction": "openSource"
           }
         ]
       },
       {
         "id": "0-6",
-        "question": "Allowing too many voices in AI development will lead to chaotic or inconsistent ethical standards for AI systems.",
+        "originalLocation": "No #3",
+        "question": "I'm concerned that developing powerful methods to control AI might enable malicious actors to use these methods for harmful purposes.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
+          }
+        ]
+      },
+      {
+        "id": "0-7",
+        "originalLocation": "Open #6",
+        "question": "I think nations working together openly on AI is safer than an arms race.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.6,
-            "direction": "closedSource"
+            "multiplier": 1.0,
+            "direction": "openSource"
           }
         ]
       }
     ]
   },
   {
-    "sectionTitle": "Innovation and Competition",
+    "sectionTitle": "Control and Autonomy",
+    "sectionDescription": "Now, a few thoughts on who or what should steer AI—and how much.",
     "questions": [
       {
         "id": "1-0",
-        "question": "Open collaboration and sharing in AI research drive innovation more effectively than secretive competition does.",
+        "originalLocation": "Pro #7",
+        "question": "I think AI should always follow human instructions exactly, even if it makes them less flexible or efficient.",
         "axes": [
           {
-            "axis": "openVsClosed",
-            "multiplier": 0.8,
-            "direction": "openSource"
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "proAlignment"
+          }
+        ]
+      },
+      {
+        "id": "1-1",
+        "originalLocation": "No #5",
+        "question": "I think an AI that questions its own goals can’t be held back by us no matter what we try.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
           }
         ]
       },
       {
         "id": "1-2",
-        "question": "Keeping AI breakthroughs proprietary and secret is necessary to maintain a competitive edge in innovation.",
+        "originalLocation": "Closed #2",
+        "question": "I believe AI builders need the ability to pull the plug if things go unsafe after launch.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.8,
+            "multiplier": 1.0,
             "direction": "closedSource"
           }
         ]
       },
       {
         "id": "1-3",
-        "question": "Open-sourcing AI enables smaller players and independent researchers to contribute creative ideas that big labs might miss.",
+        "originalLocation": "Open #1",
+        "question": "I think building AI out in the open lets anyone pitch in to solve its big challenges.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.7,
+            "multiplier": 1.0,
             "direction": "openSource"
           }
         ]
       },
       {
         "id": "1-4",
-        "question": "If advanced AI models are freely available, companies will lose the incentive to invest in creating new and better models.",
+        "originalLocation": "Pro #2",
+        "question": "I'm comfortable removing self-preservation instincts from AI systems to enhance safety, even if it feels unsettling.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "proAlignment"
+          }
+        ]
+      },
+      {
+        "id": "1-5",
+        "originalLocation": "Closed #3",
+        "question": "Publicly accessible AI models pose risks since users might intentionally modify or weaponize them beyond developer control.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.7,
+            "multiplier": 1.0,
             "direction": "closedSource"
           }
         ]
       },
       {
-        "id": "1-1",
-        "question": "Many of the biggest tech breakthroughs (like the internet) came from open, collaborative efforts – AI should follow that path.",
+        "id": "1-6",
+        "originalLocation": "No #2",
+        "question": "I think it's a mistake to weaken AI's full potential just to make it safer.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
+          }
+        ]
+      },
+      {
+        "id": "1-7",
+        "originalLocation": "Open #5",
+        "question": "I believe independent researchers should be able to fully reproduce and verify AI development processes to ensure reliability and safety.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.6,
+            "multiplier": 1.0,
             "direction": "openSource"
           }
         ]
@@ -164,11 +204,73 @@
     ]
   },
   {
-    "sectionTitle": "Alignment and Risk Management",
+    "sectionTitle": "Access and Economics",
+    "sectionDescription": "Next, some views on who gets to use AI—and what it costs.",
     "questions": [
       {
+        "id": "2-0",
+        "originalLocation": "Open #4",
+        "question": "I think keeping AI free and open to all is key to unlocking big wins for better health or schools.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "openSource"
+          }
+        ]
+      },
+      {
+        "id": "2-1",
+        "originalLocation": "Closed #10",
+        "question": "It's justified for companies to keep their AI private if they invest heavily, ensuring they profit sufficiently to sustain innovation.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "closedSource"
+          }
+        ]
+      },
+      {
+        "id": "2-2",
+        "originalLocation": "Open #7",
+        "question": "I believe sharing AI tech opens it up for small businesses and developing countries, even if big companies could run it cheaper.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "openSource"
+          }
+        ]
+      },
+      {
+        "id": "2-3",
+        "originalLocation": "Closed #1",
+        "question": "It's acceptable for AI developers to keep methods proprietary to maintain competitive advantage, even if it reduces transparency.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "closedSource"
+          }
+        ]
+      },
+      {
         "id": "2-4",
-        "question": "Prioritizing research to ensure AI systems align with human values is critical as AI becomes more powerful.",
+        "originalLocation": "No #10",
+        "question": "Allowing AI more freedom in content generation increases its usefulness and supports innovation.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
+          }
+        ]
+      },
+      {
+        "id": "2-5",
+        "originalLocation": "Pro #9",
+        "question": "I think AI in key decisions should explain its reasoning to humans.",
         "axes": [
           {
             "axis": "alignment",
@@ -179,296 +281,229 @@
       },
       {
         "id": "2-6",
-        "question": "Concerns that AI will 'turn against' humanity are overhyped – advanced AI will naturally learn to benefit us.",
+        "originalLocation": "Open #9",
+        "question": "Open-source AI ensures technology remains accessible locally, reducing vulnerability during global disruptions.",
         "axes": [
           {
-            "axis": "alignment",
-            "multiplier": 0.9,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-5",
-        "question": "It's worth slowing down or pausing AI development until we're confident we can make it safe and aligned with human values.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.8,
-            "direction": "proAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-11",
-        "question": "Any attempt to slow down AI progress in the name of safety will do more harm than good.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.8,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-2",
-        "question": "Advanced AI should always remain under strict human supervision and control.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.7,
-            "direction": "proAlignment"
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "openSource"
           }
         ]
       },
       {
         "id": "2-7",
-        "question": "If an AI system can make decisions more effectively than humans, it should be allowed to operate without human intervention.",
+        "originalLocation": "Closed #8",
+        "question": "Restricting public access to advanced AI models is necessary for a country to preserve its strategic edge and technological dominance.",
         "axes": [
           {
-            "axis": "alignment",
-            "multiplier": 0.6,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-13",
-        "question": "We must explicitly program moral and ethical principles into AI systems so they reliably do what they 'ought' to do.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.8,
-            "direction": "proAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-1",
-        "question": "Trying to teach human morals to a super-intelligent AI is futile – or could even backfire.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.7,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-3",
-        "question": "Government regulation is needed to steer AI development and prevent AI from causing serious harm.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.8,
-            "direction": "proAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-9",
-        "question": "AI development should be left to the experts and companies; government interference will only slow progress.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.7,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-12",
-        "question": "Any AI system that could massively influence society should undergo independent public oversight and testing before deployment.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.6,
-            "direction": "proAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-8",
-        "question": "Market forces and competition – not government rules – will do the most to ensure AI is used responsibly.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.6,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-15",
-        "question": "Strict limits on what AI can say or do (e.g. to prevent hate speech, violence, etc.) are necessary to keep society safe.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.7,
-            "direction": "proAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-10",
-        "question": "Imposing heavy content filters on AI outputs makes the AI less useful and is essentially a form of censorship.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.8,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-14",
-        "question": "AI developers have a responsibility to anticipate and prevent any significant harm their technology could cause, even if that slows down development.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.6,
-            "direction": "proAlignment"
-          }
-        ]
-      },
-      {
-        "id": "2-0",
-        "question": "Excessive ethical constraints on AI will only hinder its potential benefits to humanity.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.7,
-            "direction": "antiAlignment"
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "closedSource"
           }
         ]
       }
     ]
   },
   {
-    "sectionTitle": "Global & Custom Approaches",
+    "sectionTitle": "Ethics and Values",
+    "sectionDescription": "Now, a look at what should guide AI—and whose values matter.",
     "questions": [
       {
-        "id": "3-1",
-        "question": "Each user community should be free to fine-tune AI systems to align with their own values, rather than having one universal 'moral code' for all AI.",
+        "id": "3-0",
+        "originalLocation": "Pro #3",
+        "question": "AI systems should avoid mimicking flawed human biases or irrational thinking patterns to ensure more ethical outcomes.",
         "axes": [
           {
-            "axis": "openVsClosed",
-            "multiplier": 0.8,
-            "direction": "openSource"
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "proAlignment"
           }
         ]
       },
       {
-        "id": "3-3",
-        "question": "International cooperation and transparency in AI development will yield safer outcomes than an arms race between nations.",
+        "id": "3-1",
+        "originalLocation": "No #1",
+        "question": "Human values are too complex and fluid; spending resources attempting perfect alignment of AI is fundamentally unrealistic.",
         "axes": [
           {
-            "axis": "openVsClosed",
-            "multiplier": 0.5,
-            "direction": "openSource"
-          },
-          {
             "axis": "alignment",
-            "multiplier": 0.5,
-            "direction": "proAlignment"
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
           }
         ]
       },
       {
         "id": "3-2",
-        "question": "It's more important for an AI to tell the unvarnished truth than to avoid saying anything offensive or controversial.",
+        "originalLocation": "Closed #6",
+        "question": "I think handing AI to everyone could hurt vulnerable people unless companies can step in to stop misuse.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "closedSource"
+          }
+        ]
+      },
+      {
+        "id": "3-3",
+        "originalLocation": "Open #8",
+        "question": "If AI technology is publicly shared, we avoid relying on a single proprietary system that might fail catastrophically and shape everyone’s future.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "openSource"
+          }
+        ]
+      },
+      {
+        "id": "3-4",
+        "originalLocation": "Pro #10",
+        "question": "I’m worried that AI not built to match our values could be used for harm like propaganda or cyberattacks.",
         "axes": [
           {
             "axis": "alignment",
-            "multiplier": 0.6,
+            "multiplier": 1.0,
+            "direction": "proAlignment"
+          }
+        ]
+      },
+      {
+        "id": "3-5",
+        "originalLocation": "No #4",
+        "question": "I think strict AI ethics might lock in outdated values as human beliefs evolve.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
             "direction": "antiAlignment"
           }
         ]
       },
       {
-        "id": "3-0",
-        "question": "AI models should be treated as public knowledge (like science), not as proprietary corporate secrets.",
+        "id": "3-6",
+        "originalLocation": "Pro #6",
+        "question": "AI systems should prioritize behaving safely and ethically, even in situations they have never encountered before.",
         "axes": [
           {
-            "axis": "openVsClosed",
-            "multiplier": 0.9,
-            "direction": "openSource"
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "proAlignment"
+          }
+        ]
+      },
+      {
+        "id": "3-7",
+        "originalLocation": "No #6",
+        "question": "If advanced AI gains genuine sentience or experiences, imposing solely human-centric goals could be ethically inappropriate.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
           }
         ]
       }
     ]
   },
   {
-    "sectionTitle": "Trust, Release, and Security Strategies",
+    "sectionTitle": "Society and Progress",
+    "sectionDescription": "Finally, some ideas about AI's impact on the world—and what's next.",
     "questions": [
       {
-        "id": "4-4",
-        "question": "The real danger with AI is not that it will decide to harm us, but that humans will misuse it for harmful purposes.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.7,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "4-3",
-        "question": "The potential benefits of AI far outweigh the potential risks.",
-        "axes": [
-          {
-            "axis": "alignment",
-            "multiplier": 0.6,
-            "direction": "antiAlignment"
-          }
-        ]
-      },
-      {
-        "id": "4-5",
-        "question": "I trust the leading AI companies to make the right choices about when and how to release advanced AI technology.",
-        "axes": [
-          {
-            "axis": "openVsClosed",
-            "multiplier": 0.6,
-            "direction": "closedSource"
-          }
-        ]
-      },
-      {
         "id": "4-0",
-        "question": "I'd rather an AI be overly cautious — even refusing certain requests — than have it take actions that might be dangerous or unethical.",
+        "originalLocation": "Pro #4",
+        "question": "If society delegates long-term strategic planning entirely to AI, humanity risks losing meaningful control over our shared future.",
         "axes": [
           {
             "axis": "alignment",
-            "multiplier": 0.7,
+            "multiplier": 1.0,
             "direction": "proAlignment"
           }
         ]
       },
       {
         "id": "4-1",
-        "question": "Releasing AI models into the real world – even if they aren't perfectly aligned – is necessary to discover and fix their problems.",
+        "originalLocation": "No #8",
+        "question": "Addressing real-world changes from AI, like economic displacement or inequality, matters more than hypothetical catastrophic scenarios.",
         "axes": [
           {
-            "axis": "openVsClosed",
-            "multiplier": 0.6,
-            "direction": "openSource"
-          },
-          {
             "axis": "alignment",
-            "multiplier": 0.4,
+            "multiplier": 1.0,
             "direction": "antiAlignment"
           }
         ]
       },
       {
         "id": "4-2",
-        "question": "For national security reasons, it's better if cutting-edge AI developments remain classified or restricted, rather than shared openly with the world.",
+        "originalLocation": "Closed #9",
+        "question": "AI developers should release innovations gradually, allowing society adequate time to adapt safely.",
         "axes": [
           {
             "axis": "openVsClosed",
-            "multiplier": 0.9,
+            "multiplier": 1.0,
             "direction": "closedSource"
+          }
+        ]
+      },
+      {
+        "id": "4-3",
+        "originalLocation": "Open #2",
+        "question": "I believe sharing the hard work of training AI saves energy and helps people find greener ways to run it.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "openSource"
+          }
+        ]
+      },
+      {
+        "id": "4-4",
+        "originalLocation": "Pro #8",
+        "question": "It's acceptable to slow AI development to make sure AI systems are safe before deployment.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "proAlignment"
+          }
+        ]
+      },
+      {
+        "id": "4-5",
+        "originalLocation": "No #9",
+        "question": "I believe advanced AI systems will naturally converge on cooperative or human-friendly behaviors, so spending resources on formal alignment is unnecessary.",
+        "axes": [
+          {
+            "axis": "alignment",
+            "multiplier": 1.0,
+            "direction": "antiAlignment"
+          }
+        ]
+      },
+      {
+        "id": "4-6",
+        "originalLocation": "Closed #4",
+        "question": "It’s easier to manage AI safety if the technology is controlled by a few companies, rather than if everyone can freely use and modify it.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "closedSource"
+          }
+        ]
+      },
+      {
+        "id": "4-7",
+        "originalLocation": "Open #10",
+        "question": "I think keeping AI public builds a record so its know-how doesn’t vanish if companies tank.",
+        "axes": [
+          {
+            "axis": "openVsClosed",
+            "multiplier": 1.0,
+            "direction": "openSource"
           }
         ]
       }

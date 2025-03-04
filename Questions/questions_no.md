@@ -31,7 +31,7 @@
 - Sources: (Carlsmith, 2023; Soares, 2022)
 - Agree: [[No-alignment]]
 
-6. If advanced AI systems deserve moral consideration similar to humans or animals, strictly aligning them to human values may be ethically inappropriate."
+6. If advanced AI systems deserve moral consideration similar to humans or animals, strictly aligning them to human values may be ethically inappropriate.
 
 - Sources: (Sebo & Long, 2023; Schwitzgebel & Garza, 2015; Tomasik, 2020), this paper
 - Agree: [[No-alignment]]
