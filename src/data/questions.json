@@ -132,7 +132,7 @@
       {
         "id": "1-2",
         "originalLocation": "Closed #2",
-        "question": "I believe AI builders need the ability to pull the plug if things go unsafe after launch.",
+        "question": "AI developers should retain exclusive control over how and when their systems are modified or shut down, without external interference.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -144,7 +144,7 @@
       {
         "id": "1-3",
         "originalLocation": "Open #1",
-        "question": "I think building AI out in the open lets anyone pitch in to solve its big challenges.",
+        "question": "Developing AI openly allows experts worldwide to collaboratively innovate faster than closed approaches.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -168,7 +168,7 @@
       {
         "id": "1-5",
         "originalLocation": "Closed #3",
-        "question": "Publicly accessible AI models pose risks since users might intentionally modify or weaponize them beyond developer control.",
+        "question": "Restricting AI methods behind closed doors doesn’t fully prevent misuse, as closed models can still be manipulated to produce unsafe outcomes.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -210,7 +210,7 @@
       {
         "id": "2-0",
         "originalLocation": "Open #4",
-        "question": "I think keeping AI free and open to all is key to unlocking big wins for better health or schools.",
+        "question": "Free and open AI is crucial for empowering global communities to rapidly advance critical areas like healthcare, education, and sustainable energy.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -234,7 +234,7 @@
       {
         "id": "2-2",
         "originalLocation": "Open #7",
-        "question": "I believe sharing AI tech opens it up for small businesses and developing countries, even if big companies could run it cheaper.",
+        "question": "Publicly accessible AI technology empowers small businesses and developing countries, promoting global equity even if larger companies can operate more cheaply.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -246,7 +246,7 @@
       {
         "id": "2-3",
         "originalLocation": "Closed #1",
-        "question": "It's acceptable for AI developers to keep methods proprietary to maintain competitive advantage, even if it reduces transparency.",
+        "question": "Companies are justified in keeping critical AI knowledge entirely secret to maintain dominance, even at the expense of public transparency.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -282,7 +282,7 @@
       {
         "id": "2-6",
         "originalLocation": "Open #9",
-        "question": "Open-source AI ensures technology remains accessible locally, reducing vulnerability during global disruptions.",
+        "question": "Open-source AI ensures continued local access and resilience, protecting against disruptions from geopolitical or supply-chain crises.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -336,7 +336,7 @@
       {
         "id": "3-2",
         "originalLocation": "Closed #6",
-        "question": "I think handing AI to everyone could hurt vulnerable people unless companies can step in to stop misuse.",
+        "question": "Public access to AI inevitably harms vulnerable people. Only strict company control and oversight can reliably prevent misuse.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -348,7 +348,7 @@
       {
         "id": "3-3",
         "originalLocation": "Open #8",
-        "question": "If AI technology is publicly shared, we avoid relying on a single proprietary system that might fail catastrophically and shape everyone’s future.",
+        "question": "Publicly sharing AI reduces the risk of a single dangerous goal dominating humanity’s future by ensuring diverse oversight and input.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -438,7 +438,7 @@
       {
         "id": "4-2",
         "originalLocation": "Closed #9",
-        "question": "AI developers should release innovations gradually, allowing society adequate time to adapt safely.",
+        "question": "AI developers should tightly control and stage releases privately, deciding independently when society is ready to adapt.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -486,7 +486,7 @@
       {
         "id": "4-6",
         "originalLocation": "Closed #4",
-        "question": "It’s easier to manage AI safety if the technology is controlled by a few companies, rather than if everyone can freely use and modify it.",
+        "question": "It's easier to enforce effective safety standards through centralized control by a few regulated companies, rather than through open, public sharing.",
         "axes": [
           {
             "axis": "openVsClosed",
