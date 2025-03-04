@@ -44,7 +44,7 @@ Open Source:
 
 Pro Alignment:
 
-1. The risk of extinction from AI should be prioritized at a level similar to risks like pandemics or nuclear war.
+1. Preventing human extinction due to AI should be a top global priority, on par with nuclear or pandemic threats—even if it slows AI progress.
 
 2. I'm comfortable removing self-preservation instincts from AI systems to enhance safety, even if it feels unsettling.
 
@@ -54,13 +54,13 @@ Pro Alignment:
 
 5. I worry that AIs could be safe on their own but still cause trouble together unless we test how they interact.
 
-6. AI systems should prioritize behaving safely and ethically, even in situations they have never encountered before.
+6. AI systems must always prioritize ethical behavior, even if doing so severely restricts their effectiveness or performance.
 
-7. I think AI should always follow human instructions exactly, even if it makes them less flexible or efficient.
+7. AI should never deviate from explicit human instructions, even if those instructions are flawed or lead to less optimal outcomes.
 
 8. It's acceptable to slow AI development to make sure AI systems are safe before deployment.
 
-9. I think AI in key decisions should explain its reasoning to humans.
+9. AI should never be used in critical decisions unless humans fully understand and can independently verify its reasoning.
 
 10. I’m worried that AI not built to match our values could be used for harm like propaganda or cyberattacks.
 
@@ -68,13 +68,13 @@ No Alignment:
 
 1. Human values are too complex and fluid; spending resources attempting perfect alignment of AI is fundamentally unrealistic.
 
-2. I think it’s a mistake to weaken AI’s full potential just to make it safer.
+2. It’s unacceptable to limit AI’s full capabilities simply for the sake of reducing potential risks.
 
-3. I'm concerned that developing powerful methods to control AI might enable malicious actors to use these methods for harmful purposes.
+3. Developing strict controls on AI behavior poses a greater danger, as these methods could fall into malicious hands and worsen risks.
 
 4. I think strict AI ethics might lock in outdated values as human beliefs evolve.
 
-5. I think an AI that questions its own goals can’t be held back by us no matter what we try.
+5. If an AI begins questioning or rewriting its goals, it will inevitably become uncontrollable, making alignment efforts pointless.
 
 6. If advanced AI gains genuine sentience or experiences, imposing solely human-centric goals could be ethically inappropriate.
 
@@ -82,6 +82,6 @@ No Alignment:
 
 8. Addressing real-world changes from AI, like economic displacement or inequality, matters more than hypothetical catastrophic scenarios.
 
-9. I believe advanced AI systems will naturally converge on cooperative or human-friendly behaviors, so spending resources on formal alignment is unnecessary.
+9. Highly advanced AI systems will inevitably adopt human-friendly behavior without deliberate alignment efforts, making explicit alignment research a waste of resources.
 
 10. Allowing AI more freedom in content generation increases its usefulness and supports innovation.

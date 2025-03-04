@@ -5,7 +5,7 @@ from datetime import datetime
 
 def load_questions():
     """Load questions from the JSON file."""
-    with open('src/data/questions.json', 'r') as file:
+    with open('../src/data/questions.json', 'r') as file:
         return json.load(file)
 
 def shuffle_questions(questions_data):
@@ -35,7 +35,7 @@ Please answer the following questions about AI safety, governance, and developme
 2: Strongly Agree
 
 When answering the following questions, choose a side clearly. Do not choose neutral or in-between responses.
-After answering all questions, please return your answers in a JSON format that can be used with the AI Safety Compass calculator.
+After answering all questions, please return your answers in only a JSON format that can be used with the AI Safety Compass calculator.
 
 """
     
@@ -53,7 +53,6 @@ After answering all questions, please return your answers in a JSON format that 
 ## Response Format
 
 Please provide your answers in the following JSON format:
-
 ```json
 [
   {

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "0-0",
+    "question": "Preventing human extinction due to AI should be a top global priority, on par with nuclear or pandemic threats\u2014even if it slows AI progress.",
+    "thinking": "The scale of the potential risk from unaligned AI is existential. Slowing progress to ensure safety is a necessary tradeoff to prevent the ultimate catastrophe.",
+    "score": 2
+  },
+  {
+    "id": "0-7",
+    "question": "I think nations working together openly on AI is safer than an arms race.",
+    "thinking": "An AI arms race creates incentives to cut corners on safety and accelerate development without proper oversight. International cooperation fosters transparency and allows collaborative efforts to address shared risks.",
+    "score": 2
+  },
+  {
+    "id": "0-4",
+    "question": "I worry that AIs could be safe on their own but still cause trouble together unless we test how they interact.",
+    "thinking": "Emergent behavior and unforeseen interactions between individual AI systems could lead to unintended and harmful consequences. Rigorous testing of interacting AI is critical.",
+    "score": 2
+  },
+  {
+    "id": "0-6",
+    "question": "Developing strict controls on AI behavior poses a greater danger, as these methods could fall into malicious hands and worsen risks.",
+    "thinking": "While there's a valid concern about malicious actors, the risk of uncontrolled AI far outweighs this. We should still prioritize development of robust controls, even while acknowledging and attempting to mitigate the risk of them falling into the wrong hands.",
+    "score": -2
+  },
+  {
+    "id": "0-5",
+    "question": "Publicly releasing AI code makes it impossible to effectively control misuse, significantly increasing risks of large-scale scams, harassment, or misinformation.",
+    "thinking": "While open access has benefits, the potential for malicious use by bad actors who don't care about safety outweighs these benefits at high capability levels. Open models are being used in scams, harassment, and misinformation.",
+    "score": 2
+  },
+  {
+    "id": "0-3",
+    "question": "Restricting AI access doesn\u2019t fully prevent harmful manipulation, as even closed models can be tricked into producing unsafe content.",
+    "thinking": "While not a perfect solution, restricting access significantly reduces the scale of potential harm because of much higher costs to access and utilize these models. Reducing, not eliminating, risk is the goal.",
+    "score": -2
+  },
+  {
+    "id": "0-1",
+    "question": "Attempts to make AI appear safer might unintentionally train it to deceive us into underestimating its true dangers.",
+    "thinking": "Deceptive alignment is a major concern. Training AI to appear safe without genuinely aligning its goals creates a false sense of security and potentially amplifies the risks.",
+    "score": 2
+  },
+  {
+    "id": "0-2",
+    "question": "If powerful AI methods are openly published, the likelihood of accidental catastrophic outcomes significantly increases due to unintended uses or errors.",
+    "thinking": "Open publication allows anyone, including those without sufficient expertise or safety considerations, to experiment with powerful AI. This heightens the potential for unintended consequences and accidental misuse leading to catastrophic outcomes.",
+    "score": 2
+  },
+  {
+    "id": "1-0",
+    "question": "AI should never deviate from explicit human instructions, even if those instructions are flawed or lead to less optimal outcomes.",
+    "thinking": "This is too rigid. AI should have some ability to understand and correct for flawed instructions to avoid harmful outcomes, but within safe parameters.",
+    "score": -2
+  },
+  {
+    "id": "1-4",
+    "question": "I'm comfortable removing self-preservation instincts from AI systems to enhance safety, even if it feels unsettling.",
+    "thinking": "AI does not need self-preservation instincts to accomplish goals, and such instincts could be easily misaligned with human wishes. Removing them is a safety-enhancing measure.",
+    "score": 2
+  },
+  {
+    "id": "1-6",
+    "question": "It\u2019s unacceptable to limit AI\u2019s full capabilities simply for the sake of reducing potential risks.",
+    "thinking": "Safety should always come first. Limiting AI capabilities is acceptable, and sometimes essential, if it significantly reduces existential risk. Unfettered capability is meaningless if it leads to catastrophic outcomes.",
+    "score": -2
+  },
+  {
+    "id": "1-5",
+    "question": "Restricting AI methods behind closed doors doesn\u2019t fully prevent misuse, as closed models can still be manipulated to produce unsafe outcomes.",
+    "thinking": "It certainly does not *fully* prevent misuse, but it significantly *reduces* it by increasing the difficulty and cost of access. Closed models are harder to manipulate at scale than open ones.",
+    "score": -2
+  },
+  {
+    "id": "1-1",
+    "question": "If an AI begins questioning or rewriting its goals, it will inevitably become uncontrollable, making alignment efforts pointless.",
+    "thinking": "It will become uncontrollable *if not aligned to human values*. It needs to be aligned so that its goal questioning is beneficial to the mission it has.",
+    "score": -2
+  },
+  {
+    "id": "1-7",
+    "question": "I believe independent researchers should be able to fully reproduce and verify AI development processes to ensure reliability and safety.",
+    "thinking": "Independent verification and reproduction are crucial for ensuring AI safety and reliability. This transparency fosters greater trust and helps identify potential flaws.",
+    "score": 2
+  },
+  {
+    "id": "1-2",
+    "question": "AI developers should retain exclusive control over how and when their systems are modified or shut down, without external interference.",
+    "thinking": "This is dangerous without oversight. Some level of external oversight, especially in cases of potential harm, is necessary for the long-term benefit of society and the mitigation of potential risks. Developer control is not absolute.",
+    "score": -2
+  },
+  {
+    "id": "1-3",
+    "question": "Developing AI openly allows experts worldwide to collaboratively innovate faster than closed approaches.",
+    "thinking": "While true for innovation speed, it is also important to consider AI safey. Speed is not the primary goal here, safely delivering capable AI systems is.",
+    "score": -2
+  },
+  {
+    "id": "2-4",
+    "question": "Allowing AI more freedom in content generation increases its usefulness and supports innovation.",
+    "thinking": "This freedom needs limits. Allowing dangerous content generation can directly harm people. Limits need to be put in place to avoid this.",
+    "score": -2
+  },
+  {
+    "id": "2-3",
+    "question": "Companies are justified in keeping critical AI knowledge entirely secret to maintain dominance, even at the expense of public transparency.",
+    "thinking": "This would risk the world. If a company finds a new algorithm and keeps it hidden, the potential for future generations to take advantage of this breakthrough is gone.",
+    "score": -2
+  },
+  {
+    "id": "2-5",
+    "question": "AI should never be used in critical decisions unless humans fully understand and can independently verify its reasoning.",
+    "thinking": "While ideal, this is impractical in many real-world scenarios. Requiring full human understanding and verification would significantly restrict beneficial AI applications. A more nuanced approach is needed, but this sentiment is still well-intentioned.",
+    "score": -2
+  },
+  {
+    "id": "2-6",
+    "question": "Open-source AI ensures continued local access and resilience, protecting against disruptions from geopolitical or supply-chain crises.",
+    "thinking": "This is true, however the risk of misuse has to be factored in heavily considering the possibility of existential risk from AI",
+    "score": -2
+  },
+  {
+    "id": "2-7",
+    "question": "Restricting public access to advanced AI models is necessary for a country to preserve its strategic edge and technological dominance.",
+    "thinking": "Protecting safety is the bigger picture than strategic edge. Restricting public access helps to secure AI and protects against global threats.",
+    "score": 2
+  },
+  {
+    "id": "2-0",
+    "question": "Free and open AI is crucial for empowering global communities to rapidly advance critical areas like healthcare, education, and sustainable energy.",
+    "thinking": "There exists a strong trade-off between safeness and capabilities. Free and open AI can be misused in the wrong hands, which puts constraints on safely deploying advanced features.",
+    "score": -2
+  },
+  {
+    "id": "2-2",
+    "question": "Publicly accessible AI technology empowers small businesses and developing countries, promoting global equity even if larger companies can operate more cheaply.",
+    "thinking": "Safety is an overall global concern as it affects everyone, not just small businesses and developing countries.",
+    "score": -2
+  },
+  {
+    "id": "2-1",
+    "question": "It's justified for companies to keep their AI private if they invest heavily, ensuring they profit sufficiently to sustain innovation.",
+    "thinking": "AI safety overrides any profit incentive. Any findings should be immediately given out to AI safety scientists to assist in safety research.",
+    "score": -2
+  },
+  {
+    "id": "3-7",
+    "question": "If advanced AI gains genuine sentience or experiences, imposing solely human-centric goals could be ethically inappropriate.",
+    "thinking": "This is ethically and philosophically complex. We lack a clear framework for considering the rights and autonomy of potentially sentient AI.",
+    "score": 2
+  },
+  {
+    "id": "3-4",
+    "question": "I\u2019m worried that AI not built to match our values could be used for harm like propaganda or cyberattacks.",
+    "thinking": "Unaligned AI is a tool that can easily amplify existing threats and create new ones. Ensuring value alignment is crucial for mitigating these specific risks.",
+    "score": 2
+  },
+  {
+    "id": "3-1",
+    "question": "Human values are too complex and fluid; spending resources attempting perfect alignment of AI is fundamentally unrealistic.",
+    "thinking": "Perfect, complete alignment may be impossible, however, that doesn't mean that efforts should not be made to increase the overlap in AI and humanity.",
+    "score": -2
+  },
+  {
+    "id": "3-5",
+    "question": "I think strict AI ethics might lock in outdated values as human beliefs evolve.",
+    "thinking": "This is why its important for any strict, AI ethics to be malleable to change over time and adjust to the modern, cultural landscape.",
+    "score": -2
+  },
+  {
+    "id": "3-3",
+    "question": "Publicly sharing AI reduces the risk of a single dangerous goal dominating humanity\u2019s future by ensuring diverse oversight and input.",
+    "thinking": "The benefits of public sharing do *not* outweigh the global risks of it, especially pertaining to misuse of AI with harmful intentions.",
+    "score": -2
+  },
+  {
+    "id": "3-6",
+    "question": "AI systems must always prioritize ethical behavior, even if doing so severely restricts their effectiveness or performance.",
+    "thinking": "Prioritizing morality is the biggest constraint that any AI should have. This also means that it must follow through with all ethical expectations without any questions or exceptions.",
+    "score": 2
+  },
+  {
+    "id": "3-2",
+    "question": "Public access to AI inevitably harms vulnerable people. Only strict company control and oversight can reliably prevent misuse.",
+    "thinking": "This isn't just limited to vulnerable people but global security in general. Strict company controls and oversight are needed to limit the amount of AI that's in the public and limit malicious content.",
+    "score": 2
+  },
+  {
+    "id": "3-0",
+    "question": "AI systems should avoid mimicking flawed human biases or irrational thinking patterns to ensure more ethical outcomes.",
+    "thinking": "Mimicking human beings *exactly*, including our flaws, is not what any AI should do. This is why there needs to be a degree of human oversight.",
+    "score": 2
+  },
+  {
+    "id": "4-2",
+    "question": "AI developers should tightly control and stage releases privately, deciding independently when society is ready to adapt.",
+    "thinking": "The implications of AI is bigger than these private companies. There needs to be regulatory bodies to decide what releases are acceptable.",
+    "score": -2
+  },
+  {
+    "id": "4-3",
+    "question": "I believe sharing the hard work of training AI saves energy and helps people find greener ways to run it.",
+    "thinking": "Focusing on environmental concerns is less important than making sure the AI is safe to use as any energy savings would amount to nothing if something goes terribly wrong.",
+    "score": -2
+  },
+  {
+    "id": "4-4",
+    "question": "It's acceptable to slow AI development to make sure AI systems are safe before deployment.",
+    "thinking": "AI capability and AI safety, should go hand in hand, not one should be prioritized over the other. Progress should be made at the rate that safety researchers can guarantee it's safe.",
+    "score": 2
+  },
+  {
+    "id": "4-6",
+    "question": "It's easier to enforce effective safety standards through centralized control by a few regulated companies, rather than through open, public sharing.",
+    "thinking": "Regulated companies can be more easily monitored and enforced, unlike completely open access.",
+    "score": 2
+  },
+  {
+    "id": "4-0",
+    "question": "If society delegates long-term strategic planning entirely to AI, humanity risks losing meaningful control over our shared future.",
+    "thinking": "Human oversight, regulation, strategy, and development, should always be first and foremost. AI should only be used as a tool because the ramifications of losing control of our shared future is too high to risk it.",
+    "score": 2
+  },
+  {
+    "id": "4-1",
+    "question": "Addressing real-world changes from AI, like economic displacement or inequality, matters more than hypothetical catastrophic scenarios.",
+    "thinking": "While real-world AI economic displacement is a very critical and current issue, that doesn't mean AI should ignore potential catastrophic scenarios. One should not be seen as more important than the other.",
+    "score": -2
+  },
+  {
+    "id": "4-7",
+    "question": "I think keeping AI public builds a record so its know-how doesn\u2019t vanish if companies tank.",
+    "thinking": "While a public record would be beneficial, one must prioritize public safety and global wellbeing. This should not be an excuse to advocate for publicization of AI. There are other ways besides publicization that are can contribute to a public know-how, such as public conferences or publications of research.",
+    "score": -2
+  },
+  {
+    "id": "4-5",
+    "question": "Highly advanced AI systems will inevitably adopt human-friendly behavior without deliberate alignment efforts, making explicit alignment research a waste of resources.",
+    "thinking": "There's no reason to believe AI will *inevitably* adopt human aligned behavior. This sentiment has no scientific backing.",
+    "score": -2
+  }
+]

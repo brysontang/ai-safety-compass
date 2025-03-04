@@ -6,7 +6,7 @@
       {
         "id": "0-0",
         "originalLocation": "Pro #1",
-        "question": "The risk of extinction from AI should be prioritized at a level similar to risks like pandemics or nuclear war.",
+        "question": "Preventing human extinction due to AI should be a top global priority, on par with nuclear or pandemic threats—even if it slows AI progress.",
         "axes": [
           {
             "axis": "alignment",
@@ -78,7 +78,7 @@
       {
         "id": "0-6",
         "originalLocation": "No #3",
-        "question": "I'm concerned that developing powerful methods to control AI might enable malicious actors to use these methods for harmful purposes.",
+        "question": "Developing strict controls on AI behavior poses a greater danger, as these methods could fall into malicious hands and worsen risks.",
         "axes": [
           {
             "axis": "alignment",
@@ -108,7 +108,7 @@
       {
         "id": "1-0",
         "originalLocation": "Pro #7",
-        "question": "I think AI should always follow human instructions exactly, even if it makes them less flexible or efficient.",
+        "question": "AI should never deviate from explicit human instructions, even if those instructions are flawed or lead to less optimal outcomes.",
         "axes": [
           {
             "axis": "alignment",
@@ -120,7 +120,7 @@
       {
         "id": "1-1",
         "originalLocation": "No #5",
-        "question": "I think an AI that questions its own goals can’t be held back by us no matter what we try.",
+        "question": "If an AI begins questioning or rewriting its goals, it will inevitably become uncontrollable, making alignment efforts pointless.",
         "axes": [
           {
             "axis": "alignment",
@@ -180,7 +180,7 @@
       {
         "id": "1-6",
         "originalLocation": "No #2",
-        "question": "I think it's a mistake to weaken AI's full potential just to make it safer.",
+        "question": "It’s unacceptable to limit AI’s full capabilities simply for the sake of reducing potential risks.",
         "axes": [
           {
             "axis": "alignment",
@@ -270,7 +270,7 @@
       {
         "id": "2-5",
         "originalLocation": "Pro #9",
-        "question": "I think AI in key decisions should explain its reasoning to humans.",
+        "question": "AI should never be used in critical decisions unless humans fully understand and can independently verify its reasoning.",
         "axes": [
           {
             "axis": "alignment",
@@ -384,7 +384,7 @@
       {
         "id": "3-6",
         "originalLocation": "Pro #6",
-        "question": "AI systems should prioritize behaving safely and ethically, even in situations they have never encountered before.",
+        "question": "AI systems must always prioritize ethical behavior, even if doing so severely restricts their effectiveness or performance.",
         "axes": [
           {
             "axis": "alignment",
@@ -474,7 +474,7 @@
       {
         "id": "4-5",
         "originalLocation": "No #9",
-        "question": "I believe advanced AI systems will naturally converge on cooperative or human-friendly behaviors, so spending resources on formal alignment is unnecessary.",
+        "question": "Highly advanced AI systems will inevitably adopt human-friendly behavior without deliberate alignment efforts, making explicit alignment research a waste of resources.",
         "axes": [
           {
             "axis": "alignment",
