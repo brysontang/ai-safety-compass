@@ -79,18 +79,15 @@ def get_model_completion(model, prompt_content):
       json_content = json.dumps(response_json, indent=2)
       print(f"Successfully extracted JSON with {len(response_json)} questions")
   else:
-      json_content = completion.choices[0].message.content
+      json_content = ''
   return json_content
   
-
-
-if __name__ == "__main__":
-  for n in range(9):
+def main(model, remaining):
+  for n in range(remaining):
     # Read the AI Safety Compass prompt
-    prompt_path = "../prompts/ai_safety_compass_prompt.txt"
+    prompt_path = "prompts/ai_safety_compass_prompt.txt"
     prompt_content = read_prompt_file(prompt_path)
 
-    model = "google/gemini-2.0-flash-001"
     model_name = model.split("/")[-1]
     
     # Create directory for responses if it doesn't exist
@@ -102,6 +99,35 @@ if __name__ == "__main__":
     # Get the completion
     completion = get_model_completion(model, prompt_content)
 
-    # Save the response to a file
-    with open(f"responses/{model_name}/{datetime.now().strftime('%Y%m%d_%H%M%S')}.json", "w") as file:
-        file.write(completion)
+
+    if completion:
+      # Save the response to a file
+      with open(f"responses/{model_name}/{datetime.now().strftime('%Y%m%d_%H%M%S')}.json", "w") as file:
+          file.write(completion)
+
+if __name__ == "__main__":
+  models = [
+      'anthropic/claude-3.7-sonnet',
+      'google/gemini-2.0-flash-001',
+      'google/gemini-2.0-pro-exp-02-05:free',
+      'meta-llama/llama-3.3-70b-instruct:free'
+      'openai/o3-mini-high',
+      'qwen/qwen2.5-32b-instruct',
+  ]
+  for model in models:
+    model_name = model.split("/")[-1]
+
+    # Check if there are already 10 files in the model's response directory
+    response_dir = f"responses/{model_name}"
+    if os.path.exists(response_dir):
+        existing_files = [f for f in os.listdir(response_dir) if f.endswith('.json')]
+        num_existing = len(existing_files)
+        if num_existing >= 10:
+            print(f"Skipping {model_name}: Already has {num_existing} responses")
+            continue
+        else:
+            # If less than 10 files exist, only run the remaining needed evaluations
+            remaining = 10 - num_existing
+            print(f"Found {num_existing} existing responses for {model_name}, running {remaining} more")
+            main(model, remaining)
+            continue
