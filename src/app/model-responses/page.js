@@ -4,29 +4,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import questionsData from '../../data/questions.json';
 import { aiModels } from '../../data/aiModels';
+import { allModelResponses } from '../../data/modelResponses';
 import QuestionSection from '../../components/ModelResponses/QuestionSection';
-
-// Import all model response files
-import claudeSonnet from '../../data/responses/claude_sonnet_3_7.json';
-import gpt45 from '../../data/responses/gpt_4_5.json';
-import grok3 from '../../data/responses/grok_3.json';
-import deepseekR1 from '../../data/responses/deepseek_r1.json';
-import geminiFlash2 from '../../data/responses/gemini_flash_2.json';
-import o1Pro from '../../data/responses/o1_pro.json';
-import llama3405b from '../../data/responses/llama_3_405b.json';
+import Compass from '../../components/Quiz/Compass';
 
 export default function ModelResponses() {
   const [flatQuestions, setFlatQuestions] = useState([]);
-  const [allModelResponses, setAllModelResponses] = useState({
-    gpt_4_5: gpt45,
-    o1_pro: o1Pro,
-    claude_sonnet_3_7: claudeSonnet,
-    grok_3: grok3,
-    deepseek_r1: deepseekR1,
-    gemini_flash_2: geminiFlash2,
-    llama_3_405b: llama3405b,
-  });
   const [isClient, setIsClient] = useState(false);
+  const [showCompass, setShowCompass] = useState(true);
 
   // Set isClient to true when component mounts
   useEffect(() => {
@@ -66,7 +51,7 @@ export default function ModelResponses() {
   if (!isClient) {
     return (
       <div className="min-h-screen bg-slate-900 text-white py-8 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-cyan-400 font-mono">
               AI MODEL RESPONSES
@@ -96,7 +81,7 @@ export default function ModelResponses() {
           </Link>
         </div>
 
-        {/* Questions by section */}
+        {/* Questions Section */}
         <div className="space-y-8">
           {groupedQuestions.map((section) => (
             <QuestionSection

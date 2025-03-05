@@ -71,7 +71,7 @@ export default function QuestionItem({
                 ([modelKey, modelResponses]) => {
                   const response = findResponse(question.id, modelResponses);
                   const modelName = getModelDisplayName(modelKey);
-                  const modelPosition = getModelPosition(modelName);
+                  const modelPosition = getModelPosition(modelKey);
 
                   if (!response) return null;
 

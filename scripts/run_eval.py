@@ -113,9 +113,16 @@ if __name__ == "__main__":
       'meta-llama/llama-3.3-70b-instruct:free'
       'openai/o3-mini-high',
       'qwen/qwen2.5-32b-instruct',
+      'openai/gpt-4.5-preview'
   ]
   for model in models:
     model_name = model.split("/")[-1]
+
+    # Create directory for responses if it doesn't exist
+    response_dir = f"responses/{model_name}"
+    if not os.path.exists(response_dir):
+        os.makedirs(response_dir)
+        print(f"Created directory: {response_dir}")
 
     # Check if there are already 10 files in the model's response directory
     response_dir = f"responses/{model_name}"
