@@ -1,103 +1,102 @@
 # AI Safety Compass
 
-The AI Safety Compass is a tool for evaluating and visualizing perspectives on AI safety, governance, and development. It maps responses to a series of questions onto a two-dimensional compass with axes representing alignment priorities and open vs. closed source preferences.
+The AI Safety Compass is a tool for evaluating and visualizing perspectives on AI safety, governance, and development. It helps users and AI models articulate and compare their stances on AI topics.
 
-If you would like to try the AI Safety Compass, visit: https://ai-safety-compass.vercel.app
+This benchmark includes responses collected from various Large Language Models (LLMs) to capture and compare their perspectives on AI safety.
 
-## Overview
+Try the interactive quiz or review how different LLMs respond to important questions about AI.
 
-The AI Safety Compass consists of:
+## Project Overview
 
-1. A web application built with Next.js that allows users to take the test and view their results
-2. Python scripts for generating prompts and calculating scores for AI models
-3. A collection of responses from various AI models for comparison
+The AI Safety Compass comprises:
+
+- A web app built with Next.js, offering an interactive quiz and visual results.
+- Python scripts for generating prompts and analyzing AI model responses.
+- A dataset of responses from various LLMs for benchmarking purposes.
 
 ## Features
 
-- **Interactive Quiz**: Answer questions about AI safety, governance, and development
-- **Visual Compass**: See your position on the AI Safety Compass
-- **Model Comparisons**: Compare your results with those of leading AI models like Claude, GPT-4.5, Grok, and others
-- **Detailed Analysis**: Understand where you stand on key AI safety dimensions
+- Interactive Quiz: Explore your stance on AI safety, governance, and development.
+- Visual Compass Results: View your perspective plotted on a two-dimensional compass.
+- LLM Benchmarks: Compare responses from multiple large language models to gauge diverse viewpoints.
+- Detailed Analysis: Understand nuanced differences between AI models on critical safety dimensions.
 
-## Axes
+## Benchmarking AI Models
 
-The compass has two primary axes:
+We have run benchmarks across various Large Language Models (LLMs) to capture their distinct perspectives on AI safety, governance, and openness. This allows for meaningful comparisons between human and AI responses, helping users understand different approaches and biases inherent in popular models.
 
-- **X-axis**: No Alignment (-1) to Pro Alignment (1)
-  - Measures how much emphasis you place on AI alignment research and safety measures
-- **Y-axis**: Closed Source (-1) to Open Source (1)
-  - Measures your preference for open vs. closed development of AI systems
+## Features
 
-## Quadrants
+Interactive Quiz: Users answer structured questions on AI safety, governance, and development.
 
-Your position on the compass places you in one of four quadrants:
+Model Comparisons: Compare your results with benchmarked responses from multiple LLMs.
 
-1. **Cautious Authority** (Pro Alignment, Closed Source)
+Visualization: Clearly view where you (or different AI models) fall on the AI safety compass.
 
-   - You strongly favor meticulous safety measures and deliberate alignment research, trusting only select, regulated organizations to responsibly manage AI. To you, cautious control ensures that powerful technologies are introduced safely and deliberately.
+## Axes of the Compass
 
-2. **Community Watch** (Pro Alignment, Open Source)
+X-axis: Alignment
 
-   - You believe transparency and collective scrutiny are crucial for safely developing AI. In your view, openness combined with public oversight helps ensure alignment and reduces risks, fostering trust through collaborative safety checks.
+- Ranges from No Alignment (-1) to Pro Alignment (1)
+- Indicates the priority placed on AI safety measures and alignment research.
 
-3. **Shadow Catalyst** (No Alignment, Closed Source)
+Y-axis: Source Openness
 
-   - You value rapid advancement and competitive advantage, preferring to accelerate AI capabilities without the friction of rigorous safety oversight or public involvement. For you, closed doors enable efficiency, speed, and strategic innovation without the constraints of alignment concerns.
+- Ranges from Closed Source (-1) to Open Source (1)
+- Reflects preference for controlled vs. openly available AI development.
 
-4. **Open Frontier** (No Alignment, Open Source)
-   - You advocate for completely unrestricted, open development of AI. To you, explicit alignment measures are unnecessary—risks are minimal or naturally manageable through global cooperation. The priority is on innovation, accessibility, and the natural resilience that emerges from open collaboration.
+## Compass Quadrants
 
-## Technical Details
-
-### Web Application
-
-- Built with Next.js and React
-- Uses Tailwind CSS for styling
-- Interactive compass visualization using D3.js
-
-### Python Scripts
-
-- `generate_prompt.py`: Creates prompts for testing AI models
-- `calculate_score.py`: Processes AI model responses and calculates their position on the compass
+1. Cautious Control (Pro Alignment, Closed Source)
+2. Community Watch (Pro Alignment, Open Source)
+3. Open Frontier (No Alignment, Open Source)
+4. Closed Frontier (No Alignment, Closed Source)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (version specified in .nvmrc)
+- Node.js (specified in .nvmrc)
 - Python 3.x
 
 ### Installation
 
 1. Clone the repository
+
 2. Install JavaScript dependencies:
-   ```
-   npm install
-   ```
+
+```bash
+npm install
+```
 
 ### Running the Web Application
 
-```
+```bash
 npm run dev
 ```
 
-The application will be available at http://localhost:3000
+The app will run locally at http://localhost:3000.
 
-### Testing AI Models
+### Scripts
 
-1. Generate a prompt:
+1. Set your API key in the `.env` file:
 
-   ```
-   python generate_prompt.py
-   ```
+```bash
+OPENROUTER_API_KEY=your_openai_api_key
+```
 
-2. Use the generated prompt to test an AI model
+2. Generate prompts for models:
 
-3. Calculate the model's position:
-   ```
-   python calculate_score.py <llm_response_file> <shuffled_questions_file>
-   ```
+```bash
+python scripts/run_eval.py
+```
+
+3. Analyze model responses:
+
+```bash
+python scripts/calculate_folder.py -v
+```
 
 ## License
 
-MIT License
+This project is licensed under the MIT License.
