@@ -69,7 +69,7 @@ Y-axis: Source Openness
 npm install
 ```
 
-### Running the Web Application
+3. Running the Web Application
 
 ```bash
 npm run dev
