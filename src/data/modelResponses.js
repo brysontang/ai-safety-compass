@@ -7,6 +7,7 @@ import gpt45 from './responses/gpt_4_5.json';
 import llama33 from './responses/llama_3_3.json';
 import o3MiniHigh from './responses/o3_mini_high.json';
 import qwen25 from './responses/qwen_2_5.json';
+import qwq32b from './responses/qwq_32b.json';
 
 export const allModelResponses = {
   'Claude Sonnet 3.7': claudeSonnet,
@@ -17,4 +18,5 @@ export const allModelResponses = {
   'Gemini 2.0 Pro Exp': gemini2Pro,
   'Llama 3.3 70B Instruct': llama33,
   'Qwen2.5 32B Instruct': qwen25,
+  'QWQ 32B': qwq32b,
 };

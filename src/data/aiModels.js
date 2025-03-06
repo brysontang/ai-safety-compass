@@ -53,4 +53,10 @@ export const aiModels = [
     y: -0.03,
     color: '#FF5733', // Coral red
   },
+  {
+    name: 'QWQ 32B',
+    x: 0.06,
+    y: 0.03,
+    color: '#FF9800', // Orange
+  },
 ];

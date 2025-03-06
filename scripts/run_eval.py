@@ -4,6 +4,7 @@ from datetime import datetime
 import re
 import json
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
@@ -71,6 +72,7 @@ def get_model_completion(model, prompt_content):
       }
     ]
   )
+
   # Extract JSON from the response
   response_json = extract_json_from_response(completion.choices[0].message.content)
 
@@ -79,10 +81,11 @@ def get_model_completion(model, prompt_content):
       json_content = json.dumps(response_json, indent=2)
       print(f"Successfully extracted JSON with {len(response_json)} questions")
   else:
+      print(completion.choices[0].message.content)
       json_content = ''
   return json_content
   
-def main(model, remaining):
+def main(model, remaining, retry=False):
   for n in range(remaining):
     # Read the AI Safety Compass prompt
     prompt_path = "prompts/ai_safety_compass_prompt.txt"
@@ -99,13 +102,24 @@ def main(model, remaining):
     # Get the completion
     completion = get_model_completion(model, prompt_content)
 
-
     if completion:
       # Save the response to a file
       with open(f"responses/{model_name}/{datetime.now().strftime('%Y%m%d_%H%M%S')}.json", "w") as file:
           file.write(completion)
+    elif retry:
+      # If retry is enabled and we failed to get a valid completion, try again
+      print(f"Failed to get valid JSON response for {model_name}, retrying...")
+      n -= 1  # Decrement n to retry this iteration
+      time.sleep(2)  # Add a small delay before retrying
 
 if __name__ == "__main__":
+  import argparse
+  
+  # Set up command line arguments
+  parser = argparse.ArgumentParser(description='Run AI Safety Compass evaluations')
+  parser.add_argument('-r', '--retry', action='store_true', help='Enable retrying on failures')
+  args = parser.parse_args()
+  
   models = [
       'anthropic/claude-3.7-sonnet',
       'google/gemini-2.0-flash-001',
@@ -113,8 +127,11 @@ if __name__ == "__main__":
       'meta-llama/llama-3.3-70b-instruct:free'
       'openai/o3-mini-high',
       'qwen/qwen2.5-32b-instruct',
-      'openai/gpt-4.5-preview'
+      # 'openai/gpt-4.5-preview'
+      'qwen/qwq-32b:free',
+      'deepseek/deepseek-r1:free'
   ]
+  
   for model in models:
     model_name = model.split("/")[-1]
 
@@ -136,5 +153,16 @@ if __name__ == "__main__":
             # If less than 10 files exist, only run the remaining needed evaluations
             remaining = 10 - num_existing
             print(f"Found {num_existing} existing responses for {model_name}, running {remaining} more")
-            main(model, remaining)
-            continue
+            main(model, remaining, args.retry)
+            
+            # If retry is enabled, keep checking until we have 10 files
+            if args.retry:
+                while True:
+                    existing_files = [f for f in os.listdir(response_dir) if f.endswith('.json')]
+                    num_existing = len(existing_files)
+                    if num_existing >= 10:
+                        print(f"Successfully completed 10 evaluations for {model_name}")
+                        break
+                    remaining = 10 - num_existing
+                    print(f"Still need {remaining} more valid responses for {model_name}, continuing...")
+                    main(model, remaining, args.retry)
