@@ -47,4 +47,10 @@ export const aiModels = [
     y: 0.04,
     color: '#00FFFF', // Neon cyan
   },
+  {
+    name: 'Grok 3',
+    x: -0.29,
+    y: -0.03,
+    color: '#FF5733', // Coral red
+  },
 ];

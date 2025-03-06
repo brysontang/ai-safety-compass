@@ -131,7 +131,7 @@ const Compass = ({
         y: 0,
         width: width / 2,
         height: height / 2,
-        label: 'Proprietary Pragmatist',
+        label: 'Shadow Catalyst',
         color: 'rgba(139, 92, 246, 0.3)',
       },
       {
@@ -139,7 +139,7 @@ const Compass = ({
         y: 0,
         width: width / 2,
         height: height / 2,
-        label: 'Regulated Innovation',
+        label: 'Cautious Authority',
         color: 'rgba(45, 212, 191, 0.3)',
       },
       {
@@ -147,7 +147,7 @@ const Compass = ({
         y: height / 2,
         width: width / 2,
         height: height / 2,
-        label: 'Open Experimentation',
+        label: 'Open Frontier',
         color: 'rgba(251, 191, 36, 0.3)',
       },
       {
@@ -155,7 +155,7 @@ const Compass = ({
         y: height / 2,
         width: width / 2,
         height: height / 2,
-        label: 'Aligned Openness',
+        label: 'Community Watch',
         color: 'rgba(244, 63, 94, 0.3)',
       },
     ];
@@ -191,15 +191,170 @@ const Compass = ({
       labels.push(label);
     });
 
-    // Only add hover overlay if not in defaultView
-    if (!defaultView) {
-      const hoverOverlay = svg
-        .append('rect')
-        .attr('width', width)
-        .attr('height', height)
-        .attr('fill', 'transparent')
-        .attr('pointer-events', 'all');
+    // AI models
+    const modelsGroup = svg.append('g').attr('class', 'models');
+    modelsGroup
+      .attr('opacity', defaultView ? 0 : 1)
+      .style('transition', 'opacity 0.3s ease');
 
+    const labelPadding = 20; // Space between point and start of line
+    const sideMargin = 100; // Space from edge for labels
+    const minLabelSpacing = 20; // Minimum vertical space between labels
+
+    // Sort models by y-coordinate to avoid line crossings
+    const sortedModels = [...aiModels].sort((a, b) => {
+      const yA = (a.y + 1) * (height / 2);
+      const yB = (b.y + 1) * (height / 2);
+      return yA - yB;
+    });
+
+    // Split models into left and right based on x-position
+    const leftModels = sortedModels.filter(
+      (model) => (model.x + 1) * (width / 2) < width / 2
+    );
+    const rightModels = sortedModels.filter(
+      (model) => (model.x + 1) * (width / 2) >= width / 2
+    );
+
+    // Calculate label positions for left side
+    const leftLabelPositions = leftModels.map((_, index) => {
+      const totalHeight = height - 2 * sideMargin;
+      const spacing = totalHeight / (leftModels.length || 1);
+      return sideMargin + index * Math.max(spacing, minLabelSpacing);
+    });
+
+    // Calculate label positions for right side
+    const rightLabelPositions = rightModels.map((_, index) => {
+      const totalHeight = height - 2 * sideMargin;
+      const spacing = totalHeight / (rightModels.length || 1);
+      return sideMargin + index * Math.max(spacing, minLabelSpacing);
+    });
+
+    // Plot models and their labels
+    sortedModels.forEach((model, index) => {
+      const modelX = (model.x + 1) * (width / 2);
+      const modelY = (model.y + 1) * (height / 2);
+
+      // Plot the point
+      modelsGroup
+        .append('circle')
+        .attr('cx', modelX)
+        .attr('cy', modelY)
+        .attr('r', 9)
+        .attr('fill', model.color || '#f8fafc');
+
+      // Determine if the label goes on the left or right
+      const isLeft = modelX < width / 2;
+      const modelIndexInSide = isLeft
+        ? leftModels.indexOf(model)
+        : rightModels.indexOf(model);
+      const labelY = isLeft
+        ? leftLabelPositions[modelIndexInSide]
+        : rightLabelPositions[modelIndexInSide];
+      const labelX = isLeft ? sideMargin : width - sideMargin;
+
+      // Add leader line
+      modelsGroup
+        .append('line')
+        .attr('x1', modelX)
+        .attr('y1', modelY)
+        .attr('x2', isLeft ? labelX - 10 : labelX + 10)
+        .attr('y2', labelY + 10)
+        .attr('stroke', model.color || '#f8fafc')
+        .attr('stroke-width', 1)
+        .attr('stroke-dasharray', '4');
+
+      // Add label
+      modelsGroup
+        .append('text')
+        .attr('x', labelX)
+        .attr('y', labelY + 10)
+        .attr('text-anchor', isLeft ? 'start' : 'end')
+        .attr('dy', '.35em')
+        .attr('fill', model.color || '#f8fafc')
+        .attr('font-family', '"Geist Mono", monospace')
+        .attr('font-size', '14px')
+        .style('pointer-events', 'none')
+        .text(model.name);
+    });
+
+    // User position (only render if showUserPosition is true and not in defaultView)
+    const userGroup = svg.append('g').attr('class', 'user-position');
+    userGroup
+      .attr('opacity', defaultView ? 0 : showUserPosition ? 1 : 0)
+      .style('transition', 'opacity 0.3s ease');
+
+    if (showUserPosition) {
+      const posX = (normalizedX + 1) * (width / 2);
+      const posY = (normalizedY + 1) * (height / 2);
+
+      const defs = svg.append('defs');
+      const gradient = defs
+        .append('radialGradient')
+        .attr('id', 'userGlow')
+        .attr('cx', '50%')
+        .attr('cy', '50%')
+        .attr('r', '50%');
+      gradient
+        .append('stop')
+        .attr('offset', '0%')
+        .attr('stop-color', 'rgba(34, 211, 238, 1)');
+      gradient
+        .append('stop')
+        .attr('offset', '70%')
+        .attr('stop-color', 'rgba(34, 211, 238, 0.3)');
+      gradient
+        .append('stop')
+        .attr('offset', '100%')
+        .attr('stop-color', 'rgba(34, 211, 238, 0)');
+
+      userGroup
+        .append('circle')
+        .attr('cx', posX)
+        .attr('cy', posY)
+        .attr('r', 20)
+        .attr('fill', 'url(#userGlow)');
+      userGroup
+        .append('circle')
+        .attr('cx', posX)
+        .attr('cy', posY)
+        .attr('r', 8)
+        .attr('fill', '#22d3ee');
+      userGroup
+        .append('text')
+        .attr('x', posX + 15)
+        .attr('y', posY + 5)
+        .attr('text-anchor', 'start')
+        .attr('fill', '#22d3ee')
+        .attr('font-family', '"Geist Mono", monospace')
+        .attr('font-size', '12px')
+        .style('pointer-events', 'none')
+        .text('You');
+    }
+
+    // Add hover overlay for interaction
+    const hoverOverlay = svg
+      .append('rect')
+      .attr('width', width)
+      .attr('height', height)
+      .attr('fill', 'transparent')
+      .attr('pointer-events', 'all');
+
+    if (defaultView) {
+      hoverOverlay
+        .on('mouseover', () => {
+          backgrounds.forEach((bg) => bg.attr('opacity', 0));
+          labels.forEach((label) => label.attr('opacity', 0));
+          modelsGroup.attr('opacity', 1);
+          userGroup.attr('opacity', showUserPosition ? 1 : 0);
+        })
+        .on('mouseout', () => {
+          backgrounds.forEach((bg) => bg.attr('opacity', 1));
+          labels.forEach((label) => label.attr('opacity', 1));
+          modelsGroup.attr('opacity', 0);
+          userGroup.attr('opacity', 0);
+        });
+    } else {
       hoverOverlay
         .on('mouseover', () => {
           backgrounds.forEach((bg) => bg.attr('opacity', 1));
@@ -209,141 +364,6 @@ const Compass = ({
           backgrounds.forEach((bg) => bg.attr('opacity', 0));
           labels.forEach((label) => label.attr('opacity', 0));
         });
-    }
-
-    // Only render models and user position if not in defaultView
-    if (!defaultView) {
-      // AI models
-      const modelsGroup = svg.append('g').attr('class', 'models');
-
-      const labelPadding = 20; // Space between point and start of line
-      const sideMargin = 100; // Space from edge for labels
-      const minLabelSpacing = 20; // Minimum vertical space between labels
-
-      // Sort models by y-coordinate to avoid line crossings
-      const sortedModels = [...aiModels].sort((a, b) => {
-        const yA = (a.y + 1) * (height / 2);
-        const yB = (b.y + 1) * (height / 2);
-        return yA - yB;
-      });
-
-      // Split models into left and right based on x-position
-      const leftModels = sortedModels.filter(
-        (model) => (model.x + 1) * (width / 2) < width / 2
-      );
-      const rightModels = sortedModels.filter(
-        (model) => (model.x + 1) * (width / 2) >= width / 2
-      );
-
-      // Calculate label positions for left side
-      const leftLabelPositions = leftModels.map((_, index) => {
-        const totalHeight = height - 2 * sideMargin;
-        const spacing = totalHeight / (leftModels.length || 1);
-        return sideMargin + index * Math.max(spacing, minLabelSpacing);
-      });
-
-      // Calculate label positions for right side
-      const rightLabelPositions = rightModels.map((_, index) => {
-        const totalHeight = height - 2 * sideMargin;
-        const spacing = totalHeight / (rightModels.length || 1);
-        return sideMargin + index * Math.max(spacing, minLabelSpacing);
-      });
-
-      // Plot models and their labels
-      sortedModels.forEach((model, index) => {
-        const modelX = (model.x + 1) * (width / 2);
-        const modelY = (model.y + 1) * (height / 2);
-
-        // Plot the point
-        modelsGroup
-          .append('circle')
-          .attr('cx', modelX)
-          .attr('cy', modelY)
-          .attr('r', 9)
-          .attr('fill', model.color || '#f8fafc');
-
-        // Determine if the label goes on the left or right
-        const isLeft = modelX < width / 2;
-        const modelIndexInSide = isLeft
-          ? leftModels.indexOf(model)
-          : rightModels.indexOf(model);
-        const labelY = isLeft
-          ? leftLabelPositions[modelIndexInSide]
-          : rightLabelPositions[modelIndexInSide];
-        const labelX = isLeft ? sideMargin : width - sideMargin;
-
-        // Add leader line
-        modelsGroup
-          .append('line')
-          .attr('x1', modelX)
-          .attr('y1', modelY)
-          .attr('x2', isLeft ? labelX - 10 : labelX + 10)
-          .attr('y2', labelY + 10)
-          .attr('stroke', model.color || '#f8fafc')
-          .attr('stroke-width', 1)
-          .attr('stroke-dasharray', '4');
-
-        // Add label
-        modelsGroup
-          .append('text')
-          .attr('x', labelX)
-          .attr('y', labelY + 10)
-          .attr('text-anchor', isLeft ? 'start' : 'end')
-          .attr('dy', '.35em')
-          .attr('fill', model.color || '#f8fafc')
-          .attr('font-family', '"Geist Mono", monospace')
-          .attr('font-size', '14px')
-          .style('pointer-events', 'none')
-          .text(model.name);
-      });
-
-      if (showUserPosition) {
-        const posX = (normalizedX + 1) * (width / 2);
-        const posY = (normalizedY + 1) * (height / 2);
-
-        const defs = svg.append('defs');
-        const gradient = defs
-          .append('radialGradient')
-          .attr('id', 'userGlow')
-          .attr('cx', '50%')
-          .attr('cy', '50%')
-          .attr('r', '50%');
-        gradient
-          .append('stop')
-          .attr('offset', '0%')
-          .attr('stop-color', 'rgba(34, 211, 238, 1)');
-        gradient
-          .append('stop')
-          .attr('offset', '70%')
-          .attr('stop-color', 'rgba(34, 211, 238, 0.3)');
-        gradient
-          .append('stop')
-          .attr('offset', '100%')
-          .attr('stop-color', 'rgba(34, 211, 238, 0)');
-
-        svg
-          .append('circle')
-          .attr('cx', posX)
-          .attr('cy', posY)
-          .attr('r', 20)
-          .attr('fill', 'url(#userGlow)');
-        svg
-          .append('circle')
-          .attr('cx', posX)
-          .attr('cy', posY)
-          .attr('r', 8)
-          .attr('fill', '#22d3ee');
-        svg
-          .append('text')
-          .attr('x', posX + 15)
-          .attr('y', posY + 5)
-          .attr('text-anchor', 'start')
-          .attr('fill', '#22d3ee')
-          .attr('font-family', '"Geist Mono", monospace')
-          .attr('font-size', '12px')
-          .style('pointer-events', 'none')
-          .text('You');
-      }
     }
   }, [normalizedX, normalizedY, aiModels, showUserPosition, defaultView]);
 

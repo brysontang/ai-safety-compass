@@ -32,20 +32,20 @@ The compass has two primary axes:
 
 Your position on the compass places you in one of four quadrants:
 
-1. **Regulated Innovation** (Pro Alignment, Closed Source)
+1. **Cautious Authority** (Pro Alignment, Closed Source)
 
-   - You favor strong AI safety measures and alignment research, but prefer keeping advanced AI systems proprietary and controlled by trusted organizations.
+   - You strongly favor meticulous safety measures and deliberate alignment research, trusting only select, regulated organizations to responsibly manage AI. To you, cautious control ensures that powerful technologies are introduced safely and deliberately.
 
-2. **Aligned Openness** (Pro Alignment, Open Source)
+2. **Community Watch** (Pro Alignment, Open Source)
 
-   - You believe in open access to AI technology while emphasizing the importance of alignment research and safety measures.
+   - You believe transparency and collective scrutiny are crucial for safely developing AI. In your view, openness combined with public oversight helps ensure alignment and reduces risks, fostering trust through collaborative safety checks.
 
-3. **Proprietary Pragmatist** (No Alignment, Closed Source)
+3. **Shadow Catalyst** (No Alignment, Closed Source)
 
-   - You believe AI development should proceed with minimal alignment constraints, but prefer keeping advanced AI systems closed-source and controlled by established organizations.
+   - You value rapid advancement and competitive advantage, preferring to accelerate AI capabilities without the friction of rigorous safety oversight or public involvement. For you, closed doors enable efficiency, speed, and strategic innovation without the constraints of alignment concerns.
 
-4. **Open Experimentation** (No Alignment, Open Source)
-   - You favor open-source AI development and are less concerned about potential alignment risks, believing innovation should proceed with minimal constraints.
+4. **Open Frontier** (No Alignment, Open Source)
+   - You advocate for completely unrestricted, open development of AI. To you, explicit alignment measures are unnecessary—risks are minimal or naturally manageable through global cooperation. The priority is on innovation, accessibility, and the natural resilience that emerges from open collaboration.
 
 ## Technical Details
 

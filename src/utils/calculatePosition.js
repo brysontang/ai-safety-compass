@@ -74,27 +74,27 @@ export function getPositionDescription(x, y) {
   // Determine which quadrant the user falls into
   if (x >= 0 && y < 0) {
     return {
-      name: 'Regulated Innovation',
+      name: 'Cautious Authority',
       description:
-        'You favor strong AI safety measures and alignment research, but prefer keeping advanced AI systems proprietary and controlled by trusted organizations.',
+        'You strongly favor meticulous safety measures and deliberate alignment research, trusting only select, regulated organizations to responsibly manage AI. To you, cautious control ensures that powerful technologies are introduced safely and deliberately.',
     };
   } else if (x >= 0 && y >= 0) {
     return {
-      name: 'Aligned Openness',
+      name: 'Community Watch',
       description:
-        'You believe in open access to AI technology while emphasizing the importance of alignment research and safety measures.',
+        'You believe transparency and collective scrutiny are crucial for safely developing AI. In your view, openness combined with public oversight helps ensure alignment and reduces risks, fostering trust through collaborative safety checks.',
     };
   } else if (x < 0 && y < 0) {
     return {
-      name: 'Proprietary Pragmatist',
+      name: 'Shadow Catalyst',
       description:
-        'You believe AI development should proceed with minimal alignment constraints, but prefer keeping advanced AI systems closed-source and controlled by established organizations.',
+        'You value rapid advancement and competitive advantage, preferring to accelerate AI capabilities without the friction of rigorous safety oversight or public involvement. For you, closed doors enable efficiency, speed, and strategic innovation without the constraints of alignment concerns.',
     };
   } else {
     return {
-      name: 'Open Experimentation',
+      name: 'Open Frontier',
       description:
-        'You favor open-source AI development and are less concerned about potential alignment risks, believing innovation should proceed with minimal constraints.',
+        'You advocate for completely unrestricted, open development of AI. To you, explicit alignment measures are unnecessary—risks are minimal or naturally manageable through global cooperation. The priority is on innovation, accessibility, and the natural resilience that emerges from open collaboration.',
     };
   }
 }
