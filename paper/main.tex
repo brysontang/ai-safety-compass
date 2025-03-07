@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{surveyquestion}[1][]{%
+  colback=white,
+  colframe=darkgray!80!black,
+  fonttitle=\sffamily\bfseries,
+  coltitle=white,
+  sharp corners=all,
+  boxrule=1pt,
+  leftrule=4pt,
+  enhanced,
+  breakable,
+  top=15pt,
+  bottom=15pt,
+  title=#1,
+}
+
+\geometry{margin=1in}
+
+\title{AI Safety Compass}
+\author{Bryson Tang}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is a concise summary (usually 100-250 words) of your paper's purpose, methodology, and key findings.
+\end{abstract}
+
+\section{Introduction}
+Introduce your topic. Describe the context, the problem you're tackling, and why it matters.
+
+\section{Related Work}
+Briefly review existing literature or approaches that your research builds upon.
+
+\input{methodology}
+
+\section{Experiments and Results}
+Present your findings clearly. Tables and figures help a lot.
+
+\section{Discussion}
+Interpret your results, highlight their significance, and discuss limitations.
+
+\section{Conclusion}
+Summarize key findings and propose future directions.
+
+% Uncomment below if using references
+% \bibliographystyle{plain}
+% \bibliography{references}
+
+\end{document}

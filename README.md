@@ -97,6 +97,23 @@ python scripts/run_eval.py
 python scripts/calculate_folder.py -v
 ```
 
+### Paper
+
+To generate the paper, run:
+
+```bash
+latexmk -pdf paper/main.tex
+```
+
+or install the VSCode extension:
+
+- [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+
+then enter the keystroke
+
+- macOS: Cmd + Option + B
+- Windows/Linux: Ctrl + Alt + B
+
 ## License
 
 This project is licensed under the MIT License.

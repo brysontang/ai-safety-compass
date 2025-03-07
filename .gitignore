@@ -51,3 +51,22 @@ __pycache__/
 *.pyz
 
 scripts/responses/*
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.out
+*.bbl
+*.blg
+*.lof
+*.lot
+*.gz
+*.nav
+*.snm
+*.vrb
+*.fls
+*.fdb_latexmk
