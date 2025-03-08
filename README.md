@@ -47,10 +47,10 @@ Y-axis: Source Openness
 
 ## Compass Quadrants
 
-1. Cautious Control (Pro Alignment, Closed Source)
+1. Cautious Authority (Pro Alignment, Closed Source)
 2. Community Watch (Pro Alignment, Open Source)
 3. Open Frontier (No Alignment, Open Source)
-4. Closed Frontier (No Alignment, Closed Source)
+4. Shadow Catalyst (No Alignment, Closed Source)
 
 ## Getting Started
 

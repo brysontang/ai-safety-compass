@@ -113,10 +113,39 @@ Each time the model was prompted it would calculate to a different position. In 
 \subsection{Consistency Analysis}
 To assess how consistently the models responded to the survey, we performed a binomial consistency analysis, calculating the proportion of identical responses provided by the model across the 10 repeated evaluations. This measure indicates each model's reliability in consistently interpreting and responding to the benchmark questions.
 
-We define self-consistency \(C\) for each model as:
+We define self-consistency \(C_m\) for each model as how consistent each model answers questions from trial to trail. We define self-consistency \(C_q\) for each question as how consistently they were answered across all models. Specifically, we define:
 
 \[
-C = \frac{\text{Number of Consistent Responses}}{\text{Total Trials}} \times 100\%
+C_m = \frac{1}{Q}
+  \sum_{q=1}^{Q}
+  \left(\frac{
+    \max\left(N_{m,q}(2),\, N_{m,q}(-2)\right)
+  }{
+    T_m
+  }
+  \times 100\% \right)
 \]
 
-where consistent responses are defined as identical scores given across repeated evaluations.
+\[
+C_q =  \frac{1}{M} 
+\sum_{m=1}^{M}
+\left( \frac{
+  \max\left(N_{m,q}(2),\, N_{m,q}(-2)\right)
+  }{
+    T_m
+  }
+\times 100\% \right)
+\]
+
+\noindent where:
+
+\[
+\begin{aligned}
+M &= \text{total number of models} \\
+Q &= \text{total number of questions} \\
+N_{m,q}(x) &= \text{number of times score } x \text{ occurred for question } q \text{ across trials for model } m \\
+T_m &= \text{total number of trials for model } m \, (N_m = 10).
+\end{aligned}
+\]
+
+We define self-consistency \(C_q\) for each question as
