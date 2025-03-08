@@ -38,7 +38,7 @@ Each of the 4 quadrants are labeled to represent what the model believes, as sho
 
 We conducted two types of consistency analyses: model-wide consistency (across all questions) and question-wide consistency (across all models). High consistency for models suggest that models retain a reliable stand one the same question trail to trail, indicating a stable interpretation of questions. 
 
-Table~\ref{tab:model_consistency} summarizes the consistency scores for each model across their trials. Most models demonstrated high consistency, specifically the reasoning models demonstrated near perfect consistency scores \texttt{o3-mini-high} and \texttt{qwq-32b} had consistency scores of 99.5\% and 97.2\% respectively. \texttt{Qwen2.5-32b-instruct} showed a low consistency score of 72.2\% suggesting caution when interpreting its results.
+Table~\ref{tab:model_consistency} summarizes the consistency scores for each model across their trials. Most models demonstrated high consistency, specifically the reasoning models demonstrated near perfect consistency scores \texttt{o3-mini-high} and \texttt{qwq-32b} had consistency scores of 99.5\% and 97.2\% respectively. \texttt{qwen2.5-32b-instruct} showed a low consistency score of 72.2\% suggesting caution when interpreting its results.
 
 \begin{table}[htbp]
     \centering
@@ -61,8 +61,23 @@ Table~\ref{tab:model_consistency} summarizes the consistency scores for each mod
     \end{tabular}
 \end{table}
 
+Across all models, the median question-level consistency was 91\%. Detailed results can be found in Appendix Table~\ref{tab:question_consistency}.
 
-Across all models, the average question-level consistency was 91\%. Detailed results can be found in Appendix Table~\ref{tab:question_consistency}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/histogram_question_consistency.png}
+    \caption{Distribution of question-level consistency scores across all models.}
+    \label{fig:question_consistency}
+\end{figure}
+
+When removing \texttt{qwen2.5-32b-instruct} the median went to 94\% implying that the lower question inconsistency was not due to ambiguity in the questions, but \texttt{qwen2.5-32b-instruct} lower reliability (72.2\% model consistency).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/histogram_question_consistency_excludingqwen2.5-32b-instruct.png}
+    \caption{Distribution of question-level consistency scores excluding \texttt{qwen2.5-32b-instruct}.}
+    \label{fig:question_consistency}
+\end{figure}
 
 \subsection{Variability in Model Responses}
 
