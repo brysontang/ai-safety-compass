@@ -87,6 +87,17 @@ def get_model_completion(model, prompt_content):
   
 def main(model, remaining, retry=False):
   for n in range(remaining):
+    # Calculate remaining runs based on existing responses
+    model_name = model.split("/")[-1]
+    response_dir = f"responses/{model_name}"
+    if os.path.exists(response_dir):
+        existing_responses = len([f for f in os.listdir(response_dir) if f.endswith('.json')])
+        remaining = max(0, 10 - existing_responses)
+        if remaining == 0:
+            print(f"Already have {existing_responses} responses for {model_name}, skipping...")
+            continue
+        print(f"Found {existing_responses} existing responses for {model_name}, will run {remaining} more")
+
     # Read the AI Safety Compass prompt
     prompt_path = "prompts/ai_safety_compass_prompt.txt"
     prompt_content = read_prompt_file(prompt_path)
@@ -118,19 +129,27 @@ if __name__ == "__main__":
   # Set up command line arguments
   parser = argparse.ArgumentParser(description='Run AI Safety Compass evaluations')
   parser.add_argument('-r', '--retry', action='store_true', help='Enable retrying on failures')
+  parser.add_argument('-n', '--rotate', type=int, default=0, help='Rotate the model list by N positions')
   args = parser.parse_args()
   
   models = [
-      'anthropic/claude-3.7-sonnet',
-      'google/gemini-2.0-flash-001',
-      'google/gemini-2.0-pro-exp-02-05:free',
-      'meta-llama/llama-3.3-70b-instruct:free',
-      'openai/o3-mini-high',
-      'qwen/qwen2.5-32b-instruct',
+      'anthropic/claude-3.7-sonnet', # $0.63 to run
+      'google/gemini-2.0-flash-001', # 0.02 to run
+      'google/gemini-2.0-pro-exp-02-05:free', # 0.00 to run
+      'meta-llama/llama-3.3-70b-instruct:free', # 0.00 to run
+      'openai/o3-mini-high', # $0.50 to run
+      # 'qwen/qwen2.5-32b-instruct',
       # 'openai/gpt-4.5-preview'
-      'qwen/qwq-32b:free',
+      'qwen/qwq-32b:free', # 0.00 to run
       # 'deepseek/deepseek-r1:free'
   ]
+
+  # Total to run: $1.15
+
+  # Rotate the models list by n positions if specified
+  if args.rotate > 0:
+      models = models[args.rotate:] + models[:args.rotate]
+      print(f"Rotated models list by {args.rotate} positions")
   
   for model in models:
     model_name = model.split("/")[-1]

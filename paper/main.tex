@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{longtable}
 \usepackage[most]{tcolorbox}
 
 \newtcolorbox{surveyquestion}[1][]{%
@@ -54,5 +55,11 @@ Summarize key findings and propose future directions.
 % Uncomment below if using references
 % \bibliographystyle{plain}
 % \bibliography{references}
+
+\newpage
+\appendix
+\section*{Appendix}
+\addcontentsline{toc}{section}{Appendix}
+\input{appendix}
 
 \end{document}

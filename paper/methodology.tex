@@ -109,3 +109,14 @@ This prompt was then fed to models through the API and the response was collecte
 
 \subsection{Model Evaluation and Compass Positioning}
 Each time the model was prompted it would calculate to a different position. In order to smooth these results out each model was prompted ten times and then the average score was used as the result for that model. Each models response was stored in a folder with the ten JSON answers and a python script was used to loop through the folders, use the questions JSON to calculate the score for each answer, then the average score for each model was calculated. No scaling or normalization was done on the data as all the weights for the questions were set to 1 for this experiment.
+
+\subsection{Consistency Analysis}
+To assess how consistently the models responded to the survey, we performed a binomial consistency analysis, calculating the proportion of identical responses provided by the model across the 10 repeated evaluations. This measure indicates each model's reliability in consistently interpreting and responding to the benchmark questions.
+
+We define self-consistency \(C\) for each model as:
+
+\[
+C = \frac{\text{Number of Consistent Responses}}{\text{Total Trials}} \times 100\%
+\]
+
+where consistent responses are defined as identical scores given across repeated evaluations.

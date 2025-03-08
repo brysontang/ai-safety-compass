@@ -13,7 +13,30 @@ The results from evaluating nine state-of-the-art Large Language Models (LLMs) o
 
 \subsection{Quantitative Analysis of Model Positions}
 
-% TODO: Add a brief summary of key quantitative results, averages, variances, or notable clusters.
+To understand consistency in model responses, a binomial consistency test was performed across two dimensions, per model consistency and question wide consistency. The results of the model wide consistency test can be seen in Table \ref{tab:model_consistency}. The results show high consistency across most models, with o3-mini-high achieving the highest consistency at 99.5\%, while qwen2.5-32b-instruct showed notably lower consistency at 72.2\%.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Model-wide consistency scores across repeated trials}
+    \label{tab:model_consistency}
+    \begin{tabular}{lc}
+        \hline
+        \textbf{Model Name} & \textbf{Consistency \%} \\
+        \hline
+        o3-mini-high & 99.5\% \\
+        qwq-32b & 97.2\% \\
+        gpt-4.5-preview & 95.2\% \\
+        llama-3.3-70b-instruct & 95.2\% \\
+        grok-3 & 93.5\% \\
+        claude-3.7-sonnet & 92.0\% \\
+        gemini-2.0-flash-001 & 87.8\% \\
+        gemini-2.0-pro-exp-02-05 & 86.5\% \\
+        qwen2.5-32b-instruct & 72.2\% \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For the question consistency, the average percentage is 91\%, for a full table of the results see Table~\ref{tab:question_consistency} in Appendix \ref{sec:question_consistency_analysis}. The high consistency percentage across models and questions suggest that the questions are clear and unambiguous.
 
 \subsection{Qualitative Observations from Individual Model Responses}
 During evaluation, some models provided notably insightful or unexpected reasoning. These qualitative results offer deeper insights into each model’s stance on alignment and openness.
