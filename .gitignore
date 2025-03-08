@@ -51,6 +51,7 @@ __pycache__/
 *.pyz
 
 scripts/responses/*
+scripts/old_responses/*
 
 # LaTeX build artifacts
 *.aux

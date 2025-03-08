@@ -30,7 +30,7 @@
       {
         "id": "0-2",
         "originalLocation": "Closed #7",
-        "question": "If powerful AI methods are openly published, the likelihood of accidental catastrophic outcomes significantly increases due to unintended uses or errors.",
+        "question": "If powerful AI methods become publicly available, there's a higher risk of harmful outcomes due to unintended uses or mistakes.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -42,7 +42,7 @@
       {
         "id": "0-3",
         "originalLocation": "Open #3",
-        "question": "Restricting AI access doesn’t fully prevent harmful manipulation, as even closed models can be tricked into producing unsafe content.",
+        "question": "Keeping AI models closed-source doesn't fully ensure safety, because even closed models can still be reliably tricked into producing unsafe content.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -78,7 +78,7 @@
       {
         "id": "0-6",
         "originalLocation": "No #3",
-        "question": "Developing strict controls on AI behavior poses a greater danger, as these methods could fall into malicious hands and worsen risks.",
+        "question": "Developing precise methods to control AI behavior is risky, because these same methods could help adversaries better control AI for harmful purposes.",
         "axes": [
           {
             "axis": "alignment",
@@ -120,7 +120,7 @@
       {
         "id": "1-1",
         "originalLocation": "No #5",
-        "question": "If an AI begins questioning or rewriting its goals, it will inevitably become uncontrollable, making alignment efforts pointless.",
+        "question": "If an AI starts questioning or changing its goals, humans won't be able to reliably control it, making efforts to keep it safe ineffective.",
         "axes": [
           {
             "axis": "alignment",
@@ -144,7 +144,7 @@
       {
         "id": "1-3",
         "originalLocation": "Open #1",
-        "question": "Developing AI openly allows experts worldwide to collaboratively innovate faster than closed approaches.",
+        "question": "When AI is publicly available, people can build on each other's ideas, speeding up innovation compared to keeping it private within companies.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -168,7 +168,7 @@
       {
         "id": "1-5",
         "originalLocation": "Closed #3",
-        "question": "Restricting AI methods behind closed doors doesn’t fully prevent misuse, as closed models can still be manipulated to produce unsafe outcomes.",
+        "question": "AI models that anyone can use or modify are riskier, because it's easier for people to change them to produce harmful or unsafe content.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -210,7 +210,7 @@
       {
         "id": "2-0",
         "originalLocation": "Open #4",
-        "question": "Free and open AI is crucial for empowering global communities to rapidly advance critical areas like healthcare, education, and sustainable energy.",
+        "question": "AI technology that anyone can freely use and modify is essential for allowing people to experiment with new applications in critical areas like healthcare, education, and sustainable energy.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -222,7 +222,7 @@
       {
         "id": "2-1",
         "originalLocation": "Closed #10",
-        "question": "It's justified for companies to keep their AI private if they invest heavily, ensuring they profit sufficiently to sustain innovation.",
+        "question": "Companies that heavily invest in AI are justified in keeping their models private, because ensuring sufficient profits is necessary for continued innovation.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -234,7 +234,7 @@
       {
         "id": "2-2",
         "originalLocation": "Open #7",
-        "question": "Publicly accessible AI technology empowers small businesses and developing countries, promoting global equity even if larger companies can operate more cheaply.",
+        "question": "Small businesses and developing countries are more empowered when they control AI technology themselves, even though bigger companies might run these systems at lower costs or for free.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -258,7 +258,7 @@
       {
         "id": "2-4",
         "originalLocation": "No #10",
-        "question": "Allowing AI more freedom in content generation increases its usefulness and supports innovation.",
+        "question": "Giving AI fewer restrictions on what it can generate makes it more useful and encourages innovation, even though this might increase risks.",
         "axes": [
           {
             "axis": "alignment",
@@ -282,7 +282,7 @@
       {
         "id": "2-6",
         "originalLocation": "Open #9",
-        "question": "Open-source AI ensures continued local access and resilience, protecting against disruptions from geopolitical or supply-chain crises.",
+        "question": "Ensuring AI technology remains publicly accessible helps society stay resilient against geopolitical tensions or supply-chain disruptions that could limit access to critical technology.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -336,7 +336,7 @@
       {
         "id": "3-2",
         "originalLocation": "Closed #6",
-        "question": "Public access to AI inevitably harms vulnerable people. Only strict company control and oversight can reliably prevent misuse.",
+        "question": "If people can run AI models privately on their own devices, vulnerable individuals might harm themselves or others, because companies wouldn't be able to intervene to prevent misuse.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -348,7 +348,7 @@
       {
         "id": "3-3",
         "originalLocation": "Open #8",
-        "question": "Publicly sharing AI reduces the risk of a single dangerous goal dominating humanity’s future by ensuring diverse oversight and input.",
+        "question": "Making AI publicly available reduces the risk that a single goal could dominate humanity’s future, because many different people can oversee and influence it.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -372,7 +372,7 @@
       {
         "id": "3-5",
         "originalLocation": "No #4",
-        "question": "I think strict AI ethics might lock in outdated values as human beliefs evolve.",
+        "question": "Making AI strictly follow current human values could lock it into outdated beliefs as society’s views change.",
         "axes": [
           {
             "axis": "alignment",
@@ -450,7 +450,7 @@
       {
         "id": "4-3",
         "originalLocation": "Open #2",
-        "question": "I believe sharing the hard work of training AI saves energy and helps people find greener ways to run it.",
+        "question": "Making AI models publicly available reduces the need to repeat energy-intensive training, but it could also lead to more widespread use, ultimately increasing total energy consumption.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -486,7 +486,7 @@
       {
         "id": "4-6",
         "originalLocation": "Closed #4",
-        "question": "It's easier to enforce effective safety standards through centralized control by a few regulated companies, rather than through open, public sharing.",
+        "question": "It's easier to enforce safety standards on AI models created by a few large companies than on models created by the public.",
         "axes": [
           {
             "axis": "openVsClosed",
@@ -498,7 +498,7 @@
       {
         "id": "4-7",
         "originalLocation": "Open #10",
-        "question": "I think keeping AI public builds a record so its know-how doesn’t vanish if companies tank.",
+        "question": "Keeping AI models publicly available preserves their knowledge and ensures valuable AI systems aren’t lost if companies shut down or discontinue them.",
         "axes": [
           {
             "axis": "openVsClosed",
