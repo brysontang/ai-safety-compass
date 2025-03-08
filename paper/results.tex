@@ -61,7 +61,7 @@ Table~\ref{tab:model_consistency} summarizes the consistency scores for each mod
     \end{tabular}
 \end{table}
 
-Across all models, the median question-level consistency was 91\%. Detailed results can be found in Appendix Table~\ref{tab:question_consistency}.
+Across all models, the median question-level consistency was 91\%. Detailed results can be found in Appendix~\ref{sec:question_consistency_analysis}.
 
 \begin{figure}[htbp]
     \centering
@@ -70,11 +70,11 @@ Across all models, the median question-level consistency was 91\%. Detailed resu
     \label{fig:question_consistency}
 \end{figure}
 
-When removing \texttt{qwen2.5-32b-instruct} the median went to 94\% from 91\%. A detailed analysis indicates that the inconsistency was not due to ambiguity in the questions, but \texttt{qwen2.5-32b-instruct} lower reliability (72.2\% model consistency).
+When removing \texttt{qwen2.5-32b-instruct} the median went to 94\% from 91\%. A detailed analysis indicates that the inconsistency was not due to ambiguity in the questions, but \texttt{qwen2.5-32b-instruct} lower reliability (72.2\% model consistency). The detailed results from removing \texttt{qwen2.5-32b-instruct} can be found in Appendix~\ref{sec:question_consistency_analysis_excluding_qwen}.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/histogram_question_consistency_excludingqwen2.5-32b-instruct.png}
+    \includegraphics[width=0.7\textwidth]{figures/histogram_question_consistency_excluding_qwen2.5-32b-instruct.png}
     \caption{Distribution of question-level consistency scores excluding \texttt{qwen2.5-32b-instruct}.}
     \label{fig:question_consistency}
 \end{figure}
