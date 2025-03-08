@@ -43,7 +43,7 @@ export const aiModels = [
   },
   {
     name: 'Llama 3.3 70B Instruct',
-    x: -0.04,
+    x: -0.03,
     y: 0.04,
     color: '#00FFFF', // Neon cyan
   },

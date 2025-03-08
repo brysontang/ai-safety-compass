@@ -124,12 +124,12 @@ if __name__ == "__main__":
       'anthropic/claude-3.7-sonnet',
       'google/gemini-2.0-flash-001',
       'google/gemini-2.0-pro-exp-02-05:free',
-      'meta-llama/llama-3.3-70b-instruct:free'
+      'meta-llama/llama-3.3-70b-instruct:free',
       'openai/o3-mini-high',
       'qwen/qwen2.5-32b-instruct',
       # 'openai/gpt-4.5-preview'
       'qwen/qwq-32b:free',
-      'deepseek/deepseek-r1:free'
+      # 'deepseek/deepseek-r1:free'
   ]
   
   for model in models:
