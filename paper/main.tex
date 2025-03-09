@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{longtable}
+\usepackage{natbib}
 \usepackage[most]{tcolorbox}
 
 \newtcolorbox{surveyquestion}[1][]{%
@@ -36,8 +37,7 @@
 This is a concise summary (usually 100-250 words) of your paper's purpose, methodology, and key findings.
 \end{abstract}
 
-\section{Introduction}
-Introduce your topic. Describe the context, the problem you're tackling, and why it matters.
+\input{introduction}
 
 \section{Related Work}
 Briefly review existing literature or approaches that your research builds upon.
@@ -51,8 +51,9 @@ Briefly review existing literature or approaches that your research builds upon.
 \input{conclusion}
 
 % Uncomment below if using references
-% \bibliographystyle{plain}
-% \bibliography{references}
+\newpage
+\bibliographystyle{apalike}
+\bibliography{references}
 
 \newpage
 \appendix
