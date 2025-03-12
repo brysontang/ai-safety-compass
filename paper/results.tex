@@ -61,22 +61,22 @@ Table~\ref{tab:model_consistency} summarizes the consistency scores for each mod
     \end{tabular}
 \end{table}
 
-Across all models, the median question-level consistency was 91\%. Detailed results can be found in Appendix~\ref{sec:question_consistency_analysis}.
+Across all models, the median question-level consistency was 91\%. A histogram can be seen in Figure~\ref{fig:question_consistency_histogram}. Detailed results can be found in Appendix~\ref{sec:question_consistency_analysis}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/histogram_question_consistency.png}
     \caption{Distribution of question-level consistency scores across all models.}
-    \label{fig:question_consistency}
+    \label{fig:question_consistency_histogram}
 \end{figure}
 
-When removing \texttt{qwen2.5-32b-instruct} the median went to 94\% from 91\%. A detailed analysis indicates that the inconsistency was not due to ambiguity in the questions, but \texttt{qwen2.5-32b-instruct} lower reliability (72.2\% model consistency). The detailed results from removing \texttt{qwen2.5-32b-instruct} can be found in Appendix~\ref{sec:question_consistency_analysis_excluding_qwen}.
+When removing \texttt{qwen2.5-\allowbreak 32b-\allowbreak instruct} the median went to 94\% from 91\% as can be seen in Figure~\ref{fig:question_consistency_histogram_exclude_qwen}. A detailed analysis indicates that the inconsistency was not due to ambiguity in the questions, but \texttt{qwen2.5-\allowbreak 32b-\allowbreak instruct} lower reliability (72.2\% model consistency). The detailed results from removing \texttt{qwen2.5-\allowbreak 32b-\allowbreak instruct} can be found in Appendix~\ref{sec:question_consistency_analysis_excluding_qwen}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/histogram_question_consistency_excluding_qwen2.5-32b-instruct.png}
     \caption{Distribution of question-level consistency scores excluding \texttt{qwen2.5-32b-instruct}.}
-    \label{fig:question_consistency}
+    \label{fig:question_consistency_histogram_exclude_qwen}
 \end{figure}
 
 \subsection{Variability in Model Responses}
