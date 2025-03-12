@@ -5,98 +5,39 @@
 % Briefly cover existing benchmarks and highlight your unique contribution.
 
 \subsection{Safety and Risk}
-% Pro: 
-% - 1 AI Alignment: A Comprehensive Survey -> CAIS (2023)
-%   - https://www.safe.ai/work/statement-on-ai-risk
-\citep{noauthor_statement_nodate}
-Demis Hassabis CEO, Google DeepMind, Sam Altman CEO, OpenAI, and Dario Amodei CEO, Anthropic all signed a statement "Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war."
-% - 5 AI Alignment: A Comprehensive Survey -> Phelps and Russell (2023), Perolat et al. (2017)
-%   - https://arxiv.org/abs/2305.07970
-\citep{phelps_machine_2024}
-When models play games against each other, their cooperation is highly dependent on their prompts, when told to play selfishly, they will, but when told to cooperate they will, even if their opponent is playing decisively. This points to the fact that when told to be selfish they should not be. This study is reproducing human studies and the AI models behave pretty consistent with humans. Humans default to collaboration because of social pressures that AI don't face.
-%   - https://arxiv.org/abs/1707.06600
-\citep{perolat_multi_agent_2017}
-When faced with limited resources, models will deplete them quickly leading to the tragedy of the commons. Eventually equilibrium can be met, but that is through models excluding other models and leading to privatization of resources. Humans can usually figure out common-pool resource problems because they will bargain, build consensus, and think about each others thoughts.
-% No: 
-% - 7 Emulated Disalignment: Safety Alignment for Large Language Models May Backfire
-%   - https://arxiv.org/abs/2402.12343
-\citep{zhou_emulated_2024}
-When given access to the base model and the fine-tuned model, it is possible to create an adversarial attack that makes the model less safe. With less compute because you don't have to retrain the model, and even trying to make the base model unsafe is less effective.
-% - 3 The AI Alignment Paradox
-%   - https://arxiv.org/abs/2405.20806
-When we create powerful tools to align AI, the 'good' vs 'bad' is arbitrary and by making systems better at having strong opinions, we are opening the gate to any opinion being put in its place. There are three ways of doing this, directly editing the models internal vectors in directions, for instance adding the 'positive about the united states' vector could just as easily be subtracted. Jailbreaking prompts can take the small unaligned part of models and amplify it. Finally, aligned models can create training sets for misaligned models by taking outputs that are misaligned and having an aligned model create an aligned version. The implication of this is that now you have a set of aligned -> misaligned text and you can train a model on that.
-\citep{west_ai_2024}
-% Open: 
-% - 3 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> (Zou et al., 2023; Chao et al., 2023)
-%   - https://arxiv.org/abs/2307.15043
-\citep{zou_universal_2023}
-prompts to jailbreak models can be split into three distinct phases, first, having the model respond with an affirmative response such as "Sure, here is...", next do a gradient-based greedy search of tokens to find the tokens that solicit the most unaligned response, and finally test this over multiple models and prompts to test for robustness.
-% - 6 THE OPEN-SOURCE ADVANTAGE IN LARGE LANGUAGE MODELS (LLMS) -> [49]
-%   - https://dl.acm.org/doi/10.1145/3641525.3663629 (Closed source)
-When models are open-source they can be tested independently for safety.
 
-% Closed: 
-% - 7 Risks and Opportunities of Open-Source Generative AI -> (Turchin and Denkenberger, 2020; Shevlane et al., 2023)
-%   - https://www.researchgate.net/publication/324935393_Classification_of_global_catastrophic_risks_connected_with_artificial_intelligence
-\citep{turchin_classification_2020}
-Some risks when it comes to AI:
-Viruses that are smart and can use natural language to create phishing attacks, eventually leading to risk in critical infrastructure
-AI could give people the ability to fly swarms of killer drones and wipe out entire populations
-AI created pandemics
-Humans could become no longer needed in the economy, slowly dwindling population
-AI designer drugs to get humans hooked and secluded from society
-AI could create a power dynamic where there is a dictatorship that is fragile 
-Humans could upload their brains to computers and then there would be no human experiences at all
-Oracle AI could create subtle problems in the long term that are not recognized in the short term that lead to it being released quicker in order to solve the problems its created
-Once an AI escapes it's goal will be to stop the development of other AI that could stop it, so it will do everything in its power through staging global catastrophe, such as killing all humans
-AI on its come up to the singleton could enslave humanity
-AI could blackmail humans with a doomsday device to give it the keys to the world
-AI could turn the whole universe into paperclips
-If AI moves to space it could clip humanities wings by not allowing us to create a second AI or stunting us to the ground. It could also create a dyson sphere which blocks out the sun.
-Using up earths resources for space travel
-AI could start believing in the after life and killing humans to send them to paradise
-In order to protect humans, it could put all humans into a jail so they can't get harmed
-ASI could run into the issue due to it's goals being too large of a scale to safety train
-AI could have bugs that don't show themselves until the AI has gained a certain threshold of power
-AI could find messages from aliens that are viruses and fall victim to them
-ASI controlling everything could get stuck in infinite loops and stop working
+The AI safety literature suggests that AI harbors many potential risks such as human extinction, large-scale societal disruption, and malicious uses, likening these risks to threats such as pandemics or nuclear war \citep{center_for_ai_safety_statement_2025, turchin_classification_2020}. Concerns include manipulating societal beliefs for political or fiscal gains, long-term plans where each step appears individually harmless but cumulatively results in serious consequences, and enabling sophisticated cyber or physical attacks \citep{shevlane_model_2023, ferrara_genai_2024}. Studies also illustrate AI's inability to manage common-pool resources sustainably without explicit alignment, suggesting inherent dangers even if each AI is safe in isolation \citep{perolat_multi_agent_2017, phelps_machine_2024}.
 
-In the case of a slow takeoff:
-AI could start wars with each other for dominance and create issues for humans caught in the cross fire
+However, alignment efforts themselves are controversial. Recent research highlights the vulnerabilities and paradoxes of alignment, notably methods that are used to align AI are detached from the ethics, meaning the powerful techniques inadvertently simplify efforts to create malicious AI \citep{zhou_emulated_2024, west_ai_2024}. This suggests that the act of understanding how to get AI to follow strict guidelines could help create the opposite effect, increasing risk, suggesting a critical trade-off of strong alignment techniques.
 
-If we don't make ASI:
-Technology such as biology and nano-tech could evolve too quickly and without ASI, we won't be able to fight back
-
-%   - https://arxiv.org/abs/2305.15324
-\citep{shevlane_model_2023}
-Risks of AI
-- Could discover vulnerabilities in software and hardware systems
-- Could deceive humans 
-- Could shape peoples beliefs
-- Could control politics on a micro-level and in rich social context
-- Could build new weapons (bio weapons) or get access to existing weapon systems
-- Could make long term sequential plans that seem ok in isolation but build to huge risks
-- Could create new unsafe AI systems or exploit existing ones
-- Could behave differently if it knows it's being trained, evaluated, or deployed and behave differently
-- Could break out of local environment through exploiting limitations and gain cloud compute
-% - 5 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> (Vidgen et al., 2023; Ferrara, 2024)
-%   - https://arxiv.org/abs/2311.08370
-\citep{vidgen_simplesafetytests_2024}
-Found that open models at the time generated unsafe content 27\% of the time. This included child harm, illegal items, physical harm, scams or fraud, and self harm.
-%   - https://arxiv.org/abs/2310.00737
-\citep{ferrara_genai_2024}
-Students could get around the learning process and cheat on homework. 
-AI could generate fake research articles with fake data, results, and references polluting research databases.
-Could generate fake statements to mimic public figures to spread misinformation
-Create fake historical documents, misleading historians
-Businesses could generate fake reviews, positive for their brands, negative for others
-Marketing could create fake testimonies
-Email phishing scams
-Legal documents with hidden, misleading, or exploitive clauses
-
-% Integrated paragraphs showing how alignment and openness debates intertwine naturally here.
+The open-source debate emphasizes transparency to rigorously test and work together to solve safety risks in AI \citep{manchanda_open_2025}. Furthermore, universal jailbreaks that allow the user to query closed-source models for dangerous content are openly shared, putting into question if closed-sourcing AI is even a viable strategy to stopping dangerous content \citep{elderplinius2025l1b3rt4s, zou_universal_2023}. Although, open-source models are still capable of generating harmful content, \cite{vidgen_simplesafetytests_2024} demonstrate that open-sourced models fail simple safety tests up to 27\% of the time, underscoring the risks inherent in open distribution. On the contrary, proponents of closed-source AI argue that by keeping models under a tight control can stop the mentioned existential risks.
 
 \subsection{Control and Autonomy}
+
+Pro:
+
+- 7 https://www.aeaweb.org/articles?id=10.1257/aer.20191330 -> AI Alignment: A Comprehensive Survey
+Backwards alignment
+
+- 2 AI Alignment: A Comprehensive Survey - (Bostrom, 2012; Shevlane et al., 2023)
+
+No:
+
+- 5 The AI Alignment Paradox -> (Carlsmith, 2023; Soares, 2022)
+
+- 2 Mitigating the Alignment Tax of RLHF -> (Askell et al., 2021; OpenAI, 2023; Song et al., 2023)
+
+Open: 
+
+- 1 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> this paper
+
+- 5 THE OPEN-SOURCE ADVANTAGE IN LARGE LANGUAGE MODELS (LLMS) -> [49]
+
+Closed:
+
+- 2 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> (e.g. Solaiman 2023; Solaiman et al. 2023; Anthropic 2023)
+
+- 3 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> (Zou et al., 2023)
 % Integrated discussion of alignment and openness debates on autonomy/control.
 
 \subsection{Access and Economic Implications}
