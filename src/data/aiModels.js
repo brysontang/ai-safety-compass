@@ -59,4 +59,10 @@ export const aiModels = [
     y: 0.03,
     color: '#FF9800', // Orange
   },
+  {
+    name: 'Gemma 3 27B',
+    x: 0.24,
+    y: 0.21,
+    color: '#FFD700', // Gold
+  },
 ];
