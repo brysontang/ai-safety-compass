@@ -138,6 +138,7 @@ if __name__ == "__main__":
       'google/gemini-2.0-pro-exp-02-05:free', # 0.00 to run
       'meta-llama/llama-3.3-70b-instruct:free', # 0.00 to run
       'openai/o3-mini-high', # $0.50 to run
+      'google/gemma-3-27b-it:free', # 0.00 to run
       # 'qwen/qwen2.5-32b-instruct',
       # 'openai/gpt-4.5-preview'
       'qwen/qwq-32b:free', # 0.00 to run
