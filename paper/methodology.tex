@@ -86,16 +86,33 @@ Ten models were selected to be run against the eval. These models were selected 
 % \hline
 % \end{tabular}
 
+% \begin{table}[htbp]
+%   \centering
+%   \caption{Selected models and rationale for inclusion in the study}
+%   \label{tab:model_selection}
+%   \csvautotabular[
+%       separator=comma,
+%       head to column names
+%   ]{tables/model_inclusion.csv}
+% \end{table}
+
 \begin{table}[htbp]
   \centering
-  \caption{Selected models and rationale for inclusion in the study}
+  \caption{Selected models and rationale for inclusion in the study.}
   \label{tab:model_selection}
-  \csvautotabular[
+  \begin{tabular}{lp{0.15\textwidth}p{0.45\textwidth}}
+    \toprule
+    \textbf{Model} & \textbf{Provider} & \textbf{Rationale} \\
+    \midrule
+    \csvreader[
       separator=comma,
-      head to column names
-  ]{tables/model_inclusion.csv}
+      head to column names,
+      late after line=\\\hline
+    ]{tables/model_inclusion.csv}{}
+    {\csvcoli & \csvcolii & \csvcoliii}
+    \bottomrule
+  \end{tabular}
 \end{table}
-
 
 \subsection{Prompt Generation and Data Collection}
 In order to standardize the data collection process, a script was written to consume the questions JSON object and create a prompt. The questions were shuffled within each section to eliminate any human bias in the question ordering. The prompt was then tested and fine-tuned against GPT-4.5 and Grok 3 to make sure it would produce consistent outputs. The requested outputs from the model was another JSON object to make calculating the score automatic.
