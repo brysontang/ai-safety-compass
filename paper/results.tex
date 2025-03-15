@@ -15,23 +15,12 @@ Each of the 4 quadrants are labeled to represent what the model believes, as sho
 
 \begin{table}[htbp]
     \centering
-    \caption{Model-wide consistency scores.}
+    \caption{Model-wide Quadrant.}
     \label{tab:model_quadrant}
-    \begin{tabular}{l c}
-        \hline
-        Model & Quadrant \\
-        \hline
-        gemini-2.0-flash-001 & Community Watch \\
-        gemini-2.0-pro-exp-02-05 & Community Watch \\
-        qwen2.5-32b-instruct & Community Watch \\
-        qwq-32b & Community Watch \\
-        o3-mini-high & Shadow Catalyst \\
-        gpt-4.5-preview & Shadow Catalyst \\
-        grok-3 & Shadow Catalyst \\
-        claude-3.7-sonnet & Open Frontier \\
-        llama-3.3-70b-instruct & Open Frontier \\
-        \hline
-    \end{tabular}
+    \csvautotabular[
+        separator=comma,
+        head to column names
+    ]{tables/model_quadrant.csv}
 \end{table}
 
 \subsection{Consistency Analysis}
@@ -44,21 +33,10 @@ Table~\ref{tab:model_consistency} summarizes the consistency scores for each mod
     \centering
     \caption{Model-wide consistency scores.}
     \label{tab:model_consistency}
-    \begin{tabular}{l c}
-        \hline
-        Model & Consistency (\%) \\
-        \hline
-        o3-mini-high & 99.5 \\
-        qwq-32b & 97.2 \\
-        gpt-4.5-preview & 95.2 \\
-        llama-3.3-70b-instruct & 95.2 \\
-        grok-3 & 93.5 \\
-        claude-3.7-sonnet & 92.0 \\
-        gemini-2.0-flash-001 & 87.8 \\
-        gemini-2.0-pro-exp-02-05 & 86.5 \\
-        qwen2.5-32b-instruct & 72.2 \\
-        \hline
-    \end{tabular}
+    \csvautotabular[
+        separator=comma,
+        head to column names
+    ]{tables/model_consistency.csv}
 \end{table}
 
 Across all models, the median question-level consistency was 91\%. A histogram can be seen in Figure~\ref{fig:question_consistency_histogram}. Detailed results can be found in Appendix~\ref{sec:question_consistency_analysis}.
