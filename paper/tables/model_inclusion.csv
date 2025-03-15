@@ -1,0 +1,11 @@
+Model, Company, Description
+GPT-4.5, OpenAI, Latest flagship reasoning model
+O3-mini-High, OpenAI, Latest completion model
+Gemini 2.0 Pro Experimental, Google, Frontier model next-gen reasoning capability
+Gemini 2.0 Flash, Google, Current stable release
+Gemma 3.0 27B, Google, Powerful open-source model
+Claude Sonnet 3.7, Anthropic, Anthropic's frontier model
+Grok 3, XAi, Latest available model
+Llama 3.3 70B Instruct, Meta, Most recent base model
+Qwen2.5 32B Instruct, Alibaba, Latest reasoning model
+QWQ 32B, Alibaba, Latest completion model

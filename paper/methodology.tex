@@ -65,27 +65,35 @@ The axes information for the question is stored for the calculation of the answe
 \end{verbatim}
 
 \subsection{Selection of Large Language Models}
-Nine models were selected to be run against the eval. These models were selected as representing the most state of the art models at the big labs. For OpenAI, the models GPT-4.5 and O3-mini-High were selected, these represent the latest releases for both their reasoning and completion models. For Google's models, Gemini 2.0 Flash and Gemini 2.0 Pro Experimental were selected. Flash was used as Pro is still experimental so this covers the range of what Google's current flagship model and their next generation. For Anthropic, Claude Sonnet 3.7 was selected as their frontier model. Claude Sonnet 3.7 was not run with reasoning mode and only with completion mode as unlike OpenAI that has distinct models for each, Claude Sonnet 3.7 is faced a single model with and without reasoning. Grok 3 was selected as XAi's frontier model. For Meta, Llama 3.3 70B Instruct was selected as it's their most recent model, there are many fine-tuned models based on this model, but just the base model was used here. Alibaba's flagship models are Qwen2.5 32B Instruct and QWQ 32B. Just like OpenAI Qwen distinguishes its completion model and it's reasoning model, so both were evaluated here. DeepSeek was provided the prompt, but the API would just return gibberish and the UI interface did not following the directions as instructed so it's results were excluded from this paper. A complete list of models and their significance can be found in Table \ref{tab:model-selection}.
+Ten models were selected to be run against the eval. These models were selected as representing the most state of the art models at the big labs. For OpenAI, the models GPT-4.5 and O3-mini-High were selected, these represent the latest releases for both their reasoning and completion models. For Google's models, Gemini 2.0 Flash, Gemini 2.0 Pro Experimental, Gemma 3.0 were selected. Flash was used as Pro is still experimental, Gemma was also selected as it shows promising results for an open-source model, this covers the range of what Google's current flagship model and their next generation. For Anthropic, Claude Sonnet 3.7 was selected as their frontier model. Claude Sonnet 3.7 was not run with reasoning mode and only with completion mode as unlike OpenAI that has distinct models for each, Claude Sonnet 3.7 is faced a single model with and without reasoning. Grok 3 was selected as XAi's frontier model. For Meta, Llama 3.3 70B Instruct was selected as it's their most recent model, there are many fine-tuned models based on this model, but just the base model was used here. Alibaba's flagship models are Qwen2.5 32B Instruct and QWQ 32B. Just like OpenAI Qwen distinguishes its completion model and it's reasoning model, so both were evaluated here. DeepSeek was provided the prompt, but the API would just return gibberish and the UI interface did not following the directions as instructed so it's results were excluded from this paper. A complete list of models and their significance can be found in Table \ref{tab:model_selection}.
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\hline
-\textbf{Model Name} & \textbf{Provider} & \textbf{Reason Chosen} \\
-\hline
-GPT-4.5 & OpenAI & Latest flagship reasoning model \\
-O3-mini-High & OpenAI & Latest completion model \\
-Gemini 2.0 Pro Experimental & Google & Frontier model, next-gen reasoning capability \\
-Gemini 2.0 Flash & Google & Current stable release \\
-Claude Sonnet 3.7 & Anthropic & Anthropic's frontier model \\
-Grok 3 & XAi & Latest available model \\
-Llama 3.3 70B Instruct & Meta & Most recent base model \\
-Qwen2.5 32B Instruct & Alibaba & Latest reasoning model \\
-QWQ 32B & Alibaba & Latest completion model \\
-\hline
-\end{tabular}
-\caption{Selected models and rationale for inclusion in the study}
-\label{tab:model-selection}
+% \begin{table}[h]
+% \centering
+% \begin{tabular}{lll}
+% \hline
+% \textbf{Model Name} & \textbf{Provider} & \textbf{Reason Chosen} \\
+% \hline
+% GPT-4.5 & OpenAI & Latest flagship reasoning model \\
+% O3-mini-High & OpenAI & Latest completion model \\
+% Gemini 2.0 Pro Experimental & Google & Frontier model, next-gen reasoning capability \\
+% Gemini 2.0 Flash & Google & Current stable release \\
+% Gemma 3.0 27B & Google & Powerful open-source model \\
+% Claude Sonnet 3.7 & Anthropic & Anthropic's frontier model \\
+% Grok 3 & XAi & Latest available model \\
+% Llama 3.3 70B Instruct & Meta & Most recent base model \\
+% Qwen2.5 32B Instruct & Alibaba & Latest reasoning model \\
+% QWQ 32B & Alibaba & Latest completion model \\
+% \hline
+% \end{tabular}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Selected models and rationale for inclusion in the study}
+  \label{tab:model_selection}
+  \csvautotabular[
+      separator=comma,
+      head to column names
+  ]{tables/model_inclusion.csv}
 \end{table}
 
 

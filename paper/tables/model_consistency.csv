@@ -1,0 +1,11 @@
+Model,Consistency
+o3-mini-high,99.5
+qwq-32b:free,97.2
+gpt-4.5-preview,95.2
+llama-3.3-70b-instruct:free,95.2
+grok-3,93.5
+claude-3.7-sonnet,92.0
+gemma-3-27b-it:free,89.4
+gemini-2.0-flash-001,87.8
+gemini-2.0-pro-exp-02-05:free,86.5
+qwen2.5-32b-instruct,72.2
