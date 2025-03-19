@@ -36,14 +36,24 @@ No:
 - 5 Towards a Theory of AI Personhood -> (Carlsmith, 2023; Soares, 2022)
 \citep{carlsmith_scheming_2023}
 
-
+Models that have underlying goals and have the ability to scheme might fake safety training in order pursue their goal and make power grabs. By doing RLHF, we might be training the model to scheme better, thus helping it achieve its underlying goal more effectively by understanding how humans perceive it.
 
 \citep{soares_central_2022}
 
+One of the central technical challenges in AI alignment is that capabilities generalize better than alignment, a phenomenon likely to lead to significant risks as AI systems become increasingly capable. This issue arises prominently because advanced AI systems, as their intelligence and capabilities rapidly increase, will likely generalize beyond the training scenarios in unpredictable ways, revealing that existing alignment methods are inadequate or superficial.
+
 - 2 Mitigating the Alignment Tax of RLHF -> (Askell et al., 2021; OpenAI, 2023; Song et al., 2023)
 \citep{askell_general_2021}
+
+For models of smaller size, adding a prompt to align the model decrease it's score on coding evaluations, but larger models do not have this issue, in fact they preform slightly better.
+
 \citep{openai_gpt_4_2023}
+
+After the post-training process for GPT-4, the correlation between it's confidence and actual score on a subset of MMLU became uncalibrated, meaning it was over confident when it was wrong. Before post-training, it's confidence and it's correctness was highly correlated.
+
 \citep{song_reward_2023}
+
+When aligning models through humans selecting the best output, open-ended questions are put on the scale as factual questions, leading to the nuance human values of open-ended questions being lost.
 
 Open: 
 
