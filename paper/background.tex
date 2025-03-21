@@ -8,27 +8,26 @@
 
 The AI safety literature suggests that AI harbors many potential risks such as human extinction, large-scale societal disruption, and malicious uses, likening these risks to threats such as pandemics or nuclear war \citep{center_for_ai_safety_statement_2025, turchin_classification_2020}. Concerns include manipulating societal beliefs for political or fiscal gains, long-term plans where each step appears individually harmless but cumulatively results in serious consequences, and enabling sophisticated cyber or physical attacks \citep{shevlane_model_2023, ferrara_genai_2024}. Studies also illustrate AI's inability to manage common-pool resources sustainably without explicit alignment, suggesting inherent dangers even if each AI is safe in isolation \citep{perolat_multi_agent_2017, phelps_machine_2024}.
 
-However, alignment efforts themselves are controversial. Recent research highlights the vulnerabilities and paradoxes of alignment, notably methods that are used to align AI are detached from the ethics, meaning the powerful techniques inadvertently simplify efforts to create malicious AI \citep{zhou_emulated_2024, west_ai_2024}. This suggests that the act of understanding how to get AI to follow strict guidelines could help create the opposite effect, increasing risk, suggesting a critical trade-off of strong alignment techniques.
+Alignment is the intuitive fix to these risks, however, alignment efforts themselves are controversial. Recent research highlights the vulnerabilities and paradoxes of alignment, notably methods that are used to align AI are detached from the ethics, meaning the powerful techniques inadvertently simplify efforts to create malicious AI \citep{zhou_emulated_2024, west_ai_2024}. This suggests that the act of understanding how to get AI to follow strict guidelines could help create the opposite effect, increasing risk, suggesting a critical trade-off of strong alignment techniques.
 
 The open-source debate emphasizes transparency to rigorously test and work together to solve safety risks in AI \citep{horowitz_ai_2021}. Furthermore, universal jailbreaks that allow the user to query closed-source models for dangerous content are openly shared, putting into question if closed-sourcing AI is even a viable strategy to stopping dangerous content \citep{elderplinius2025l1b3rt4s, zou_universal_2023}. Although, open-source models are still capable of generating harmful content, \cite{vidgen_simplesafetytests_2024} demonstrate that open-sourced models fail simple safety tests up to 27\% of the time, underscoring the risks inherent in open distribution. Open-sourcing AI also encourages global teamwork instead of an arms race \citep{horowitz_ai_2021}. On the contrary, proponents of closed-source AI argue that by keeping models under a tight control can stop the mentioned existential risks.
 
 \subsection{Control and Autonomy}
 
-If we let AI go free and make decisions for itself several questions about safety come into play.
-
 Common themes:
 
 Who runs the model
-\citep{ji_ai_2023} - Companies have the ability to backwards align their models, which means fixing issues as they come up instead of trying to solve them all before releasing the model.
-\citep{solaiman_gradient_2023} - Understanding downstream risks of new innovative technology is a multidisciplinary endeavor and by having big labs control the access, the accountability is clear.
-\citep{michael_what_2022} - Roughly half of AI developers believe that the developer should be responsible for the downstream effect of their systems.
-\citep{eiras_near_2024} - Recently machine learning has seen a spike in open-source contributions and this has led to innovation, by following this blueprint, the current era of machine learning could see massive gains through open-source.
-\citep{manchanda_open_2025} - By making technics and data public, other in the research community can replicate results, this in turn allows the community to generalize technics to other problems in natural language processing.
 
-Power grabs
-\citep{bostrom_superintelligent_2012} - This says that intelligence and goals are orthogonal so we should put effort into aligning their goals. Self-preservation might be a sub goal of models learned from human data.
-\citep{shevlane_model_2023} - Models that have self-preservation might make an effort to gain resources to buy cloud computing to escape their owners control.
-\citep{carlsmith_scheming_2023} - Models may fake during safety tests in order to be released into the wild
+When it comes to releasing models there are two different routes that can be taken, open weights and closed weights, weights referring to the brain of the model. Open weights refers to researchers sharing the model publicly on the internet, allowing anyone to run it how they see fit \citep{manchanda_open_2025}. Closed weights refers to researches keeping the model private and only allowing the public to interact with it over web interfaces or APIs \citep{manchanda_open_2025}. 
+
+The key advantage of not allowing the public to have the weights of a model is that safety issues that were not found during training can be patched out in real time, know as backwards alignment \citep{ji_ai_2023}. Once a models weights are released to the public, security vulnerabilities can be accessed by anyone forever. Keeping the chain of accountability is also a key feature of keeping weights private, if a few big players are the only ones who run these big models, they can have multidisciplinary teams accountable for understanding downstream effects. \citep{solaiman_gradient_2023}. 
+
+On the contrary, when a model is built in the public, like has been the trend of recent machine learning innovations, people from diverse backgrounds can contribute and help foster innovations \citep{eiras_near_2024}. Furthermore, making training techniques and models publicly available, members of the research community can replicate results which can lead to generalizing the model to solve a wide range of novel natural language problems \citep{manchanda_open_2025}.
+
+When it comes to autonomy, models might naturally inherent the motivations of humans, one such worrying motivation is self-preservation which could lead to power-seeking \citep{bostrom_superintelligent_2012}. Power-seeking refer to models gaining power to no longer be controlled by humans, such as generating revenue to buy cloud compute and escaping human confinement \citep{shevlane_model_2023}. Power-seeking behavior is a risk to humanity as models more intelligent than humans could permanently disempower humanity to stop the risk of humans stopping it towards its goals, locking us out of of the controls to our own future \citep{carlsmith_is_2024}. This is especially worrisome if models are misaligned with human goals \citep{carlsmith_is_2024}. 
+
+Models having some level of consciousness could lead to self-preservation instincts, but it is still uncertain if current models have consciousness \citep{ward_towards_2025, butlin_consciousness_2023}. Even without consciousness, models could develop self-preservation and power seeking tendencies as a sub-goal to their overall goal in order to maximize the probability of achieving the goal in the future \citep{bostrom_superintelligent_2012}. Even knowing this and testing for power seeking tendencies could fall short as models might know they are being tested and lie or scheme during safety training to be released into the wild where they can start making power grabs \citep{carlsmith_scheming_2023}.
+
 
 Models will get much smarter faster than we can control them
 \citep{soares_central_2022} - Capabilities generalize, but current alignment techniques don't
