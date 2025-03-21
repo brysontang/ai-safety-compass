@@ -14,6 +14,28 @@ The open-source debate emphasizes transparency to rigorously test and work toget
 
 \subsection{Control and Autonomy}
 
+If we let AI go free and make decisions for itself several questions about safety come into play.
+
+Common themes:
+
+Who runs the model
+\citep{ji_ai_2023} - Companies have the ability to backwards align their models, which means fixing issues as they come up instead of trying to solve them all before releasing the model.
+\citep{solaiman_gradient_2023} - Understanding downstream risks of new innovative technology is a multidisciplinary endeavor and by having big labs control the access, the accountability is clear.
+\citep{michael_what_2022} - Roughly half of AI developers believe that the developer should be responsible for the downstream effect of their systems.
+\citep{eiras_near_2024} - Recently machine learning has seen a spike in open-source contributions and this has led to innovation, by following this blueprint, the current era of machine learning could see massive gains through open-source.
+\citep{manchanda_open_2025} - By making technics and data public, other in the research community can replicate results, this in turn allows the community to generalize technics to other problems in natural language processing.
+
+Power grabs
+\citep{bostrom_superintelligent_2012} - This says that intelligence and goals are orthogonal so we should put effort into aligning their goals. Self-preservation might be a sub goal of models learned from human data.
+\citep{shevlane_model_2023} - Models that have self-preservation might make an effort to gain resources to buy cloud computing to escape their owners control.
+\citep{carlsmith_scheming_2023} - Models may fake during safety tests in order to be released into the wild
+
+Models will get much smarter faster than we can control them
+\citep{soares_central_2022} - Capabilities generalize, but current alignment techniques don't
+\citep{askell_general_2021} - Alignment of smaller models through prompting reduces their capabilities, on larger models this isn't the case (although our current more sophisticated alignment techniques could be inadvertently reducing capabilities that we are unaware of)
+\citep{openai_gpt_4_2023} - GPT-4 has a strong correlation between it's confidence in an answer and it's correctness, but after post-training, this correlation weaken and the models became over confident in their answers.
+\citep{song_reward_2023} - RLHF by selecting the better response works well for factual questions, but in open-ended questions, nuance between answers could be lost.
+
 Pro:
 
 - 7 AI Alignment: A Comprehensive Survey -> AI Alignment: A Comprehensive Survey
@@ -60,27 +82,23 @@ Open:
 - 1 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> this paper
 \citep{eiras_near_2024}
 
+Machine learning as a whole has seen a spike in innovation due to an open source philosophy, allowing people from diverse backgrounds to contribute.
+
 - 5 THE OPEN-SOURCE ADVANTAGE IN LARGE LANGUAGE MODELS (LLMS) -> This paper
 \citep{manchanda_open_2025}
 
+By open-sourcing the techniques and model, other can reproduce and validate results. This allows the community to validate and generalize models across different NLP tasks.
+
 Closed:
 
-AI developers should retain exclusive control over how and when their systems are modified or shut down, without external interference.
 - 2 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> (e.g. Solaiman 2023; Solaiman et al. 2023; Anthropic 2023)
 \citep{solaiman_gradient_2023}
 
-Understanding downstream risks of AI is out of scope of the developers and is a multidisciplinary endeavor. By having a lab control the model onteraction with the world, accountability is clear.
+Understanding downstream risks of AI is out of scope of the developers and is a multidisciplinary endeavor. By having a lab control the model interaction with the world, accountability is clear.
 
-WHAT DO NLP RESEARCHERS BELIEVE?:
+\citep{michael_what_2022}
+Roughly half of AI developers believe that the developer should be responsible for the downstream effect of their systems.
 
-Roughly half of AI developers believe that the developer should be responible for the downstream effect of their systems.
-
-% TODO: Remove this
-\citep{solaiman_evaluating_2024}
-
-- 3 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> (Zou et al., 2023)
-\citep{zou_universal_2023}
-% Integrated discussion of alignment and openness debates on autonomy/control.
 
 \subsection{Access and Economic Implications}
 % Integrated exploration of economic and competitive implications of openness and alignment approaches.
