@@ -51,6 +51,7 @@ __pycache__/
 *.pyz
 
 scripts/responses/*
+paper/Exported Items.bib
 
 # LaTeX build artifacts
 *.aux
