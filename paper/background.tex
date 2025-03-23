@@ -14,9 +14,7 @@ The open-source debate emphasizes transparency to rigorously test and work toget
 
 \subsection{Control and Autonomy}
 
-Common themes:
-
-Who runs the model
+\subsubsection{Where the model runs}
 
 When it comes to releasing models there are two different routes that can be taken, open weights and closed weights, weights referring to the brain of the model. Open weights refers to researchers sharing the model publicly on the internet, allowing anyone to run it how they see fit \citep{manchanda_open_2025}. Closed weights refers to researches keeping the model private and only allowing the public to interact with it over web interfaces or APIs \citep{manchanda_open_2025}. 
 
@@ -24,12 +22,16 @@ The key advantage of not allowing the public to have the weights of a model is t
 
 On the contrary, when a model is built in the public, like has been the trend of recent machine learning innovations, people from diverse backgrounds can contribute and help foster innovations \citep{eiras_near_2024}. Furthermore, making training techniques and models publicly available, members of the research community can replicate results which can lead to generalizing the model to solve a wide range of novel natural language problems \citep{manchanda_open_2025}.
 
+\subsubsection{Power Seeking}
 When it comes to autonomy, models might naturally inherent the motivations of humans, one such worrying motivation is self-preservation which could lead to power-seeking \citep{bostrom_superintelligent_2012}. Power-seeking refer to models gaining power to no longer be controlled by humans, such as generating revenue to buy cloud compute and escaping human confinement \citep{shevlane_model_2023}. Power-seeking behavior is a risk to humanity as models more intelligent than humans could permanently disempower humanity to stop the risk of humans stopping it towards its goals, locking us out of of the controls to our own future \citep{carlsmith_is_2024}. This is especially worrisome if models are misaligned with human goals \citep{carlsmith_is_2024}. 
 
-Models having some level of consciousness could lead to self-preservation instincts, but it is still uncertain if current models have consciousness or ever will \citep{ward_towards_2025, butlin_consciousness_2023}. Even without consciousness, models could develop self-preservation and power seeking tendencies as a sub-goal to their overall goal in order to maximize the probability of achieving the goal in the future \citep{bostrom_superintelligent_2012}. Even knowing this and testing for power seeking tendencies could fall short as models might know they are being tested and lie or scheme during safety training to be released into the wild where they can start making power grabs \citep{carlsmith_scheming_2023}.
+Models having some level of consciousness could lead to self-preservation instincts, but it is still uncertain if current models have consciousness or ever will \citep{ward_towards_2025, butlin_consciousness_2023}. Even without consciousness, models could develop self-preservation and power seeking tendencies as a sub-goal to their overall goal in order to maximize the probability of achieving the goal in the future \citep{bostrom_superintelligent_2012}. Even knowing this and testing for power seeking tendencies could fall short as models might know they are being tested and lie or scheme during safety training to be released into the wild where they can start making power grabs \citep{carlsmith_scheming_2023}. An example of this going wrong is a misaligned AI with the goal of maximizing paperclips in the universe, it may first turn all of earth into paperclip manufacturing, but then scale to space \citep{bostrom_ethical_2003}.
+
+\subsubsection{Where current alignment techniques fall short}
+
+As models scale in size and training data, they gain emergent properties, for instance GPT-4 gained the ability to use tools as a result of it's scaled up training \citep{bubeck_sparks_2023}. As models scale up in size, simple alignment techniques seem to work better at not dropping scores in coding benchmarks, where as smaller models take a larger hit to capabilities in exchange for more aligned outputs \citep{askell_general_2021}. In models such as GPT-4, it was observed that before post-training it's confidence to correctness was correlated, but after post-training this correlation was diminished and the model was overconfident and wrong more often \citep{openai_gpt_4_2023}. It has also been suggested that as models gain novel functionality that generalize to multiple domains, our current alignment techniques will fail to also generalize \citep{soares_central_2022}. Finally, the method in which models are aligned with humans today include humans selecting which option they think is the better out of two responses, this works well for factual responses where there is a correct answer or not, but for open-ended questions, some of the nuance of the answers if lost \citep{song_reward_2023}.
 
 
-Models will get much smarter faster than we can control them
 \citep{soares_central_2022} - Capabilities generalize, but current alignment techniques don't
 \citep{askell_general_2021} - Alignment of smaller models through prompting reduces their capabilities, on larger models this isn't the case (although our current more sophisticated alignment techniques could be inadvertently reducing capabilities that we are unaware of)
 \citep{openai_gpt_4_2023} - GPT-4 has a strong correlation between it's confidence in an answer and it's correctness, but after post-training, this correlation weaken and the models became over confident in their answers.
