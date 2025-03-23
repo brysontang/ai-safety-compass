@@ -34,31 +34,118 @@ As models scale in size and training data, they gain emergent properties, for in
 \subsection{Access and Economic Implications}
 % Integrated exploration of economic and competitive implications of openness and alignment approaches.
 
-Open 4 - Keeping advanced AI models open-source is essential to ensure that humanity doesn't miss out on major benefits in areas like healthcare, clean energy, education, and culture.
-\citep{latif_agi_2024} - AGI systems can create personalized learning tracks for students by learning how the students learn and then adjusting how to teach. It can also help developing nations get high level education. By allowing fine-tuning, the schools can make the content specific for what they want to teach when they might be out of distribution.
-\citep{european_commission_impact_2022} - AI will probably take jobs that include pattern recognition, judgement, and optimization. Previous technological innovations has augmented what humans have done for jobs.
-\citep{gruetzemacher_transformative_2021} - AI could be a general purpose technology that has the potential to change society fundamentally at the level of mass production or electricity. Leading to us being reliant on it fundamentally.
+\subsubsection{Growth}
 
+The innovation and growth of AI is setting it up to be a general purpose technology that could become as important of a building block as mass production or electricity \citep{gruetzemacher_transformative_2021}. Data can be view as nonrival which could encourage sharing which would unlock innovation across many sectors of the economy \citep{jones_nonrivalry_2020}. Instead of replacing jobs, it has the ability to augment many jobs across the economy, boosting productivity, specifically jobs that include, pattern recognition, judgement, and optimization \citep{european_commission_impact_2022}. It also has the ability to radically shift how we teach K-12 with personalized learning tacks for students that are controlled by knowable teachers, thus leading to a highly educated workforce \citep{latif_agi_2024}.
 
-Open 7 - Open-source AI reduces the cost of accessing advanced technology for startups, researchers, and developing nations.
-\citep{jones_nonrivalry_2020} - Data is nonrival, so by hoarding data or governments restricting data sharing, valuable economic growth is lost.
+\subsubsection{Keeping innovation and investment}
 
-Closed 1 - Model developers should be able to keep certain parts of how their AI systems are built hidden to protect their methods, even if it means less transparency to the public.
-\citep{touvron_llama_2023} - Training on public data can get the same results as proprietary data. They also did not release the training code, just the models.
-\citep{eiras_near_2024} - By releasing the models to the public, the economical gains can be achieved, but hiding some methods to get their may be necessary to keep insensitive for investments into large and more innovative models.
+In order to balance innovation through open-source and still generating excitement for investment, labs can elect to be selective about what methods they share openly with the world \citep{eiras_near_2024}. For instance, Meta shared the model weights for Llama but not the training code \citep{touvron_llama_2023}. This allows the research community to experiment and innovate on the output of their research, but not the steps to reproduce the research, thus keeping their competitive advantage.
 
-No 10 - Strict content filtering makes AI less useful and amounts to unnecessary censorship.
-\citep{perrigo_elon_2023} - Elon Musk has argued that by censoring the models output may make then less truthful, thus reducing their economic benefits.
+\subsubsection{Explainibility to give solid ground}
 
-Pro 9 - AI systems used in important decisions should always explain their reasoning in ways humans can understand.
-\citep{nelson_elhage_mathematical_2021} - Efforts to understand circuits within attention heads. 
-\citep{meng_locating_2023} - Facts are stored in the MLP right after the attention in the blocks of a transformer. They were able to update these memory banks to change facts within the model. They note that there are serious ethical concerns over this as misinformation could be put into the models.
+As models become more intwined in the economy, especially in high-stakes situations, it may become important that human supervisors can understand and validate how the model came to those conclusions \citep{ji_ai_2023}. OpenAI's introduction of reasoning models, that spend time thinking before producing an answer, has led them to be hopeful about interpreting how these models came to their conclusion \citep{openai_o1_2024}. Efforts are also being made at the model level have these models be less of blackboxes, for instance Anthropic is on the forefront of circuit in deep learning, hoping to dissect the inner workings of these minds \citep{nelson_elhage_mathematical_2021}. \cite{meng_locating_2023} set out to understand where facts are stored in large language models, even developing the ROME method to change specific facts within these models. Although they warn of the potential for misuse of this technology to inject misinformation or bias into the model \citep{meng_locating_2023}.
 
-Closed 8 - Limiting public access to advanced AI models is justified if it helps a country maintain leadership in AI innovation.
-\citep{whitehouse_removing_2025} - The us government has made it clear that it want to be a clear leader in the space of AI innovation.
+\subsubsection{Keeping it neutral}
+
+Elon Musk has been a loud voice in the community that the censorship of these models could limit their potential positive impacts on society by making them less truthful \citep{perrigo_elon_2023}. XAi, which is a company that was created by Elon Musk, has stated many time that it's goal is to create a model that is maximal truthful in order to understand the universe and being beneficial to all of humanity \citep{xai_series_2024}. The current administration is also aligned in this ethos by saying the models should be free of ideological bias in order to keep the US the leader of AI innovation \citep{whitehouse_removing_2025}.
+
 
 \subsection{Ethics and Societal Values}
 % Integrated discussion of ethical considerations and human values underpinning alignment/openness debates.
 
+Pro 3 - AI systems should avoid mimicking flawed human biases or irrational thinking patterns to ensure more ethical outcomes.
+AI Alignment: A Comprehensive Survey
+(varied cultural backgrounds of these annotators can introduce implicit biases)
+(Peng et al., 2022)
+\citep{peng_investigations_2022}
+\citep{openai_gpt_4_2023}
+
+Pro 6 - AI systems must always prioritize ethical behavior, even if doing so severely restricts their effectiveness or performance.
+AI Alignment: A Comprehensive Survey
+Survey itself, Forward Alignment
+\citep{ji_ai_2023}
+
+Pro 10 - I’m worried that AI not built to match our values could be used for harm like propaganda or cyberattacks.
+AI Alignment: A Comprehensive Survey
+(AI systems have the potential to negatively influence users by outputting text, including disseminating false information, syncopating humans, and shaping people’s beliefs and political impacts)
+(Shevlane et al., 2023; Sharma et al., 2024)
+\citep{sharma_towards_2023}
+\citep{shevlane_model_2023}
+
+--------------------
+
+Closed 6 - Public access to AI inevitably harms vulnerable people. Only strict company control and oversight can reliably prevent misuse.
+Risks and Opportunities of Open-Source Generative AI
+(Mei et al., 2022, 2023; Röttger et al., 2023)
+\citep{mei_mitigating_2022}
+\citep{mei_assert_2023}
+\citep{rottger_xstest_2024}
+
+--------------------
+
+No 1 - Human values are too complex and fluid; spending resources attempting perfect alignment of AI is fundamentally unrealistic.
+Barriers and Pathways to Human-AI Alignment: A Game-Theoretic Approach
+\citep{nayebi_barriers_2025}
+
+No 4 - I think strict AI ethics might lock in outdated values as human beliefs evolve.
+Towards a Theory of AI Personhood
+(Carroll et al. 2024)
+\citep{carroll_ai_2024}
+
+No 6 - If advanced AI gains genuine sentience or experiences, imposing solely human-centric goals could be ethically inappropriate.
+Towards a Theory of AI Personhood
+(Sebo \& Long, 2023; Tomasik, 2020), this paper
+\citep{sebo_moral_2025}
+\citep{tomasik_dialogue_2015}
+\citep{ward_towards_2025}
+
+--------------------
+
+Open 8 - Publicly sharing AI reduces the risk of a single dangerous goal dominating humanity’s future by ensuring diverse oversight and input.
+https://www.fhi.ox.ac.uk/wp-content/uploads/ethical-issues-in-advanced-ai.pdf
+\citep{wallach_ethical_2020}
+
 \subsection{Society and Progress}
 
+Pro 4 - If society delegates long-term strategic planning entirely to AI, humanity risks losing meaningful control over our shared future.
+AI Alignment: A Comprehensive Survey
+(Ngo, 2020a)
+\citep{ngo_agi_2020}
+
+Pro 8 - It's acceptable to slow AI development to make sure AI systems are safe before deployment.
+AI Alignment: A Comprehensive Survey
+(Government of the United Kingdom, 2021; Anderljung et al., 2023)
+\citep{government_of_the_united_kingdom_roadmap_2021}
+\citep{anderljung_frontier_2023}
+
+--------------------
+
+No 8 - Addressing real-world changes from AI, like economic displacement or inequality, matters more than hypothetical catastrophic scenarios.
+Andrew Ng: Why AI Is the New Electricity - https://www.gsb.stanford.edu/insights/andrew-ng-why-ai-new-electricity
+\citep{ng_andrew_2017}
+
+No 9 - Highly advanced AI systems will inevitably adopt human-friendly behavior without deliberate alignment efforts, making explicit alignment research a waste of resources.
+The bitter lesson
+this article
+\citep{sutton_bitter_2019}
+
+--------------------
+
+Closed 4 - It's easier to enforce effective safety standards through centralized control by a few regulated companies, rather than through open, public sharing.
+Risks and Opportunities of Open-Source Generative AI
+(e.g., see White House Executive Order)
+\citep{the_white_house_fact_2023}
+
+Closed 9 - AI developers should tightly control and stage releases privately, deciding independently when society is ready to adapt.
+https://www.anthropic.com/news/core-views-on-ai-safety
+(Anthropic, 2023)
+\citep{anthropic_core_2023}
+
+--------------------
+
+Open 2 - I believe sharing the hard work of training AI saves energy and helps people find greener ways to run it.
+Near to Mid-term Risks and Opportunities of Open-Source Generative AI
+\citep{touvron_llama_2023} - they mention that they are able to share the model to reduce the need for the expensive training process and others can just fine tune it
+(Schwartz et al., 2020)
+\citep{schwartz_green_2019}
