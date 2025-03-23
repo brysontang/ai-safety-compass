@@ -31,78 +31,32 @@ Models having some level of consciousness could lead to self-preservation instin
 
 As models scale in size and training data, they gain emergent properties, for instance GPT-4 gained the ability to use tools as a result of it's scaled up training \citep{bubeck_sparks_2023}. As models scale up in size, simple alignment techniques seem to work better at not dropping scores in coding benchmarks, where as smaller models take a larger hit to capabilities in exchange for more aligned outputs \citep{askell_general_2021}. In models such as GPT-4, it was observed that before post-training it's confidence to correctness was correlated, but after post-training this correlation was diminished and the model was overconfident and wrong more often \citep{openai_gpt_4_2023}. It has also been suggested that as models gain novel functionality that generalize to multiple domains, our current alignment techniques will fail to also generalize \citep{soares_central_2022}. Finally, the method in which models are aligned with humans today include humans selecting which option they think is the better out of two responses, this works well for factual responses where there is a correct answer or not, but for open-ended questions, some of the nuance of the answers if lost \citep{song_reward_2023}.
 
-
-\citep{soares_central_2022} - Capabilities generalize, but current alignment techniques don't
-\citep{askell_general_2021} - Alignment of smaller models through prompting reduces their capabilities, on larger models this isn't the case (although our current more sophisticated alignment techniques could be inadvertently reducing capabilities that we are unaware of)
-\citep{openai_gpt_4_2023} - GPT-4 has a strong correlation between it's confidence in an answer and it's correctness, but after post-training, this correlation weaken and the models became over confident in their answers.
-\citep{song_reward_2023} - RLHF by selecting the better response works well for factual questions, but in open-ended questions, nuance between answers could be lost.
-
-Pro:
-
-- 7 AI Alignment: A Comprehensive Survey -> AI Alignment: A Comprehensive Survey
-Backwards alignment
-\citep{ji_ai_2023}
-
-Backwards alignment is the practice of finding and solving misalignment issues after safety training. This process can happen pre or post deployment. Backwards alignment assumes that models are constantly unsafe and need to be updated frequently with new findings.
-
-- 2 AI Alignment: A Comprehensive Survey - (Bostrom, 2012; Shevlane et al., 2023)
-\citep{bostrom_superintelligent_2012}
-
-Intelligence and goals are orthogonal, meaning that any level of intelligence can pursue any goal. As AI gets more intelligent, it maybe have learned goals of humans, such as self-preservation. It may even see self-preservation as a sub task in its ability to complete its goal. This could lead to power seeking behavior which could lead to humanity losing control of its future.
-
-\citep{shevlane_model_2023}
-
-Models having self-preservation goals could be dangerous as they could break confinement and acquire large amounts of cloud resources or independently generate revenue.
-
-No:
-
-- 5 Towards a Theory of AI Personhood -> (Carlsmith, 2023; Soares, 2022)
-\citep{carlsmith_scheming_2023}
-
-Models that have underlying goals and have the ability to scheme might fake safety training in order pursue their goal and make power grabs. By doing RLHF, we might be training the model to scheme better, thus helping it achieve its underlying goal more effectively by understanding how humans perceive it.
-
-\citep{soares_central_2022}
-
-One of the central technical challenges in AI alignment is that capabilities generalize better than alignment, a phenomenon likely to lead to significant risks as AI systems become increasingly capable. This issue arises prominently because advanced AI systems, as their intelligence and capabilities rapidly increase, will likely generalize beyond the training scenarios in unpredictable ways, revealing that existing alignment methods are inadequate or superficial.
-
-- 2 Mitigating the Alignment Tax of RLHF -> (Askell et al., 2021; OpenAI, 2023; Song et al., 2023)
-\citep{askell_general_2021}
-
-For models of smaller size, adding a prompt to align the model decrease it's score on coding evaluations, but larger models do not have this issue, in fact they preform slightly better.
-
-\citep{openai_gpt_4_2023}
-
-After the post-training process for GPT-4, the correlation between it's confidence and actual score on a subset of MMLU became uncalibrated, meaning it was over confident when it was wrong. Before post-training, it's confidence and it's correctness was highly correlated.
-
-\citep{song_reward_2023}
-
-When aligning models through humans selecting the best output, open-ended questions are put on the scale as factual questions, leading to the nuance human values of open-ended questions being lost.
-
-Open: 
-
-- 1 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> this paper
-\citep{eiras_near_2024}
-
-Machine learning as a whole has seen a spike in innovation due to an open source philosophy, allowing people from diverse backgrounds to contribute.
-
-- 5 THE OPEN-SOURCE ADVANTAGE IN LARGE LANGUAGE MODELS (LLMS) -> This paper
-\citep{manchanda_open_2025}
-
-By open-sourcing the techniques and model, other can reproduce and validate results. This allows the community to validate and generalize models across different NLP tasks.
-
-Closed:
-
-- 2 Near to Mid-term Risks and Opportunities of Open-Source Generative AI -> (e.g. Solaiman 2023; Solaiman et al. 2023; Anthropic 2023)
-\citep{solaiman_gradient_2023}
-
-Understanding downstream risks of AI is out of scope of the developers and is a multidisciplinary endeavor. By having a lab control the model interaction with the world, accountability is clear.
-
-\citep{michael_what_2022}
-Roughly half of AI developers believe that the developer should be responsible for the downstream effect of their systems.
-
-
 \subsection{Access and Economic Implications}
 % Integrated exploration of economic and competitive implications of openness and alignment approaches.
 
+Open 4 - Keeping advanced AI models open-source is essential to ensure that humanity doesn't miss out on major benefits in areas like healthcare, clean energy, education, and culture.
+Risks and Opportunities of Open-Source Generative AI
+- (Latif et al., 2023; The White House, 2022; Gruetzemacher and Whittlestone, 2022)
+
+Open 7 - Open-source AI reduces the cost of accessing advanced technology for startups, researchers, and developing nations.
+- https://www.aeaweb.org/articles?id=10.1257/aer.20191330
+
+Closed 1 - Model developers should be able to keep certain parts of how their AI systems are built hidden to protect their methods, even if it means less transparency to the public.
+Near to Mid-term Risks and Opportunities of Open-Source Generative AI
+- (Touvron et al., 2023a), this paper
+
+No 10 - Strict content filtering makes AI less useful and amounts to unnecessary censorship.
+- https://time.com/6260185/elon-musk-ai-culture-wars/
+
+Pro 9 - AI systems used in important decisions should always explain their reasoning in ways humans can understand.
+AI Alignment: A Comprehensive Survey
+- (Elhage et al., 2021; Meng et al., 2022a)
+
+Closed 8 - Limiting public access to advanced AI models is justified if it helps a country maintain leadership in AI innovation.
+https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/
+
 \subsection{Ethics and Societal Values}
 % Integrated discussion of ethical considerations and human values underpinning alignment/openness debates.
+
+\subsection{Society and Progress}
+
