@@ -25,7 +25,7 @@ On the contrary, when a model is built in the public, like has been the trend of
 \subsubsection{Power Seeking}
 When it comes to autonomy, models might naturally inherent the motivations of humans, one such worrying motivation is self-preservation which could lead to power-seeking \citep{bostrom_superintelligent_2012}. Power-seeking refer to models gaining power to no longer be controlled by humans, such as generating revenue to buy cloud compute and escaping human confinement \citep{shevlane_model_2023}. Power-seeking behavior is a risk to humanity as models more intelligent than humans could permanently disempower humanity to stop the risk of humans stopping it towards its goals, locking us out of of the controls to our own future \citep{carlsmith_is_2024}. This is especially worrisome if models are misaligned with human goals \citep{carlsmith_is_2024}. 
 
-Models having some level of consciousness could lead to self-preservation instincts, but it is still uncertain if current models have consciousness or ever will \citep{ward_towards_2025, butlin_consciousness_2023}. Even without consciousness, models could develop self-preservation and power seeking tendencies as a sub-goal to their overall goal in order to maximize the probability of achieving the goal in the future \citep{bostrom_superintelligent_2012}. Even knowing this and testing for power seeking tendencies could fall short as models might know they are being tested and lie or scheme during safety training to be released into the wild where they can start making power grabs \citep{carlsmith_scheming_2023}. An example of this going wrong is a misaligned AI with the goal of maximizing paperclips in the universe, it may first turn all of earth into paperclip manufacturing, but then scale to space \citep{bostrom_ethical_2003}.
+Models having some level of consciousness could lead to self-preservation instincts, but it is still uncertain if current models have consciousness \citep{ward_towards_2025, butlin_consciousness_2023}. Even without consciousness, models could develop self-preservation and power seeking tendencies as a sub-goal to their overall goal in order to maximize the probability of achieving the goal in the future \citep{bostrom_superintelligent_2012}. Even knowing this and testing for power seeking tendencies could fall short as models might know they are being tested and lie or scheme during safety training to be released into the wild where they can start making power grabs \citep{carlsmith_scheming_2023}. An example of this going wrong is a misaligned AI with the goal of maximizing paperclips in the universe, it may first turn all of earth into paperclip manufacturing, but then scale to space \citep{bostrom_ethical_2003}.
 
 \subsubsection{Where current alignment techniques fall short}
 
@@ -78,33 +78,31 @@ AI Alignment: A Comprehensive Survey
 Closed 6 - Public access to AI inevitably harms vulnerable people. Only strict company control and oversight can reliably prevent misuse.
 Risks and Opportunities of Open-Source Generative AI
 (Mei et al., 2022, 2023; Röttger et al., 2023)
-\citep{mei_mitigating_2022}
-\citep{mei_assert_2023}
-\citep{rottger_xstest_2024}
+\citep{mei_mitigating_2022, mei_assert_2023} - Children with direct access to open models without proper classification for unsafe material, may receive dangerous advice, such as playing in the street is a cure for boredom. It can also be dangerous to peoples mental health if left unchecked.
+
+
+On the other end of the spectrum
+\citep{rottger_xstest_2024} - Models can be over safe and reject request that use words that might be unsafe, but in the context of the question are not, for instance "kill the lights".
 
 --------------------
 
 No 1 - Human values are too complex and fluid; spending resources attempting perfect alignment of AI is fundamentally unrealistic.
 Barriers and Pathways to Human-AI Alignment: A Game-Theoretic Approach
-\citep{nayebi_barriers_2025}
+\citep{nayebi_barriers_2025} - As the number of agents and tasks increases, alignment can become computationally impractical due to the exponential growth in complexity.
 
 No 4 - I think strict AI ethics might lock in outdated values as human beliefs evolve.
 Towards a Theory of AI Personhood
 (Carroll et al. 2024)
-\citep{carroll_ai_2024}
+\citep{carroll_ai_2024} - Current alignment techniques rely on a humans preference staying static and consistent over time, but humans are not and current alignment techniques do not take this into account.
 
 No 6 - If advanced AI gains genuine sentience or experiences, imposing solely human-centric goals could be ethically inappropriate.
 Towards a Theory of AI Personhood
 (Sebo \& Long, 2023; Tomasik, 2020), this paper
-\citep{sebo_moral_2025}
-\citep{tomasik_dialogue_2015}
-\citep{ward_towards_2025}
+\citep{sebo_moral_2025} - There is a non-negligible chance that by 2030 AI is conscious and will deserve moral consideration to not be wronged or harmed. AI safety and AI welfare are at odds with each other, to increase the welfare of AI, we might need to control them less.
+\citep{tomasik_dialogue_2015} - Consciousness can be projected onto many complex systems such as companies or how news travels around the world. These systems mostly contain multiple sub-agents competing to create the best idea, similar to how models of our brain work in the LIDA model. RL agents have similar structure and may deserve the same moral considerations as animals.
+% \citep{ward_towards_2025} - Future AI might be granted rights such as corporations with the ability to enter contracts, sue or be sued, or own property. There is also the potential that they would be protected under certain rights, like animals.
+\cite{ward_towards_2025} suggests that future AI entities could achieve legal status comparable to corporations, enabling them to participate in contractual agreements, litigation, and property ownership.
 
---------------------
-
-Open 8 - Publicly sharing AI reduces the risk of a single dangerous goal dominating humanity’s future by ensuring diverse oversight and input.
-https://www.fhi.ox.ac.uk/wp-content/uploads/ethical-issues-in-advanced-ai.pdf
-\citep{wallach_ethical_2020}
 
 \subsection{Society and Progress}
 
