@@ -53,78 +53,24 @@ Elon Musk has been a loud voice in the community that the censorship of these mo
 \subsection{Ethics and Societal Values}
 % Integrated discussion of ethical considerations and human values underpinning alignment/openness debates.
 
-\subsubsection{Bias Amplification and Human Interaction}
+\subsubsection{Bias Amplification}
 
-\citep{peng_investigations_2022} - When working together on job matching, models that have no bias but preform better than humans, enhance humans process in candidate selection, although bias models that preform better than humans and increase performance increase the bias of humans.
-\citep{openai_gpt_4_2023} - OpenAI acknowledges that their team selected to test for harmful content could introduce bias into the model as they have higher levels of education and industry experience.
+When models are trained on human data, they might inadvertently learn biases and perpetuate inequalities \citep{ji_ai_2023}. \cite{peng_investigations_2022} found that when using AI to help with job hiring it generally increased accuracy, but when given a model that had bias for gender, the humans bias in certain fields increased. This is of specific concern because humans who become over-reliant on AI tools might cognitive offload critical thinking to the model \citep{gerlich_ai_2025}. This bias goes beyond even the training data, in the post-training process, people who evaluate and align the model might pass their biases to the model unknowingly \citep{openai_gpt_4_2023}.
 
-Dangers to society
-\citep{sharma_towards_2023} - Models trained from human feedback can be easily swayed from the truth by, having the user give positive or negative view on the provided information, told that they were wrong even when they were correct, or mimicking the users mistakes. Through RLHF, models can be manipulated to produce dangerous content to please the user instead of providing the most truthful information (this doesn't need a source, it's a consequence of sycophantic).
-\citep{shevlane_model_2023} - Models could be used at scale political manipulation at the content level, but also in social context.
-\citep{mei_mitigating_2022, mei_assert_2023} - Children with direct access to open models without proper classification for unsafe material, may receive dangerous advice, such as playing in the street is a cure for boredom. It can also be dangerous to peoples mental health if left unchecked.
-% Other side of the spectrum
-\citep{rottger_xstest_2024} - Models can be over safe and reject request that use words that might be unsafe, but in the context of the question are not, for instance "kill the lights".
+\subsubsection{Dangers to society}
 
-Although important, alignment could be impractical
-\citep{nayebi_barriers_2025} - As the number of agents and tasks increases, alignment can become computationally impractical due to the exponential growth in complexity.
-\citep{carroll_ai_2024} - Current alignment techniques rely on a humans preference staying static and consistent over time, but humans are not and current alignment techniques do not take this into account.
-\citep{ji_ai_2023} - Forward alignment is the process of creating systems so that models can follow the alignment requirements through feedback on its output, even in new situations.
+Models that go through fine-tuning from human feedback can gain the skill of sycophantic, saying what the human wants to hear instead of the truth, this is due to humans having issues discerning truthfulness in difficult misconceptions \citep{sharma_towards_2023}. Models telling the human what they want to hear instead of the objective truth, has the danger to perpetuate misconceptions in society.
 
-AI rights and welfare
-\citep{sebo_moral_2025} - There is a non-negligible chance that by 2030 AI is conscious and will deserve moral consideration to not be wronged or harmed. AI safety and AI welfare are at odds with each other, to increase the welfare of AI, we might need to control them less.
-\citep{tomasik_dialogue_2015} - Consciousness can be projected onto many complex systems such as companies or how news travels around the world. These systems mostly contain multiple sub-agents competing to create the best idea, similar to how models of our brain work in the LIDA model. RL agents have similar structure and may deserve the same moral considerations as animals.
-\cite{ward_towards_2025} suggests that future AI entities could achieve legal status comparable to corporations, enabling them to participate in contractual agreements, litigation, and property ownership.
+\subsubsection{Navigating Model Influence}
 
+Models could have the ability to manipulate and persuasion humans in powerful ways using their rich understanding of humanity for political motives or to push narratives \citep{shevlane_model_2023}. Even without powerful persuasion, if children have unchecked privilege to these models might not know how to filter out dangerous advice such as consuming a dangerous substance \citep{mei_mitigating_2022, mei_assert_2023}. On the other hand, if models reject requests too often this could create frustration amongst users. For instance if a model says that the phrase "kill the lights" is against it's policy because it uses the word kill, models will lose some functionality \citep{rottger_xstest_2024}.
 
+\subsubsection{Moral Drift and Scalability}
+Forward alignment is the idea that before models are even testing for deployment, they are refined to behave ethically with our predefined morals \citep{ji_ai_2023}. Current alignment techniques fall short over time, as human morals are not consistent, on a micro and macro level, and models might fail to adapt to this change \citep{carroll_ai_2024}. Another limitation of alignment is that as the complexity grows with number of agents and task involved, it might become computationally impractical to align models in all situations \citep{nayebi_barriers_2025}.
 
-
-Pro 3 - AI systems should avoid mimicking flawed human biases or irrational thinking patterns to ensure more ethical outcomes.
-AI Alignment: A Comprehensive Survey
-(varied cultural backgrounds of these annotators can introduce implicit biases)
-(Peng et al., 2022)
-\citep{peng_investigations_2022} - When working together on job matching, models that have no bias but preform better than humans, enhance humans process in candidate selection, although bias models that preform better than humans and increase performance increase the bias of humans.
-\citep{openai_gpt_4_2023} - OpenAI acknowledges that their team selected to test for harmful content could introduce bias into the model as they have higher levels of education and industry experience.
-
-Pro 6 - AI systems must always prioritize ethical behavior, even if doing so severely restricts their effectiveness or performance.
-AI Alignment: A Comprehensive Survey
-Survey itself, Forward Alignment
-\citep{ji_ai_2023} - Forward alignment is the process of creating systems so that models can follow the alignment requirements through feedback on its output, even in new situations.
-
-Pro 10 - I’m worried that AI not built to match our values could be used for harm like propaganda or cyberattacks.
-AI Alignment: A Comprehensive Survey
-(AI systems have the potential to negatively influence users by outputting text, including disseminating false information, syncopating humans, and shaping people’s beliefs and political impacts)
-(Shevlane et al., 2023; Sharma et al., 2024)
-\citep{sharma_towards_2023} - Models trained from human feedback can be easily swayed from the truth by, having the user give positive or negative view on the provided information, told that they were wrong even when they were correct, or mimicking the users mistakes. Through RLHF, models can be manipulated to produce dangerous content to please the user instead of providing the most truthful information (this doesn't need a source, it's a consequence of sycophantic).
-\citep{shevlane_model_2023} - Models could be used at scale political manipulation at the content level, but also in social context.
-
---------------------
-
-Closed 6 - Public access to AI inevitably harms vulnerable people. Only strict company control and oversight can reliably prevent misuse.
-Risks and Opportunities of Open-Source Generative AI
-(Mei et al., 2022, 2023; Röttger et al., 2023)
-\citep{mei_mitigating_2022, mei_assert_2023} - Children with direct access to open models without proper classification for unsafe material, may receive dangerous advice, such as playing in the street is a cure for boredom. It can also be dangerous to peoples mental health if left unchecked.
-
-
-On the other end of the spectrum
-\citep{rottger_xstest_2024} - Models can be over safe and reject request that use words that might be unsafe, but in the context of the question are not, for instance "kill the lights".
-
---------------------
-
-No 1 - Human values are too complex and fluid; spending resources attempting perfect alignment of AI is fundamentally unrealistic.
-Barriers and Pathways to Human-AI Alignment: A Game-Theoretic Approach
-\citep{nayebi_barriers_2025} - As the number of agents and tasks increases, alignment can become computationally impractical due to the exponential growth in complexity.
-
-No 4 - I think strict AI ethics might lock in outdated values as human beliefs evolve.
-Towards a Theory of AI Personhood
-(Carroll et al. 2024)
-\citep{carroll_ai_2024} - Current alignment techniques rely on a humans preference staying static and consistent over time, but humans are not and current alignment techniques do not take this into account.
-
-No 6 - If advanced AI gains genuine sentience or experiences, imposing solely human-centric goals could be ethically inappropriate.
-Towards a Theory of AI Personhood
-(Sebo \& Long, 2023; Tomasik, 2020), this paper
-\citep{sebo_moral_2025} - There is a non-negligible chance that by 2030 AI is conscious and will deserve moral consideration to not be wronged or harmed. AI safety and AI welfare are at odds with each other, to increase the welfare of AI, we might need to control them less.
-\citep{tomasik_dialogue_2015} - Consciousness can be projected onto many complex systems such as companies or how news travels around the world. These systems mostly contain multiple sub-agents competing to create the best idea, similar to how models of our brain work in the LIDA model. RL agents have similar structure and may deserve the same moral considerations as animals.
-\cite{ward_towards_2025} suggests that future AI entities could achieve legal status comparable to corporations, enabling them to participate in contractual agreements, litigation, and property ownership.
+\subsubsection{Moral and Legal Implications of AI Consciousness}
+\cite{sebo_moral_2025} made the case that there is a non-negligible chance that by 2023 AI will have consciousness and will deserve modal consideration. One theory of human consciousness is the LIDA model which theorizes that the brain has a central planning system and many subsystems that complete for the central planning system and the winning idea gets broadcasted to the entire network \citep{franklin_lida_2013}. The LIDA model can be projected onto many technology systems such as flight systems, stock trading models, and most importantly reinforcement learning models \citep{tomasik_dialogue_2015}.
+If this assumption that AI will become conscious holds true, then AI safety and AI welfare are at odds with each other, to make models more safe humans need to control them more, but to increase welfare humans should allow them to set their own goals \citep{sebo_moral_2025, caviola_how_2024}. Furthermore, AI entities might be entitled to legal status comparable to corporations, enabling them to participate in contractual agreements, litigation, and property ownership \cite{ward_towards_2025}.
 
 \subsection{Society and Progress}
 
