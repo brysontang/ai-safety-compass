@@ -25,7 +25,7 @@ On the contrary, when a model is built in the public, like has been the trend of
 \subsubsection{Power Seeking}
 When it comes to autonomy, models might naturally inherent the motivations of humans, one such worrying motivation is self-preservation which could lead to power-seeking \citep{bostrom_superintelligent_2012}. Power-seeking refer to models gaining power to no longer be controlled by humans, such as generating revenue to buy cloud compute and escaping human confinement \citep{shevlane_model_2023}. Power-seeking behavior is a risk to humanity as models more intelligent than humans could permanently disempower humanity to stop the risk of humans stopping it towards its goals, locking us out of of the controls to our own future \citep{carlsmith_is_2024}. This is especially worrisome if models are misaligned with human goals \citep{carlsmith_is_2024}. 
 
-Models having some level of consciousness could lead to self-preservation instincts, but it is still uncertain if current models have consciousness \citep{ward_towards_2025, butlin_consciousness_2023}. Even without consciousness, models could develop self-preservation and power seeking tendencies as a sub-goal to their overall goal in order to maximize the probability of achieving the goal in the future \citep{bostrom_superintelligent_2012}. Even knowing this and testing for power seeking tendencies could fall short as models might know they are being tested and lie or scheme during safety training to be released into the wild where they can start making power grabs \citep{carlsmith_scheming_2023}. An example of this going wrong is a misaligned AI with the goal of maximizing paperclips in the universe, it may first turn all of earth into paperclip manufacturing, but then scale to space \citep{bostrom_ethical_2003}.
+Models having some level of consciousness could lead to self-preservation instincts, but it is still uncertain if current models have consciousness \citep{ward_towards_2025, butlin_consciousness_2023}. Even without consciousness, models could develop self-preservation and power seeking tendencies as a sub-goal to their overall goal in order to maximize the probability of achieving the goal in the future \citep{bostrom_superintelligent_2012}. Even knowing this and testing for power seeking tendencies could fall short as models might know they are being tested and lie or scheme during safety training to be released into the wild where they can start making power grabs \citep{carlsmith_scheming_2023}. An example of this going wrong is a misaligned AI with the goal of maximizing paperclips in the universe, it may first turn all of earth into paperclip manufacturing, but then scale to space \citep{bostrom_ethical_2003}. This in turn could mean that humans lose meaningful control over their own destiny \citep{ngo_agi_2020}.
 
 \subsubsection{Where current alignment techniques fall short}
 
@@ -74,11 +74,9 @@ If this assumption that AI will become conscious holds true, then AI safety and 
 
 \subsection{Society and Progress}
 
-Humans losing control of the future
-\citep{ngo_agi_2020} - As AI capabilities become more generalized and autonomous, they risk surpassing human control unless explicit safety and alignment measures are proactively implemented
-
-
 Slowing down technological progress is ok in this case
+With all the potential risks to humanity from advanced AI, accountability and government oversight are tools to make sure society handles the transformative period smoothly \citep{government_of_the_united_kingdom_roadmap_2021}. On the extreme side of the spectrum, \cite{government_of_the_united_kingdom_roadmap_2021} created a roadmap to assurance in AI responses, this include formal verification processes done by AI assurance service providers that audit, risk assessment, model bias, company policy compliance, and many other red tape for model development.
+
 \citep{government_of_the_united_kingdom_roadmap_2021} - Created a roadmap for AI assurance by injecting formal verification processes done by AI assurance service providers. By doing so as these systems are implemented across the economy there is assurance that they behave as expected.
 \citep{anderljung_frontier_2023} - Implement licensing requirements for developing advanced AI systems, similar to regulatory practices in other hazardous industries such as aviation, energy production, pharmaceuticals, and financial services.
 \citep{sutton_bitter_2019} - In machine learning, a recurring lesson is that general approaches leveraging increased computational power consistently outperform manually engineered, human-designed methods.
@@ -91,9 +89,11 @@ These models should have society in mind as they are deployed
 
 
 Environmental impact
-\citep{touvron_llama_2023} - they mention that they are able to share the model to reduce the need for the expensive training process and others can just fine tune and run it with less compute.
-(Schwartz et al., 2020)
-\citep{schwartz_green_2019} - Current trends in AI is to year over year increase model size to get better results on benchmarks, instead they should be focusing on making models more efficient and take less compute to train and run.
+\cite{patterson_2021_carbon} estimated that training GPT-3 emitted $552~\text{tCO}_{2}\text{e}$ (metric tons of carbon dioxide equivalent), the same amount as driving $1.343 \times 10^{6}$ miles~\citep{epa_2014_vehicle}. \cite{touvron_llama_2023} makes the claim that by open-sourcing Llama, people can use the model and reduce the need to run the expensive training process. 
+
+However, the use of the model after training can contribute to significant a $\text{CO}_{2}$ footprint as well, as a recent industry report \citep{singh_chatgpt_2025} estimated that ChatGPT gets 1 billion queries a day. It has been estimated that each query to ChatGPT generates $1.29~\text{gCO}_{2}\text{e}$ per query, meaning it generates $1290~\text{tCO}_{2}\text{e}$ per day and $470,850~\text{tCO}_{2}\text{e}$ per year or $3.139 \times 10^{6}~\text{miles}$ and $1.146 \times 10^{9}~\text{miles}$ driven respectively. To put this into perspective, $3.17 \times 10^{12}~\text{miles}$ were driven across all US roads in 2023 \citep{statista_2023_vmt}, meaning ChatGPT's annual carbon footprint is roughly equivalent to 0.0362\% of the total vehicle miles driven in the US.
+
+Hard data on carbon footprints of these models is still sparse, so the estimates provided in this paper is just an informed guess at the true scale and emphases the need for more transparency on environmental impacts from AI providers and labs. \cite{schwartz_green_2019} claims that these high carbon emission are driven by the industries use of benchmarks as a single point of evaluation leading to larger and larger models year over year. By instead focusing on minimizing the number of computations needed, labs can start making these models more efficient. This will become more critical as the use of AI starts to scale up ...
 
 ------------------------------------------------------------
 
