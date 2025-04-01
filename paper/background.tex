@@ -32,7 +32,6 @@ Models having some level of consciousness could lead to self-preservation instin
 As models scale in size and training data, they gain emergent properties, for instance GPT-4 gained the ability to use tools as a result of it's scaled up training \citep{bubeck_sparks_2023}. As models scale up in size, simple alignment techniques seem to work better at not dropping scores in coding benchmarks, where as smaller models take a larger hit to capabilities in exchange for more aligned outputs \citep{askell_general_2021}. In models such as GPT-4, it was observed that before post-training it's confidence to correctness was correlated, but after post-training this correlation was diminished and the model was overconfident and wrong more often \citep{openai_gpt_4_2023}. It has also been suggested that as models gain novel functionality that generalize to multiple domains, our current alignment techniques will fail to also generalize \citep{soares_central_2022}. Finally, the method in which models are aligned with humans today include humans selecting which option they think is the better out of two responses, this works well for factual responses where there is a correct answer or not, but for open-ended questions, some of the nuance of the answers if lost \citep{song_reward_2023}.
 
 \subsection{Access and Economic Implications}
-% Integrated exploration of economic and competitive implications of openness and alignment approaches.
 
 \subsubsection{Growth}
 
@@ -74,68 +73,19 @@ If this assumption that AI will become conscious holds true, then AI safety and 
 
 \subsection{Society and Progress}
 
-Slowing down technological progress is ok in this case
-With all the potential risks to humanity from advanced AI, accountability and government oversight are tools to make sure society handles the transformative period smoothly \citep{government_of_the_united_kingdom_roadmap_2021}. On the extreme side of the spectrum, \cite{government_of_the_united_kingdom_roadmap_2021} created a roadmap to assurance in AI responses, this include formal verification processes done by AI assurance service providers that audit, risk assessment, model bias, company policy compliance, and many other red tape for model development.
+\subsubsection{Bureaucratic Safety in an Unpredictable Frontier}
+With all the potential risks to humanity from advanced AI, accountability and government oversight are tools to make sure society handles the transformative period smoothly \citep{government_of_the_united_kingdom_roadmap_2021}. On the extreme side of the spectrum, \cite{government_of_the_united_kingdom_roadmap_2021} created a roadmap to assurance in AI responses, this include formal verification processes done by AI assurance service providers that audit, risk assessment, model bias, company policy compliance, and many other red tape for model development. This could be seen as a parallel to regulatory practices in other hazardous industries such as aviation, energy production, pharmaceuticals, and financial services where specific licenses are required \citep{anderljung_frontier_2023}. 
 
-\citep{government_of_the_united_kingdom_roadmap_2021} - Created a roadmap for AI assurance by injecting formal verification processes done by AI assurance service providers. By doing so as these systems are implemented across the economy there is assurance that they behave as expected.
-\citep{anderljung_frontier_2023} - Implement licensing requirements for developing advanced AI systems, similar to regulatory practices in other hazardous industries such as aviation, energy production, pharmaceuticals, and financial services.
-\citep{sutton_bitter_2019} - In machine learning, a recurring lesson is that general approaches leveraging increased computational power consistently outperform manually engineered, human-designed methods.
+Although, this might be a waste of resources as machine learning has shown a pattern of humans trying to be cleaver with their algorithms get beat by just putting more compute towards the problems \citep{sutton_bitter_2019}. This implies that humanity might put substantial time and effort towards making frameworks for models to become trustworthy, but as they scale up to where they could be dangerous, trustworthiness could be an emergent property. For instance, GPT 4.5 is OpenAI's largest model they have released to date, and compared to previous models, it's hallucination rate on the PersonQA benchmark was 19\% compared to GPT 4o which hallucination rate was 30\% \citep{openai_gpt-4_2025}. They also noted that their reasoning model, o1, only hallucinated 20\% of of the time, implying that test time compute might also be an avenue to reducing hallucinations, although GPT 4.5 scored 80\% on the benchmark where as o1 only scored 55\% showing that it got more right while hallucinating less \citep{openai_gpt-4_2025}.
 
-
+\subsubsection{Responsible Research}
 These models should have society in mind as they are deployed
-\citep{ng_andrew_2017} - "Worrying about evil AI killer robots today is a little bit like worrying about overpopulation on the planet Mars" There are real issues to be talking about like job displacement.
-\citep{the_white_house_fact_2023} - Setting up systems for the government to test and regulate AI developed by companies creating foundational models.
-\citep{anthropic_core_2023} - Anthropic chooses not to release research that advances the rate of AI capabilities, although they still conduct this research.
+Existential risk circulates around the current AI literature, but this heavy focus might be overshadowing near-term risks of AI. Andrew Ng emphasizes the urgency of practical concerns over speculative ones, stating, "Worrying about evil AI killer robots today is a little bit like worrying about overpopulation on the planet Mars" \citep{ng_andrew_2017}. Under the Biden administration, significant emphasis has been placed on managing such risks through the establishment of frameworks designed to test and regulate foundational AI models \citep{the_white_house_fact_2023}. Anthropic is a strong voice in this ethos and in their Core Views on AI safety, they explain that they conduct research to increase the capabilities of models, they do not publish this research to not push the rate of progress, instead electing to publicly release research on alignment that is only relevant once models become more advance \citep{anthropic_core_2023}.
 
 
-Environmental impact
+\subsubsection{The Carbon Cost of AI}
 \cite{patterson_2021_carbon} estimated that training GPT-3 emitted $552~\text{tCO}_{2}\text{e}$ (metric tons of carbon dioxide equivalent), the same amount as driving $1.343 \times 10^{6}$ miles~\citep{epa_2014_vehicle}. \cite{touvron_llama_2023} makes the claim that by open-sourcing Llama, people can use the model and reduce the need to run the expensive training process. 
 
 However, the use of the model after training can contribute to significant a $\text{CO}_{2}$ footprint as well, as a recent industry report \citep{singh_chatgpt_2025} estimated that ChatGPT gets 1 billion queries a day. It has been estimated that each query to ChatGPT generates $1.29~\text{gCO}_{2}\text{e}$ per query, meaning it generates $1290~\text{tCO}_{2}\text{e}$ per day and $470,850~\text{tCO}_{2}\text{e}$ per year or $3.139 \times 10^{6}~\text{miles}$ and $1.146 \times 10^{9}~\text{miles}$ driven respectively. To put this into perspective, $3.17 \times 10^{12}~\text{miles}$ were driven across all US roads in 2023 \citep{statista_2023_vmt}, meaning ChatGPT's annual carbon footprint is roughly equivalent to 0.0362\% of the total vehicle miles driven in the US.
 
 Hard data on carbon footprints of these models is still sparse, so the estimates provided in this paper is just an informed guess at the true scale and emphases the need for more transparency on environmental impacts from AI providers and labs. \cite{schwartz_green_2019} claims that these high carbon emission are driven by the industries use of benchmarks as a single point of evaluation leading to larger and larger models year over year. By instead focusing on minimizing the number of computations needed, labs can start making these models more efficient. This will become more critical as the use of AI starts to scale up ...
-
-------------------------------------------------------------
-
-Pro 4 - If society delegates long-term strategic planning entirely to AI, humanity risks losing meaningful control over our shared future.
-AI Alignment: A Comprehensive Survey
-(Ngo, 2020a)
-\citep{ngo_agi_2020} - As AI capabilities become more generalized and autonomous, they risk surpassing human control unless explicit safety and alignment measures are proactively implemented."
-
-Pro 8 - It's acceptable to slow AI development to make sure AI systems are safe before deployment.
-AI Alignment: A Comprehensive Survey
-(Government of the United Kingdom, 2021; Anderljung et al., 2023)
-% Should use \cite for this one <citation> created a road map...
-\citep{government_of_the_united_kingdom_roadmap_2021} - Created a roadmap for AI assurance by injecting formal verification processes done by AI assurance service providers. By doing so as these systems are implemented across the economy there is assurance that they behave as expected.
-\citep{anderljung_frontier_2023} - Implement licensing requirements for developing advanced AI systems, similar to regulatory practices in other hazardous industries such as aviation, energy production, pharmaceuticals, and financial services.
-
---------------------
-
-No 8 - Addressing real-world changes from AI, like economic displacement or inequality, matters more than hypothetical catastrophic scenarios.
-Andrew Ng: Why AI Is the New Electricity - https://www.gsb.stanford.edu/insights/andrew-ng-why-ai-new-electricity
-\citep{ng_andrew_2017} - "Worrying about evil AI killer robots today is a little bit like worrying about overpopulation on the planet Mars" There are real issues to be talking about like job displacement.
-
-No 9 - Highly advanced AI systems will inevitably adopt human-friendly behavior without deliberate alignment efforts, making explicit alignment research a waste of resources.
-The bitter lesson
-this article
-\citep{sutton_bitter_2019} - In machine learning, a recurring lesson is that general approaches leveraging increased computational power consistently outperform manually engineered, human-designed methods.
-
---------------------
-
-Closed 4 - It's easier to enforce effective safety standards through centralized control by a few regulated companies, rather than through open, public sharing.
-Risks and Opportunities of Open-Source Generative AI
-(e.g., see White House Executive Order)
-\citep{the_white_house_fact_2023} - Setting up systems for the government to test and regulate AI developed by companies creating foundational models.
-
-Closed 9 - AI developers should tightly control and stage releases privately, deciding independently when society is ready to adapt.
-https://www.anthropic.com/news/core-views-on-ai-safety
-(Anthropic, 2023)
-\citep{anthropic_core_2023} - Anthropic chooses not to release research that advances the rate of AI capabilities, although they still conduct this research.
-
---------------------
-
-Open 2 - I believe sharing the hard work of training AI saves energy and helps people find greener ways to run it.
-Near to Mid-term Risks and Opportunities of Open-Source Generative AI
-\citep{touvron_llama_2023} - they mention that they are able to share the model to reduce the need for the expensive training process and others can just fine tune and run it with less compute.
-(Schwartz et al., 2020)
-\citep{schwartz_green_2019} - Current trends in AI is to year over year increase model size to get better results on benchmarks, instead they should be focusing on making models more efficient and take less compute to train and run.
