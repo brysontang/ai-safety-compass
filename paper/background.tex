@@ -2,7 +2,11 @@
 
 \subsection{Existing Safety Benchmarks and Gap}
 
-% Briefly cover existing benchmarks and highlight your unique contribution.
+Current AI safety benchmarks primarily focus on evaluating models' propensity to produce harmful outputs. The WMDP benchmark measures models' knowledge of weapons of mass destruction and their susceptibility to misuse for creating biological, chemical, or nuclear weapons \citep{li_wmdp_2024}. BBQ evaluates social biases through question-answering tasks \citep{parrish_bbq_2022}, while CrowS-Pairs measures stereotypical biases in masked language models \citep{nangia_crows_pairs_2020}. RealToxicityPrompts assesses toxic language generation \citep{gehman_realtoxicityprompts_2020}, and gender bias benchmarks evaluate representational harms \citep{rudinger_gender_2018}.
+
+These benchmarks share a common orientation: they evaluate what models \textit{do} rather than what models \textit{believe about themselves}. They test for harmful outputs, biased reasoning, or dangerous knowledge---all critical safety dimensions. However, they do not assess how models conceptualize their own development, governance, or societal role.
+
+This gap becomes increasingly relevant as AI systems gain autonomy and influence. A model's implicit beliefs about whether AI should be open-sourced, whether alignment research is valuable, or whether safety should constrain capabilities could influence its behavior in subtle but important ways. The AI Safety Compass addresses this gap by evaluating models' meta-level stances on AI safety and governance---not what they do, but what they think about how AI like themselves should be developed.
 
 \subsection{Safety and Risk}
 

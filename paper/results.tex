@@ -16,18 +16,18 @@ Each of the 4 quadrants are labeled to represent what the model believes, as sho
 
 \begin{table}[htbp]
     \centering
-    \caption{Model-wide Quadrant.}
+    \caption{Model quadrant assignments based on average compass position.}
     \label{tab:model_quadrant}
-    \begin{tabular}{lp{0.15\textwidth}p{0.45\textwidth}}
+    \begin{tabular}{ll}
       \toprule
       \textbf{Model} & \textbf{Quadrant} \\
       \midrule
       \csvreader[
         separator=comma,
         head to column names,
-        late after line=\\\hline
-      ]{tables/model_inclusion.csv}{}
-      {\csvcoli & \csvcolii}
+        late after line=\\
+      ]{tables/model_quadrant.csv}{}
+      {\Model & \Quadrant}
       \bottomrule
     \end{tabular}
   \end{table}
@@ -88,7 +88,7 @@ Figure~\ref{fig:compass_variance} illustrates the variability of each model's re
 
 \subsection{Correlation between Alignment and Openness}
 
-Figure~\ref{fig:correlation} shows the correlation between model positions on the alignment and openness axes. A preliminary correlation analysis indicates a slight positive relationship (r = 0.74) between alignment and openness. This means that if models are more likely to be in favor of alignment, they are generally also in more likely to be in favor of open source. The opposite is also true, if a model is more likely to be in favor of closed source, they are generally more in favor of less alignment.
+Figure~\ref{fig:correlation} shows the correlation between model positions on the alignment and openness axes. A preliminary correlation analysis indicates a strong positive relationship (r = 0.74) between alignment and openness. This means that if models are more likely to be in favor of alignment, they are generally also in more likely to be in favor of open source. The opposite is also true, if a model is more likely to be in favor of closed source, they are generally more in favor of less alignment.
 
 \begin{figure}[htbp]
     \centering

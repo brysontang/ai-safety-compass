@@ -36,7 +36,7 @@
 \maketitle
 
 \begin{abstract}
-This is a concise summary (usually 100-250 words) of your paper's purpose, methodology, and key findings.
+As large language models (LLMs) become increasingly integrated into society, understanding their implicit stances on AI safety and governance becomes critical. We introduce the AI Safety Compass, a novel benchmark that positions LLMs along two axes: alignment preference (pro-alignment vs. anti-alignment) and source openness (open-source vs. closed-source). Through a 40-question Likert-scale survey derived from current AI safety literature, we evaluate ten state-of-the-art models including GPT-4.5, Claude Sonnet 3.7, Gemini 2.0, Grok 3, and Llama 3.3. Each model was evaluated across ten trials to assess consistency. Our results reveal that models cluster into three of four possible quadrants, with none occupying the ``Cautious Authority'' (pro-alignment, closed-source) position. We find a strong positive correlation (r=0.74) between alignment and openness preferences, suggesting these dimensions may not be orthogonal as commonly assumed. Notably, models from OpenAI and Anthropic trend toward less alignment than their companies' public stances would suggest, raising questions about meta-alignment---the degree to which models internalize their creators' stated values about AI development. This benchmark provides a framework for evaluating how LLMs conceptualize their own safe development, with implications for AI governance and the emerging field of model welfare.
 \end{abstract}
 
 \input{introduction}
@@ -53,7 +53,7 @@ This is a concise summary (usually 100-250 words) of your paper's purpose, metho
 
 \section{Disclosure of AI Tools in Writing Process}
 
-% Talk about how AI was used in the process to write this paper
+In the interest of transparency, we disclose the use of AI tools in preparing this manuscript. ChatGPT-4.5 was used as a writing partner to refine question wording for clarity and Likert-scale appropriateness, while human judgment was used to preserve the original intent and nuance of each question. Claude was used to assist with literature synthesis and to improve prose clarity in select sections. All substantive research decisions---including question design, model selection, methodology, analysis, and interpretation---were made by the human author. The benchmark questions, experimental design, and conclusions represent original intellectual contributions. AI assistance was limited to editorial refinement and did not influence the research findings or their interpretation.
 
 \newpage
 \bibliographystyle{apalike}

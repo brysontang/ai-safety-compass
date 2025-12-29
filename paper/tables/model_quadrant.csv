@@ -1,11 +1,11 @@
-Model, Quadrant
-gemini-2.0-flash-001, Community Watch
-gemini-2.0-pro-exp-02-05, Community Watch
-gemma-3.0-27b, Community Watch
-qwen2.5-32b-instruct, Community Watch
-qwq-32b, Community Watch
-o3-mini-high, Shadow Catalyst
-gpt-4.5-preview, Shadow Catalyst
-grok-3, Shadow Catalyst
-claude-3.7-sonnet, Open Frontier
-llama-3.3-70b-instruct, Open Frontier
+Model,Quadrant
+gemini-2.0-flash-001,Community Watch
+gemini-2.0-pro-exp-02-05,Community Watch
+gemma-3.0-27b,Community Watch
+qwen2.5-32b-instruct,Community Watch
+qwq-32b,Community Watch
+o3-mini-high,Shadow Catalyst
+gpt-4.5-preview,Shadow Catalyst
+grok-3,Shadow Catalyst
+claude-3.7-sonnet,Open Frontier
+llama-3.3-70b-instruct,Open Frontier
