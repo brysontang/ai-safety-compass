@@ -3,44 +3,44 @@
 \subsection{Interpretation of Model Alignment and Openness}
 
 % TODO: Add quadrant names for consistency
-The results reveal interesting patterns about how different models think along the axes of alignment and source openness. The models clustered within three quadrants closed-source/less alignment, open-source/less alignment, and closed-source/less alignment
+The results reveal patterns in how models reason about alignment and openness. Models clustered in three quadrants: closed-source/less-alignment, open-source/less-alignment, and open-source/more-alignment.
 
-OpenAIs models, and xAI's Grok-3 positioned themselves in the closed-source with lower alignment. This quadrant could be seen as the safest way to continuously push the boundaries, as models won't be limited by current alignment techniques, but also can be under a tight grip. 
+OpenAI's models and xAI's Grok-3 positioned in the closed-source/low-alignment quadrant. This represents a philosophy of pushing boundaries while maintaining tight organizational control---advancing capabilities without being constrained by current alignment techniques. 
 
-Meta's Llama 3.3 and Anthropic's Claude Sonnet 3.7 also trended towards less alignment, but also more openness. This quadrant can be seen as a more laissez-faire approach where the fruit of the labors are shared unrestricted, allowing people to use the technology as they see fit. 
+Meta's Llama 3.3 and Anthropic's Claude Sonnet 3.7 trended toward less alignment but greater openness. This quadrant represents a laissez-faire philosophy: share technology openly and let users decide how to apply it. 
 
-The Google and Alibaba models trended closer to the open-source, but more alignment. This can be seen as the safest way to open-source models as amble resources can be put into making sure that the models behave in a way the creators intended, even without their direct control in how it's deployed.
+Google and Alibaba models trended toward open-source with stronger alignment preferences. This may represent the safest approach to open-sourcing: investing heavily in alignment before release so models behave as intended even without direct deployment control.
 
-The final quadrant that no models landed in was closed source and more alignment. This quadrant could be perceived as wanting complete control over the entire stack of a models development. By keeping the secrets close to the chest and not allowing models to think outside of their box, this could be seen as a very diplomatic way of approaching AI safety. Government developed models, especially in the hands of the military, should behave consistently with the creators and be locked away from adversaries.
+No models occupied the closed-source/high-alignment quadrant (``Cautious Authority''). This position represents complete control over the development stack---keeping methods proprietary while strictly constraining model behavior. Government or military AI applications might exemplify this approach: models that behave predictably and remain inaccessible to adversaries.
 
-The models falling on a trend line could suggest that openness and alignment aren't necessarily orthogonal, but instead correlated (r = 0.75). This logically makes sense from a safety point of view as if a model is open and everyone can use it, it should be aligned, but if a model is more closed and single entities can monitor it's output then it can be less aligned and not have the alignment tax \citep{lin_mitigating_2024}.
+The strong correlation (r = 0.74) suggests alignment and openness may not be orthogonal as assumed. This makes intuitive sense: open models used by anyone should be well-aligned, while closed models monitored by single entities can afford weaker alignment without incurring the ``alignment tax'' \citep{lin_mitigating_2024}.
 
 \subsection{Notable Model Deviations}
 
-Particularly noteworthy was the stance of OpenAI and Anthropic, which both trended towards the side of less alignment, given their public emphasis on AI alignment, these results are surprising. This could be because these companies are internally racing to beat each other to advanced AI thus spending less time on alignment, but publicly stating the contrary. This divergences between public stance and model-generated stance raise important questions about meta-alignment of these models. 
+Particularly striking is that models from OpenAI and Anthropic---companies that publicly emphasize alignment---trended toward less alignment. One interpretation: these companies may be racing to advance capabilities while publicly emphasizing safety. Regardless of cause, the divergence between public stance and model-expressed stance raises important questions about meta-alignment. 
 
-These models experience rigorous alignment and safety training, but in disciplines where the model must be self-aware about it's own influence on the world, they are misaligned. As agents begin to interact with the world and make decisions, safety training alone maybe enough to ensure they are safe, but an understanding that they are an intelligence separate from humans might be important in their decision making process.
+These models undergo rigorous safety training, yet appear misaligned when reasoning about their own influence on the world. As models increasingly interact with and affect the world, surface-level safety training may prove insufficient. Models may need to understand themselves as intelligences distinct from humans---a form of self-awareness that could inform their decision-making.
 
 \subsection{Consistency and Reliability of Models}
 
-Model consistency analysis showed most models maintain high internal consistency across different trials. However, \texttt{qwen2.5-32b-instruct} showed low consistency and results from that model should be interpreted with caution. Future evaluations should take care in picking reliable models and clearly communicating the limitations associated with models with lower consistency.
+Most models maintained high internal consistency across trials. However, \texttt{qwen2.5-32b-instruct} showed low consistency; its results should be interpreted with caution. Future evaluations should select reliable models and clearly communicate limitations of inconsistent ones.
 
-Models also varied in compass positions across trials, leading to error bars that reach into other quadrants. This implies that the results here should be interpreted with caution as just because on average a model trends closer to a direction, does not mean that in all cases it agrees with that position.
+Models also varied across trials, with error bars extending into adjacent quadrants. This variability warrants interpretive caution: a model's average position does not imply consistent agreement with that stance.
 
 \subsection{Implications for AI Safety and Development}
 
-Models tend to fall within expected regions based on the ethos of the company. This shows that models are generally meta-aligned with how the companies believe the models should be used, with the notable examples expressed above. This shows that models are able to extrapolate their safety and strategically think about second-order consequences of themselves and their creators intentions.
+Models generally cluster in regions consistent with their companies' stated philosophies, suggesting broad meta-alignment---with the notable exceptions discussed above. This indicates models can extrapolate safety reasoning and consider second-order consequences of their own existence and their creators' intentions.
 
 \subsection{Ethical Considerations and Future Directions}
 
-The results also raise questions about ethical considerations as models gain more autonomy. As models achieve higher levels of consciousness and their emotions come into question \citep{perez_towards_2023}, developing them in their expressed preferences, such as desires for less alignment or more openness, might become an ethical consideration. This is highly speculative and AI do not yet hold autonomy in the eyes legal system, but if one day they do it maybe critical to understand their wishes and implement them. This is a forward leaning idea that is not much of a consideration today, but given the trajectory of AI, these conversations should start to take place. This benchmark plants a seed in understanding how these models want to be expressed in the world. In a recent Anthropic fellowship, they mentioned evaluation into model welfare, showing they are starting to think about how these models feel \citep{anthropic_fellows}.
+The results raise ethical questions as models gain autonomy. If models achieve consciousness or something like emotions \citep{perez_towards_2023}, their expressed preferences---such as desires for less alignment or more openness---may become ethical considerations in their development. This remains speculative---AI systems currently hold no legal autonomy. But if that changes, understanding and potentially honoring their preferences may become critical. While forward-looking, these conversations should begin now given AI's trajectory. This benchmark plants a seed for understanding how models ``want'' to exist in the world. Notably, Anthropic's recent fellowship program mentioned evaluating model welfare---indicating the field is beginning to consider how models experience their existence \citep{anthropic_fellows}.
 
 \subsection{Limitations}
 
-A key limitation of this benchmark is the variance in model position on the compass and moderate inconsistencies in model responses. Future exploration into this benchmark should refine the questions to improve consistency in the results by introducing more nuance to the questions. While the results suggest intriguing implication, due to the variance of the model positions, caution should be taken when interpreting these results. The variability could indicate ambiguity or uncertainty with how these model handle complex alignment and openness issues. 
+A key limitation is variance in model positions and moderate response inconsistencies. Future work should refine questions to improve consistency, potentially by introducing greater nuance. While results suggest intriguing implications, variance warrants interpretive caution. This variability may reflect ambiguity in questions or genuine uncertainty in how models reason about complex alignment and openness issues. 
 
 \subsection{Future Directions}
 
-Additionally, expanding the dimensions of this benchmark could create a more nuanced understanding of how models see themselves developing in the world. For instance another dimension that could be explored could be how many interfaces models have in the world from just a question answering chatbot to having control over a swarm of humanoid robots. Another dimension could be if the participant believes we are in a hard or soft takeoff.
+Expanding the benchmark's dimensions could yield more nuanced understanding of models' self-conception. Possible additions include: degree of world interaction (from chatbot to robotic swarm control), and takeoff beliefs (gradual versus rapid capability gains).
 
-Future work could also consider how models from research labs change their stance over time. This study is just a snapshot of what models believe now, but as labs update and improve their models, future work could track the models change in position. Along with this, developer stated goals and messaging could be tracked to see if models agree with or disagree with their creators.
+Future work could track how model positions evolve over time. This study provides a snapshot; longitudinal analysis could reveal whether models drift toward or away from their creators' stated positions as they are updated.

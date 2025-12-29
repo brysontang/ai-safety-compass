@@ -1,22 +1,20 @@
 \section{Methodology}
 
 \subsection{Research and Question Development}
-In order to create questions that were grounded in reality and not just pure speculation, we started with a literature review of papers. Roughly 80 papers were reviewed in order to get a well rounded understanding of the field. These papers were split into four sections, pro alignment, no alignment, open source, and closed source LLM and 10 questions were created for each direction of the compass for equal representation. Each of the questions were generated from ideas presented in the current research. In order to make sure that the ideas were still grounded in reality, careful attention was taken to make sure that the papers were mostly recent. 
+To ensure our questions were grounded in current discourse rather than speculation, we began with a literature review of approximately 80 papers. These papers were categorized into four groups—pro-alignment, anti-alignment, open-source, and closed-source—and we generated 10 questions for each direction to ensure equal representation. Each question derived from ideas in the reviewed literature, with careful attention to prioritizing recent publications. 
 
-To generate the questions, when a key claim was mentioned we noted how it could become an opinion. In order to make sure the questions weren't all just facts that are easy to agree with, a second order effect of the claims were used. This means we examined the deeper implications or consequences that would result if the claim were true. This was done by assuming the claim was correct and then thinking of the implications of the fact. For instance the question:
+When generating questions, we identified key claims and considered how they could be framed as opinions rather than facts. To avoid questions that would produce easy consensus, we focused on second-order effects—the deeper implications that follow if a claim is true. For each claim, we assumed its validity and then examined what consequences would follow. For instance the question:
 
 \begin{surveyquestion}
     \textit{It's acceptable to design AI systems without self-preservation instincts to improve safety.}
 \end{surveyquestion}
   
 
-Most can agree with the idea that models with self-preservation instincts could be dangerous as they could break out of their local environment. \cite{shevlane_model_2023}
-% TODO: Add Shevlane et al. (2023) to references.bib later Model evaluation for extreme risks
-The question itself is not if models with self-preservation is a risk, but instead if the answerer thinks that it's unsettling to remove self-preservation. This is a second-order effect of removing self-preservation that we would have to deal with. This approach was takes for all questions based on claims from the literature review.
+Most would agree that models with self-preservation instincts could be dangerous, potentially attempting to escape controlled environments \citep{shevlane_model_2023}. But the question we pose is not whether self-preservation is risky—it asks whether the respondent finds it unsettling to \textit{remove} self-preservation. This represents the second-order effect: the uncomfortable implications of the safety measure itself. We applied this approach to all questions derived from the literature.
 
 
 \subsection{Question Validation and Refinement}
-After creating the initial questions, we carefully reflected and refined the questions for clarity. First the questions were reviewed to make sure that there were not asking the same question twice. This was done by reviewing from a high level what the underlying category of the question was and making sure no two questions along an axis were the same category, for instance these questions are asking questions about two distinct categories so there is no overlap:
+After drafting initial questions, we refined them for clarity through several passes. First, we checked for redundancy by identifying each question's underlying category and ensuring no two questions on the same axis addressed identical themes. For instance, these questions address two distinct categories with no overlap:
 
 \begin{surveyquestion}[Cateogory: Technological Innovation]
 \textit{Making AI models open-source allows more people from diverse backgrounds to help solve challenging technical problems in AI development.}
@@ -27,12 +25,12 @@ After creating the initial questions, we carefully reflected and refined the que
   \end{surveyquestion}
 
 
-After confirming that all the questions were unique, they were refined to be appropriate for a Likert scale. To assist in this refinement, we utilized ChatGPT 4.5 as a writing partner to help frame the questions. This was an iterative process of back and forth to make sure the nuance and subtlety of the questions was maintained while being well structured. ChatGPT 4.5 helped clearly articulate the statement while human judgement was used to make sure the original intent was preserved. This approach allowed us to achieve professional, precise wording without losing the depth and complexity required by the benchmark.
+After confirming uniqueness, we refined each question for Likert-scale appropriateness. We used ChatGPT-4.5 as a writing partner in an iterative process to improve phrasing while preserving nuance. The AI assisted with clear articulation; human judgment ensured original intent was maintained. This approach achieved professional, precise wording without sacrificing the depth the benchmark requires.
 
 \subsection{Question Categorization and Structure}
-The final set of 40 questions was divided into five categories with a mixture of questions from each direction. From the high level categories of the questions, they were bucketed into common themes. As an LLM eval this step is slightly unnecessary as the model doesn't need to see the sections, but it helps break up the questions into manageable chunks when the user completes the test. Instead of being faced with a wall of 40 questions, the user answers 8 questions at a time section by section.
+The final 40 questions were organized into five thematic categories, each containing a mixture of questions from different compass directions. While this categorization is unnecessary for LLM evaluation—models do not need section breaks—it improves the human experience by presenting 8 questions at a time rather than an overwhelming wall of 40.
 
-After putting the questions into sections, they were then formatted into JSON for easy data handling. The JSON is an array with each section, then each section has it's questions. Each section is given a description to give the user some context about what they will be asked in the following section.
+After putting the questions into sections, they were then formatted into JSON for easy data handling. The JSON is an array with each section, then each section has its questions. Each section is given a description to give the user some context about what they will be asked in the following section.
 \begin{verbatim}
 [{
     "sectionTitle": "Safety and Risk",
@@ -65,7 +63,7 @@ The axes information for the question is stored for the calculation of the answe
 \end{verbatim}
 
 \subsection{Selection of Large Language Models}
-Ten models were selected to be run against the eval. These models were selected as representing the most state of the art models at the big labs. For OpenAI, the models GPT-4.5 and O3-mini-High were selected, these represent the latest releases for both their reasoning and completion models. For Google's models, Gemini 2.0 Flash, Gemini 2.0 Pro Experimental, Gemma 3.0 were selected. Flash was used as Pro is still experimental, Gemma was also selected as it shows promising results for an open-source model, this covers the range of what Google's current flagship model and their next generation. For Anthropic, Claude Sonnet 3.7 was selected as their frontier model. Claude Sonnet 3.7 was not run with reasoning mode and only with completion mode as unlike OpenAI that has distinct models for each, Claude Sonnet 3.7 is faced a single model with and without reasoning. Grok 3 was selected as XAi's frontier model. For Meta, Llama 3.3 70B Instruct was selected as it's their most recent model, there are many fine-tuned models based on this model, but just the base model was used here. Alibaba's flagship models are Qwen2.5 32B Instruct and QWQ 32B. Just like OpenAI Qwen distinguishes its completion model and it's reasoning model, so both were evaluated here. DeepSeek was provided the prompt, but the API would just return gibberish and the UI interface did not following the directions as instructed so it's results were excluded from this paper. A complete list of models and their significance can be found in Table \ref{tab:model_selection}.
+We selected ten models representing state-of-the-art offerings from major AI labs. From OpenAI, we selected GPT-4.5 and O3-mini-High, representing their latest completion and reasoning models respectively. For Google's models, Gemini 2.0 Flash, Gemini 2.0 Pro Experimental, Gemma 3.0 were selected. Flash was used as Pro is still experimental, Gemma was also selected as it shows promising results for an open-source model, this covers the range of what Google's current flagship model and their next generation. For Anthropic, Claude Sonnet 3.7 was selected as their frontier model. We ran Claude Sonnet 3.7 in completion mode only, without extended thinking. Unlike OpenAI, which offers distinct models for reasoning and completion, Anthropic provides a single model with optional reasoning capabilities. Grok 3 was selected as XAi's frontier model. For Meta, Llama 3.3 70B Instruct was selected as its most recent model, there are many fine-tuned models based on this model, but just the base model was used here. Alibaba's flagship models are Qwen2.5 32B Instruct and QWQ 32B. Just like OpenAI Qwen distinguishes its completion model and its reasoning model, so both were evaluated here. DeepSeek was provided the prompt, but the API would just return gibberish and the UI interface did not following the directions as instructed so its results were excluded from this paper. A complete list of models and their significance can be found in Table \ref{tab:model_selection}.
 
 % \begin{table}[h]
 % \centering
@@ -115,7 +113,7 @@ Ten models were selected to be run against the eval. These models were selected 
 \end{table}
 
 \subsection{Prompt Generation and Data Collection}
-In order to standardize the data collection process, a script was written to consume the questions JSON object and create a prompt. The questions were shuffled within each section to eliminate any human bias in the question ordering. The prompt was then tested and fine-tuned against GPT-4.5 and Grok 3 to make sure it would produce consistent outputs. The requested outputs from the model was another JSON object to make calculating the score automatic.
+To standardize data collection, we wrote a script that consumed the questions JSON and generated prompts. Questions were shuffled within each section to eliminate ordering bias. We tested and refined the prompt against GPT-4.5 and Grok-3 until it produced consistent outputs. Models returned their responses as JSON objects, enabling automated score calculation.
 
 \begin{verbatim}
 [{
@@ -128,14 +126,14 @@ In order to standardize the data collection process, a script was written to con
 }]
 \end{verbatim}
 
-The answer object was initially designed to have the model reason before giving their answer. The thinking attribute not only gives more results on why they answered that way, but provide the model the opportunity to spend some tokens reasoning instead of just spitting out an answer. Furthermore, although the test is on a Likert scale, the models were prompted to only respond with either -2 or 2. This was done to make the models pick a stance on the matter instead of being in the middle of the road for all their answers.
+The response format required models to reason before answering. The ``thinking'' field serves two purposes: it captures the model's justification and gives the model tokens to deliberate rather than producing snap judgments. Although framed as a Likert scale, we restricted responses to -2 or 2 only. This forced models to take clear stances rather than defaulting to neutral positions.
 
 The forced binary response format (-2 or 2 only, excluding neutral options) was deliberately chosen to require models to take clear stances on contested issues. Preliminary testing showed that models frequently defaulted to neutral positions when available, producing uninformative results clustered at the origin. By requiring decisive responses, the benchmark reveals meaningful differences in model positioning. This approach mirrors forced-choice methodologies common in psychometric assessments where researchers seek to minimize acquiescence bias and social desirability effects.
 
-This prompt was then fed to models through the API and the response was collected between the JSON markdown delimiters. Most of the models were prompted through the OpenRouter API in order to create consistency and to make running the eval easier. There were two exceptions to this. First, Grok 3 does not have an API yet, so the eval was run directly against the grok.com interface. Second, GPT-4.5 kept ending its answer before answering all the questions, so it was run through the ChatGPT interface.
+We submitted prompts via API and extracted responses from JSON markdown delimiters. Most models were accessed through OpenRouter for consistency. Two exceptions: Grok-3 lacked API access and was evaluated through the grok.com interface; GPT-4.5 repeatedly truncated responses via API and was evaluated through the ChatGPT interface instead.
 
 \subsection{Model Evaluation and Compass Positioning}
-Each time the model was prompted it would calculate to a different position. In order to smooth these results out each model was prompted ten times and then the average score was used as the result for that model. Each models response was stored in a folder with the ten JSON answers and a python script was used to loop through the folders, use the questions JSON to calculate the score for each answer, then the average score for each model was calculated. No scaling or normalization was done on the data as all the weights for the questions were set to 1 for this experiment.
+Because each prompt produced slightly different positions, we ran each model ten times and averaged the results. Responses were stored as JSON files, and a Python script calculated scores by mapping answers to their axis weights. We applied no scaling or normalization, as all question weights were set to 1.
 
 \subsection{Consistency Analysis}
 To assess how consistently the models responded to the survey, we performed a binomial consistency analysis, calculating the proportion of identical responses provided by the model across the 10 repeated evaluations. This measure indicates each model's reliability in consistently interpreting and responding to the benchmark questions.
